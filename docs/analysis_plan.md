@@ -27,7 +27,8 @@ disponibilidade aparente. Essa abordagem foi revisada por decisão humana:
 - diagnóstico técnico de presença/ausência, sem inferir ocupação;
 - regressão simples como sensibilidade dos contrastes;
 - comparação entre listings com e sem preço;
-- sensibilidade de host e gestão profissional de H9;
+- atributos ampliados de gestão profissional de H9; a concentração por
+  `owner_id` já foi incorporada ao ciclo 1;
 - ponderação por cobertura somente se houver suporte e pesos estáveis.
 
 ### `COULD`
@@ -51,7 +52,7 @@ disponibilidade aparente. Essa abordagem foi revisada por decisão humana:
 | H6 | Reformulada: contrastes controlados são `MUST`; regressão é `SHOULD` |
 | H7 | Mantida no ranking econômico |
 | H8 | Dividida: parte descritiva é `MUST`; modelagem ampla é `SHOULD/COULD` |
-| H9 | `SHOULD` |
+| H9 | Dividida: concentração por `owner_id` executada no ciclo 1; atributos ampliados do host permanecem `SHOULD` |
 | H10 | `COULD` |
 
 ## Decisões humanas pré-registradas
@@ -74,6 +75,23 @@ disponibilidade aparente. Essa abordagem foi revisada por decisão humana:
 Estas são decisões humanas revisáveis, não propriedades observadas nos dados.
 
 ## Ciclo 1 — concluído
+
+### Revisão corretiva do ciclo 1
+
+Após a primeira leitura, o ciclo foi reaberto para separar mudanças de método,
+calendário e amostra e para testar dependência de operadores. A revisão mantém a
+captura de 20/01 e o peso igual por listing como decisões principais e acrescenta:
+
+1. ponte incremental na ordem método de preço → datas → amostra, com
+   reconciliação exata antes do arredondamento e aviso de dependência da ordem;
+2. diagnóstico separado de mudanças entre capturas para pares listing–data
+   comuns; o efeito zero do método “mais recente” nos pares de 20/01 é identidade
+   por construção e não evidência de estabilidade;
+3. concentração por `owner_id`, peso igual por anfitrião e retirada do maior
+   anfitrião como sensibilidades;
+4. bootstrap agrupado por anfitrião e contrastes pareados em reais e percentual;
+5. classificação estatística inconclusiva quando o intervalo agrupado da
+   diferença inclui zero, sem inferir relevância econômica.
 
 ### Pergunta
 
@@ -119,14 +137,28 @@ não construir dashboard e não emitir recomendação final de compra.
 - todos os checks de integridade foram aprovados;
 - a captura de 20/01 preservou sete segmentos com pelo menos 30 listings;
 - os quatro primeiros segmentos por preço permaneceram nas mesmas posições nos
-  três métodos;
+  três métodos, mas a maior parte das mudanças de nível nos métodos secundários
+  veio da ampliação das datas e, principalmente no topo, da mudança da amostra;
 - o ajuste de calendário preservou as quatro primeiras posições e alterou apenas
   a ordem de três segmentos com medianas próximas;
 - preços ≥ 10.000 não dirigiram os segmentos principais, mas a remoção integral
   de um listing alterou em 8,8% um segmento exploratório;
 - a cobertura seletiva permaneceu como limitação material, especialmente pela
-  sobrerrepresentação de Centro, apartamentos e imóveis de um ou dois quartos.
+  sobrerrepresentação de Centro, apartamentos e imóveis de um ou dois quartos;
+- Centro/apartamento/1 quarto tem 72% dos listings da captura principal sob um
+  único anfitrião. Sua mediana pontual permanece R$ 450 com peso por host e sem
+  esse operador, mas a dependência reduz a precisão dos contrastes agrupados;
+- Centro/apartamento/2 quartos é o segmento principal com maior sensibilidade à
+  concentração: o maior anfitrião reúne 20 de 59 listings (33,9%); a mediana de
+  R$ 600 cai para R$ 480 com peso igual por anfitrião e para R$ 449 sem o maior
+  operador. Essa dependência reforça a classificação inconclusiva dos contrastes
+  envolvendo o segmento;
+- somente 12 das 21 diferenças pareadas excluem zero no bootstrap por anfitrião;
+  as demais nove são estatisticamente inconclusivas. Relevância econômica ainda
+  não foi avaliada.
 
-**Decisão:** o bloco de preço pode avançar com confiança moderada no ranking dos
-segmentos principais e conclusão restrita aos listings com preço. O ponto de
-parada foi respeitado; o próximo bloco depende de revisão humana deste resultado.
+**Decisão revisada:** o bloco de preço permanece utilizável para descrever a
+amostra coberta, com evidência mais forte para a liderança de Meia Praia/4
+quartos sobre o segundo colocado do que para ordenar os segmentos intermediários
+e inferiores. O ponto de parada foi respeitado; o próximo bloco depende de
+revisão humana deste resultado.

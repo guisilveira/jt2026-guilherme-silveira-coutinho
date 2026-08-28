@@ -18,6 +18,28 @@ Leia antes de começar a mexer nos dados.
 
 ---
 
+## Ambiente e execução reproduzível
+
+A análise foi executada com **Python 3.12.13**, `pandas==2.2.3` e
+`numpy==2.3.5`. Pré-requisito: Python 3.12 disponível como `python3`. Em um
+ambiente novo:
+
+```bash
+python3 --version
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python scripts/audit_data.py
+python scripts/analyze_airbnb_prices.py
+```
+
+Os scripts leem os CSVs originais de `data/` e recriam somente artefatos
+derivados em `data/processed/` e `reports/generated/`. Os arquivos brutos não são
+alterados.
+
+---
+
 ## Os dados (`data/`)
 
 Snapshot estático do mercado imobiliário de **Itapema (SC)**, com anúncios de Airbnb e de venda (VivaReal).

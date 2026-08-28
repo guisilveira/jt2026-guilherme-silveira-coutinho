@@ -2,16 +2,18 @@
 
 ## Conclusão desta etapa
 
-**A base pode avançar para a comparação de perfil e localização, mas somente com
-conclusões condicionadas aos anúncios que possuem preço.** A captura de
-20/01/2025 é a melhor leitura principal porque coloca os imóveis na mesma data de
-referência. A mediana entre capturas funciona como segunda leitura: ela muda o
-nível de preço de alguns segmentos, mas preserva os quatro primeiros do ranking.
+**A captura de 20/01/2025 continua sendo a comparação principal, mas a correção
+reduz a confiança na ordenação completa dos segmentos.** Ela coloca os imóveis
+na mesma data de referência e preserva peso igual por listing. A mediana entre
+capturas continua como segunda leitura, porém a decomposição mostra que as
+diferenças antes atribuídas genericamente ao “método” vêm sobretudo da ampliação
+das datas e da mudança da amostra.
 
-A integridade da preparação é alta: todos os checks de chaves, cardinalidade e
-reconciliação passaram. A representatividade é mais fraca: 22,5% dos 4.441
-listings têm algum preço ligado e 17,5% aparecem na captura de 20/01. Essa
-seleção é desigual e não pode ser corrigida com segurança pelos arquivos.
+A integridade da preparação é alta: os 35 checks de ingestão, chaves,
+cardinalidade e reconciliação passaram. A representatividade e a independência
+estatística são mais fracas: 22,5% dos 4.441 listings têm algum preço ligado,
+17,5% aparecem em 20/01 e alguns segmentos concentram anúncios do mesmo
+anfitrião. Essa seleção não pode ser corrigida com segurança pelos arquivos.
 
 Este relatório não usa VivaReal, não estima ocupação, receita ou retorno e não
 recomenda compra.
@@ -50,18 +52,19 @@ residenciais, preservadas nas tabelas técnicas, mas fora do ranking principal.
 
 ## Preço anunciado na captura principal
 
-| Segmento de imóveis | Listings | Mediana | p25–p75 | IC bootstrap 95% da mediana | Mediana de datas/listing |
-|---|---:|---:|---:|---:|---:|
-| Meia Praia · apartamento · 4 quartos | 43 | R$ 899 | R$ 735–1.537 | R$ 820–1.400 | 48 |
-| Centro · apartamento · 3 quartos | 38 | R$ 664 | R$ 500–833 | R$ 523–800 | 57,5 |
-| Meia Praia · apartamento · 3 quartos | 284 | R$ 650 | R$ 500–816 | R$ 602–700 | 54 |
-| Centro · apartamento · 2 quartos | 59 | R$ 600 | R$ 399–682 | R$ 480–628 | 61 |
-| Morretes · apartamento · 2 quartos | 43 | R$ 453,50 | R$ 352–554 | R$ 408–500 | 62 |
-| Centro · apartamento · 1 quarto | 75 | R$ 450 | R$ 378–497 | R$ 402–471 | 67 |
-| Meia Praia · apartamento · 2 quartos | 126 | R$ 448 | R$ 350–550 | R$ 400–461 | 52 |
+| Segmento de imóveis | Listings | Hosts | Mediana | p25–p75 | IC 95% por listing | IC 95% por host |
+|---|---:|---:|---:|---:|---:|---:|
+| Meia Praia · apartamento · 4 quartos | 43 | 38 | R$ 899 | R$ 735–1.537 | R$ 820–1.400 | R$ 835–1.400 |
+| Centro · apartamento · 3 quartos | 38 | 34 | R$ 664 | R$ 500–833 | R$ 523–800 | R$ 523–800 |
+| Meia Praia · apartamento · 3 quartos | 284 | 235 | R$ 650 | R$ 500–816 | R$ 602–700 | R$ 600–700 |
+| Centro · apartamento · 2 quartos | 59 | 37 | R$ 600 | R$ 399–682 | R$ 480–628 | R$ 399–630 |
+| Morretes · apartamento · 2 quartos | 43 | 34 | R$ 453,50 | R$ 352–554 | R$ 408–500 | R$ 385–500 |
+| Centro · apartamento · 1 quarto | 75 | 17 | R$ 450 | R$ 378–497 | R$ 402–471 | R$ 427–500 |
+| Meia Praia · apartamento · 2 quartos | 126 | 112 | R$ 448 | R$ 350–550 | R$ 400–461 | R$ 400–466 |
 
-Os intervalos de bootstrap representam somente incerteza amostral dentro dos
-listings observados. Eles não corrigem cobertura seletiva, datas ausentes ou
+O primeiro bootstrap reamostra listings. O segundo reamostra `owner_id` e mantém
+juntos todos os anúncios do anfitrião, evitando tratá-los como totalmente
+independentes. Nenhum dos dois corrige cobertura seletiva, datas ausentes ou
 diferenças não observadas de padrão do imóvel.
 
 ## A escolha do método muda a conclusão?
@@ -85,10 +88,130 @@ diferenças não observadas de padrão do imóvel.
 - As posições 6 e 7 trocam, mas suas medianas na captura principal diferem em
   apenas R$ 2.
 
+### Correção: ponte incremental, não três causas independentes
+
+A tabela anterior mistura mudança da regra de preço, ampliação das datas e
+entrada de novos listings. A correção aplica essas mudanças nesta ordem:
+
+```text
+pares listing–data de 20/01
+    → nova regra de preço
+    → todas as datas dos mesmos listings
+    → todos os listings disponíveis no método
+```
+
+Como a mediana não é linear, cada parcela depende dessa ordem. Os valores abaixo
+são mudanças incrementais, não causas independentes. Em todas as 21 pontes, a
+soma fecha exatamente com a diferença total antes do arredondamento.
+
+No método da própria captura de 20/01, as três etapas são idênticas e todos os
+incrementos são zero; ele é a base da ponte, não um teste de estabilidade.
+
+#### Método “mais recente”
+
+| Segmento de imóveis | Base 20/01 | Δ regra de preço | Δ datas | Δ amostra | Final | Rank final |
+|---|---:|---:|---:|---:|---:|---:|
+| Meia Praia · apartamento · 4 quartos | R$ 899 | R$ 0 (0%) | R$ 0 (0%) | +R$ 113,50 (+12,6%) | R$ 1.012,50 | 1 |
+| Centro · apartamento · 3 quartos | R$ 664 | R$ 0 (0%) | +R$ 73,50 (+11,1%) | +R$ 52,50 (+7,9%) | R$ 790 | 2 |
+| Meia Praia · apartamento · 3 quartos | R$ 650 | R$ 0 (0%) | +R$ 37 (+5,7%) | −R$ 31,75 (−4,9%) | R$ 655,25 | 3 |
+| Centro · apartamento · 2 quartos | R$ 600 | R$ 0 (0%) | +R$ 27 (+4,5%) | −R$ 47 (−7,8%) | R$ 580 | 4 |
+| Morretes · apartamento · 2 quartos | R$ 453,50 | R$ 0 (0%) | +R$ 10,50 (+2,3%) | R$ 0 (0%) | R$ 464 | 5 |
+| Centro · apartamento · 1 quarto | R$ 450 | R$ 0 (0%) | R$ 0 (0%) | −R$ 5 (−1,1%) | R$ 445 | 7 |
+| Meia Praia · apartamento · 2 quartos | R$ 448 | R$ 0 (0%) | +R$ 2 (+0,4%) | R$ 0 (0%) | R$ 450 | 6 |
+
+O Δ da regra “mais recente” é zero por construção: entre os pares presentes na
+última captura, o registro mais recente é o próprio registro de 20/01. Isso não
+é evidência de estabilidade.
+
+#### Método “mediana entre capturas”
+
+| Segmento de imóveis | Base 20/01 | Δ regra de preço | Δ datas | Δ amostra | Final | Rank final |
+|---|---:|---:|---:|---:|---:|---:|
+| Meia Praia · apartamento · 4 quartos | R$ 899 | +R$ 1 (+0,1%) | R$ 0 (0%) | +R$ 175 (+19,5%) | R$ 1.075 | 1 |
+| Centro · apartamento · 3 quartos | R$ 664 | +R$ 8,50 (+1,3%) | +R$ 65 (+9,8%) | +R$ 42,50 (+6,4%) | R$ 780 | 2 |
+| Meia Praia · apartamento · 3 quartos | R$ 650 | R$ 0 (0%) | +R$ 50 (+7,7%) | −R$ 17,33 (−2,7%) | R$ 682,67 | 3 |
+| Centro · apartamento · 2 quartos | R$ 600 | +R$ 16,75 (+2,8%) | +R$ 18,75 (+3,1%) | −R$ 35,50 (−5,9%) | R$ 600 | 4 |
+| Morretes · apartamento · 2 quartos | R$ 453,50 | −R$ 3,50 (−0,8%) | +R$ 23 (+5,1%) | −R$ 3 (−0,7%) | R$ 470 | 5 |
+| Centro · apartamento · 1 quarto | R$ 450 | R$ 0 (0%) | R$ 0 (0%) | −R$ 2 (−0,4%) | R$ 448 | 7 |
+| Meia Praia · apartamento · 2 quartos | R$ 448 | +R$ 2 (+0,4%) | R$ 0 (0%) | R$ 0 (0%) | R$ 450 | 6 |
+
+**Fato observado:** a regra de preço isolada altera as medianas em no máximo
+R$ 16,75, ou 2,8% da base. Os deslocamentos próximos de 20% vistos na comparação
+ingênua vêm sobretudo da ampliação de datas e da mudança da amostra. O topo de
+quatro segmentos não muda; somente os níveis e a ordem dos três últimos variam.
+
+### Diagnóstico das mudanças reais entre capturas
+
+Nos pares listing–data comparáveis entre 06/01 ou 07/01 e 20/01, entre 36,3% e
+67,0% dos pares mudaram de preço, dependendo do segmento e da captura; entre
+78,6% e 98,6% dos listings comparáveis tiveram ao menos uma data alterada. Entre
+os casos que mudaram, a mediana da variação absoluta típica por listing ficou
+entre 6,7% e 10,5%.
+
+A mudança mediana do segmento ainda é zero em várias comparações porque aumentos,
+reduções e datas sem mudança se compensam. Portanto, nem o zero construído do
+método “mais recente” nem uma mediana zero devem ser apresentados como evidência
+de estabilidade geral dos preços.
+
 **Decisão metodológica:** manter 20/01 como headline, mediana entre capturas como
 segunda leitura e preço mais recente como diagnóstico adicional. O ranking é
 estável no topo, mas o valor absoluto não deve ser tratado como preciso, sobretudo
 para Meia Praia/4 quartos.
+
+## Concentração por anfitrião
+
+O resultado principal abaixo continua dando peso igual a cada listing. As duas
+últimas colunas são sensibilidades, não substitutos do resultado principal.
+
+| Segmento de imóveis | Listings | Hosts | Maior host | Mediana/listing | Mediana/host | Sem maior host |
+|---|---:|---:|---:|---:|---:|---:|
+| Meia Praia · apartamento · 4 quartos | 43 | 38 | 2 (4,7%) | R$ 899 | R$ 874 | R$ 874–899* |
+| Centro · apartamento · 3 quartos | 38 | 34 | 4 (10,5%) | R$ 664 | R$ 669,25 | R$ 663,75 |
+| Meia Praia · apartamento · 3 quartos | 284 | 235 | 12 (4,2%) | R$ 650 | R$ 650 | R$ 650 |
+| Centro · apartamento · 2 quartos | 59 | 37 | 20 (33,9%) | R$ 600 | R$ 480 | R$ 449 |
+| Morretes · apartamento · 2 quartos | 43 | 34 | 7 (16,3%) | R$ 453,50 | R$ 449,25 | R$ 434,25 |
+| Centro · apartamento · 1 quarto | 75 | 17 | 54 (72,0%) | R$ 450 | R$ 450 | R$ 450 |
+| Meia Praia · apartamento · 2 quartos | 126 | 112 | 7 (5,6%) | R$ 448 | R$ 427,50 | R$ 420 |
+
+\* Cinco anfitriões empatam com dois listings; a faixa mostra a retirada de cada
+um separadamente.
+
+**Fato observado:** Centro/1 quarto é altamente concentrado: 54 de 75 listings
+pertencem ao mesmo `owner_id`. A mediana pontual não muda nem com peso igual por
+host nem com a retirada desse operador, porque ambos os grupos têm centro em
+R$ 450. Isso demonstra robustez do ponto central observado, mas não elimina a
+dependência entre anúncios; o bootstrap agrupado incorpora essa dependência.
+
+Centro/2 quartos apresenta a maior sensibilidade ao anfitrião entre os segmentos
+principais: o maior host reúne 20 de 59 listings (33,9%); a mediana cai de R$ 600
+para R$ 480 com peso igual por host (−R$ 120; −20,0%) e para R$ 449 sem o maior
+anfitrião (−R$ 151; −25,2%). Meia Praia/2 quartos também é sensível, mas em menor
+grau: R$ 448 por listing, R$ 427,50 por host (−4,6%) e R$ 420 sem o maior
+anfitrião (−6,3%).
+
+## Diferenças entre segmentos: evidência e tamanho
+
+O intervalo abaixo vem do bootstrap agrupado por `owner_id`. A classificação é
+**inconclusiva** quando inclui zero. A diferença pontual é sempre mostrada em
+reais e percentual; sua relevância econômica ainda não foi definida.
+
+| Comparação A − B | Diferença | Diferença % sobre B | IC 95% agrupado | Evidência estatística |
+|---|---:|---:|---:|---|
+| Meia Praia/4 quartos − Centro/3 quartos | R$ 235 | 35,4% | R$ 69,75 a R$ 643 | Diferença sustentada |
+| Centro/3 quartos − Meia Praia/3 quartos | R$ 14 | 2,2% | −R$ 143 a R$ 170 | Inconclusiva |
+| Meia Praia/3 quartos − Centro/2 quartos | R$ 50 | 8,3% | −R$ 19,86 a R$ 295,04 | Inconclusiva |
+| Centro/2 quartos − Morretes/2 quartos | R$ 146,50 | 32,3% | −R$ 68,01 a R$ 207 | Inconclusiva |
+| Centro/2 quartos − Centro/1 quarto | R$ 150 | 33,3% | −R$ 80,08 a R$ 200,38 | Inconclusiva |
+| Morretes/2 quartos − Centro/1 quarto | R$ 3,50 | 0,8% | −R$ 92,58 a R$ 55 | Inconclusiva |
+| Centro/1 quarto − Meia Praia/2 quartos | R$ 2 | 0,4% | −R$ 32,51 a R$ 98 | Inconclusiva |
+
+Das 21 comparações possíveis entre os sete segmentos, 12 excluem zero e nove são
+inconclusivas. Entre segmentos adjacentes no ranking, somente a separação do
+primeiro para o segundo é sustentada pelo intervalo agrupado. Em particular, a
+diferença pontual de R$ 150 entre Centro/2 quartos e Centro/1 quarto não permite
+separação estatística clara depois de considerar a concentração por anfitrião.
+Isso não significa igualdade econômica; essa avaliação fica para aquisição e
+retorno.
 
 ## Preços iguais ou superiores a R$ 10 mil
 
@@ -246,30 +369,43 @@ seria uma composição de datas idêntica à do mercado residencial observado.
 | IDs de `Details` e `Mesh` únicos | OK |
 | Join `Details`–`Mesh` | 4.441 → 4.441, sem multiplicação |
 | Grain listing–estadia–capture_day | 0 duplicações |
+| Conversão de preços, datas de estadia e captura | 0 falhas |
+| Preços ausentes, não finitos ou não positivos | 0 casos |
 | Reconciliação de `Price_AV` | 118.330 linhas ligadas + 509 órfãs = 118.839 |
 | Reconciliação de IDs de preço | 999 ligados + 6 órfãos = 1.005 |
 | Grain listing–método–tratamento | 0 duplicações |
 | Pares listing–estadia após cada método | 0 duplicações nos nove resultados |
+| Ponte incremental | erro máximo de reconciliação R$ 0 antes do arredondamento |
+| Concentração por host | 7 de 7 segmentos principais cobertos; 0 `owner_id` ausentes |
+| Contrastes pareados | 21 de 21 comparações produzidas |
 
-Os 509 registros órfãos não foram descartados silenciosamente: permanecem na
+Todos os 35 checks explícitos terminaram em `OK`; checks críticos também encerram
+o script com erro, portanto a validação não depende apenas de `assert`. Os 509
+registros órfãos não foram descartados silenciosamente: permanecem na
 reconciliação, mas não entram em segmentos porque não possuem atributos em
 `Details`. Hashes SHA-256 dos três arquivos de entrada e contagens de cada
 transformação foram gravados nos artefatos gerados.
 
 ## Decisão de continuidade
 
-**O bloco de preço operacional está suficientemente íntegro para avançar, com
-confiança moderada na ordenação dos segmentos principais e baixa confiança na
-representatividade do mercado completo.**
+**O bloco de preço operacional está suficientemente íntegro para descrever a
+amostra coberta, mas não sustenta uma ordenação completa dos sete segmentos.** A
+liderança pontual de Meia Praia/4 quartos sobre Centro/3 quartos é sustentada pelo
+bootstrap por anfitrião. Várias separações intermediárias — inclusive
+Centro/2 quartos versus Centro/1 quarto — permanecem inconclusivas. A confiança
+na representatividade do mercado completo continua baixa.
 
 Condições para o próximo bloco:
 
 1. usar 20/01 como preço principal e mediana entre capturas como sensibilidade;
-2. manter quantidade, dispersão e intervalo junto de toda comparação;
+2. manter quantidade de listings e hosts, dispersão e intervalo agrupado junto
+   de toda comparação;
 3. não promover resultados abaixo de 30 listings para conclusão principal;
 4. manter as duas sensibilidades de preços suspeitos;
 5. declarar que a análise representa listings com preço, não todos os anúncios;
-6. tratar diferenças pequenas entre os segmentos de menor preço como empate
-   metodológico, pois calendário e snapshot alteram sua ordem.
+6. separar tamanho da diferença de evidência estatística e não inferir relevância
+   econômica antes da etapa de aquisição e retorno;
+7. tratar como inconclusiva toda comparação cujo intervalo agrupado da diferença
+   inclua zero, mesmo que a ordem pontual pareça estável.
 
 Nenhuma conclusão de investimento foi produzida nesta etapa.

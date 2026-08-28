@@ -31,6 +31,28 @@ pela análise e a IA. Elas **não são fatos presentes nos CSVs**.
    integralmente os três listings afetados.
 10. Em relatórios e tabelas para leitura será usado o termo **segmento de
     imóveis**. Nomes técnicos internos podem continuar usando `cohort`.
+11. A comparação principal continuará dando peso igual a cada listing. A
+    concentração será diagnosticada por `owner_id` com duas sensibilidades:
+    mediana dos preços típicos de cada anfitrião, dando peso igual aos hosts, e
+    retirada do anfitrião com mais listings. Empates no maior número de listings
+    serão testados separadamente, sem escolha arbitrária de um ID.
+12. A incerteza será mostrada por bootstrap de listings e por bootstrap agrupado
+    por `owner_id`. Na versão agrupada, o anfitrião é reamostrado e todos os seus
+    listings permanecem juntos; assim, anúncios do mesmo operador não são
+    tratados como observações totalmente independentes. Nos contrastes entre
+    dois segmentos, a união dos anfitriões é reamostrada uma vez por réplica, de
+    modo que um host presente nos dois segmentos se mova conjuntamente.
+13. Diferenças entre segmentos terão duas leituras separadas: tamanho do efeito
+    em reais e percentual, e evidência estatística. A evidência será chamada de
+    **inconclusiva** quando o intervalo agrupado da diferença incluir zero. Uma
+    diferença estatisticamente sustentada não será chamada automaticamente de
+    economicamente relevante; esse limite depende da futura análise de aquisição
+    e retorno.
+14. As diferenças entre regras de preço serão decompostas na ordem: método de
+    preço → conjunto de datas → conjunto de listings. Os valores são mudanças
+    incrementais condicionais a essa sequência, não três causas independentes.
+    Por usar medianas, outra ordem pode atribuir valores diferentes às etapas; a
+    soma deve reconciliar com a mudança total antes do arredondamento.
 
 ## Objetivo e critérios
 
@@ -50,8 +72,8 @@ pela análise e a IA. Elas **não são fatos presentes nos CSVs**.
 | ADR proxy | Estatística robusta dos preços anunciados por data de estadia no snapshot escolhido | Não é ADR realizado nem valor efetivamente recebido |
 | Presença no arquivo | Existência de uma linha listing–data no dia de captura | Não será interpretada como disponibilidade, reserva ou ocupação |
 | Receita bruta em cenário | `ADR proxy × noites ocupadas assumidas` | Não é receita observada; ocupação será premissa ou proxy explicitamente rotulado |
-| Preço de aquisição | Distribuição de `sale_price` deduplicado na coorte VivaReal | É preço pedido, não transacionado |
-| Gross yield proxy | `receita bruta anual em cenário ÷ preço de aquisição da coorte` | Numerador e denominador vêm de imóveis diferentes da mesma coorte |
+| Preço de aquisição | Distribuição de `sale_price` deduplicado no segmento VivaReal | É preço pedido, não transacionado |
+| Gross yield proxy | `receita bruta anual em cenário ÷ preço de aquisição do segmento` | Numerador e denominador vêm de imóveis diferentes do mesmo segmento |
 | Yield após condomínio observado | `(receita bruta em cenário − 12 × condomínio mensal válido) ÷ preço de aquisição` | Ainda não é retorno líquido; faltam custos operacionais e de compra |
 
 ## Fórmulas provisórias
@@ -96,9 +118,9 @@ realizado ou receita líquida.
 
 ## Regras ainda condicionais
 
-- **Faixa de incerteza:** mediana e p25/p75 serão obrigatórios; bootstrap será
-  usado para incerteza amostral quando houver suporte, sem pretensão de corrigir
-  viés de seleção.
+- **Faixa de incerteza:** mediana e p25/p75 serão obrigatórios; bootstrap por
+  listing e agrupado por anfitrião serão usados quando houver suporte, sem
+  pretensão de corrigir viés de seleção.
 - **Normalização de bairros:** apenas mapeamentos determinísticos e auditáveis;
   subdivisões ambíguas não serão fundidas silenciosamente.
 - **Custos e retorno:** permanecem fora do primeiro ciclo de preço operacional.
