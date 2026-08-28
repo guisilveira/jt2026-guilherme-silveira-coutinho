@@ -53,6 +53,81 @@ pela análise e a IA. Elas **não são fatos presentes nos CSVs**.
     incrementais condicionais a essa sequência, não três causas independentes.
     Por usar medianas, outra ordem pode atribuir valores diferentes às etapas; a
     soma deve reconciliar com a mudança total antes do arredondamento.
+15. No ciclo 2, os contrastes previamente definidos da tese serão as comparações
+    principais. Demais combinações de bairro, tipologia e quartos serão
+    exploratórias e não sustentarão sozinhas uma conclusão geral.
+16. A evidência entre segmentos terá somente duas classes: **diferença
+    estatisticamente sustentada**, quando o intervalo de 95% do bootstrap
+    agrupado por `owner_id` excluir zero, e **evidência inconclusiva**, quando o
+    intervalo incluir zero. A diferença em reais e percentual será sempre
+    reportada, sem limiar de relevância econômica nesta etapa.
+17. Uma afirmação geral sobre localização exigirá pelo menos dois perfis
+    equivalentes com 30 ou mais listings em cada bairro e direção coerente nos
+    contrastes de preço total. Para chamar a vantagem de sustentada, os
+    intervalos agrupados desses contrastes também deverão excluir zero na mesma
+    direção. Sem isso, a conclusão permanecerá condicionada ao perfil.
+18. O ajuste de calendário do ciclo 2 reutilizará a função do ciclo 1: o
+    universo será limitado a apartamentos e casas antes de calcular a mediana
+    diária e a escala de referência. Um check comparará, por segmento, as
+    medianas ajustadas com `reports/generated/airbnb_price_calendar.csv`.
+
+## Pré-registro da tese operacional dos compactos — ciclo 2
+
+A tese será julgada em dois componentes separados, antes de observar os
+resultados do ciclo:
+
+1. **Vantagem de localização:** Centro · apartamento · 1 quarto contra o mesmo
+   perfil em outros bairros. Evidência favorável exige diferença positiva no
+   preço anunciado total com intervalo agrupado excluindo zero e direção que
+   não se inverta na mediana entre capturas nem nas duas sensibilidades de
+   preços suspeitos. Contrastes sem 30 listings nos dois lados serão
+   exploratórios e não bastarão para declarar o componente sustentado.
+2. **Vantagem do compacto:** Centro · apartamento · 1 quarto contra apartamentos
+   maiores no Centro. O julgamento priorizará preço anunciado por hóspede
+   comportado e preço anunciado por quarto; não será exigido que o compacto tenha
+   preço total superior. Para cada perfil maior principal, evidência favorável
+   exige ao menos uma dessas duas métricas com diferença positiva sustentada,
+   nenhuma com diferença contrária sustentada e direção robusta nas
+   sensibilidades principais. O componente só será favorável se essa condição
+   valer para todos os perfis maiores principais disponíveis; resultado favorável
+   em apenas parte deles será inconclusivo. Se as métricas divergirem, o conflito
+   será exposto sem escolher a mais favorável.
+
+A classificação conjunta será:
+
+- **sustentada operacionalmente:** os dois componentes têm evidência favorável
+  e robusta;
+- **parcialmente sustentada:** somente um componente tem evidência favorável;
+- **não sustentada:** há evidência robusta contrária nos dois componentes;
+- **inconclusiva:** os dados não sustentam claramente nenhuma das três posições
+  anteriores.
+
+Essa classificação é apenas operacional. No componente compacto, "favorável"
+significa somente maior densidade de preço anunciado por capacidade declarada.
+Preço por hóspede e por quarto não demonstra demanda, ocupação, receita,
+retorno ou eficiência por área ou capital. A divisão por quarto pode favorecer
+mecanicamente imóveis menores. A classificação não considera aquisição.
+
+## Regras prévias para capacidade — ciclo 2
+
+As flags abaixo serão calculadas em `Details`, antes do cruzamento com preços:
+
+1. `number_of_guests` ausente, não conversível, não finito, zero ou negativo é
+   inválido para preço por hóspede, mas o listing permanece no preço total.
+2. Capacidade positiva não inteira será marcada como suspeita e preservada.
+3. Capacidade positiva acima da cerca externa de Tukey (`p75 + 3 × IQR`) de
+   seu perfil `tipologia × quartos`, calculada somente em perfis com pelo menos
+   30 capacidades positivas válidas, será marcada como suspeita. Nos demais
+   perfis será usada a cerca externa global. A regra usa somente capacidade e
+   perfil, sem observar preço.
+4. Em imóveis com quartos positivos, capacidade menor que o número de quartos
+   será marcada como suspeita por inconsistência interna, sem exclusão do
+   resultado principal.
+5. O resultado principal por hóspede manterá todas as capacidades positivas,
+   inclusive as suspeitas. A sensibilidade retirará todas as capacidades
+   positivas sinalizadas pela regra prévia, sem seleção posterior pelo efeito.
+6. Preço por quarto será calculado somente quando quartos for finito e maior que
+   zero. Zero quarto permanecerá separado; não haverá imputação.
 
 ## Objetivo e critérios
 
@@ -69,6 +144,8 @@ pela análise e a IA. Elas **não são fatos presentes nos CSVs**.
 | Perfil | Tipologia residencial + número de quartos + capacidade; atributos operacionais entram como explicadores secundários | Zero quarto só será chamado studio após validação textual |
 | Localização | Bairro normalizado; coordenadas apenas para análise interna do Airbnb | Bairros das duas plataformas podem usar fronteiras/nomenclaturas diferentes |
 | Preço anunciado | Valor de `Price_AV.price` associado a listing, data de estadia e captura | A documentação não informa moeda nem inclusão de taxas |
+| Preço anunciado por hóspede comportado | Preço anunciado típico do listing dividido por `number_of_guests` positivo | Mede somente densidade sobre capacidade declarada; não mede demanda, ocupação, receita, retorno ou eficiência por área/capital |
+| Preço anunciado por quarto | Preço anunciado típico do listing dividido por quartos, somente quando quartos > 0 | Pode favorecer mecanicamente imóveis menores e não mede desempenho econômico |
 | ADR proxy | Estatística robusta dos preços anunciados por data de estadia no snapshot escolhido | Não é ADR realizado nem valor efetivamente recebido |
 | Presença no arquivo | Existência de uma linha listing–data no dia de captura | Não será interpretada como disponibilidade, reserva ou ocupação |
 | Receita bruta em cenário | `ADR proxy × noites ocupadas assumidas` | Não é receita observada; ocupação será premissa ou proxy explicitamente rotulado |

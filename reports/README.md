@@ -52,3 +52,38 @@ O script usa somente `Details_Itapema.csv`, `Mesh_Ids_Data_Itapema.csv` e
 - `generated/airbnb_price_summary.json`: métricas que sustentam o relatório.
 
 O relatório interpretativo é `airbnb_price_analysis.md`.
+
+## Ciclo 2 — perfis, localização e tese operacional
+
+Execute depois do ciclo 1:
+
+```bash
+python scripts/analyze_airbnb_profiles.py
+```
+
+O script usa `Details`, `Mesh`, `Price_AV` e
+`../data/processed/airbnb_listing_prices.csv`. Não usa VivaReal e recria:
+
+- `../data/processed/airbnb_listing_profile_metrics.csv`: preço total, por
+  hóspede comportado e por quarto no grain listing–método–tratamento;
+- `generated/airbnb_profile_segments.csv`: medianas, p25/p75, amostra,
+  anfitriões, incerteza agrupada e sensibilidades por segmento;
+- `generated/airbnb_profile_contrasts.csv`: contrastes controlados no headline,
+  com os pares pré-definidos da tese identificados separadamente;
+- `generated/airbnb_profile_robustness.csv`: cada leitura de método, outlier,
+  calendário, capacidade e concentração por anfitrião;
+- `generated/airbnb_location_profile_matrix.csv`: comparações de bairros
+  somente dentro de perfis equivalentes com suporte principal;
+- `generated/airbnb_capacity_quality.csv`: auditoria e tratamento dos campos de
+  capacidade e quartos;
+- `generated/airbnb_profile_checks.csv`: checks explícitos de integridade;
+- `generated/airbnb_profile_transformations.csv`: contagens e funções das
+  transformações;
+- `generated/airbnb_profile_summary.json`: resumo auditável dos resultados;
+- `figures/airbnb_*.svg`: quatro gráficos estáticos do ciclo.
+
+O relatório interpretativo é `airbnb_profile_location_analysis.md`.
+
+O check de calendário exige o mesmo universo residencial e as mesmas medianas
+ajustadas de `generated/airbnb_price_calendar.csv`; por isso o ciclo 1 deve ser
+executado antes do ciclo 2.

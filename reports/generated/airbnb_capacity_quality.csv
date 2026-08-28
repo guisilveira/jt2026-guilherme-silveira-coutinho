@@ -1,0 +1,14 @@
+regra,n_listings,tratamento,proporcao_details
+Listings em Details,4441,universo,1.0
+Capacidade ausente,0,inválido,0.0
+Falha de conversão da capacidade,0,inválido,0.0
+Capacidade não finita,0,inválido,0.0
+Capacidade zero,0,inválido,0.0
+Capacidade negativa,0,inválido,0.0
+Capacidade positiva válida,4441,resultado principal,1.0
+Capacidade positiva não inteira,0,flag suspeita,0.0
+Capacidade acima da cerca externa,18,flag suspeita,0.004053141184417924
+Capacidade menor que quartos,6,flag suspeita,0.0013510470614726414
+Capacidade positiva suspeita (união),24,preservada; retirada apenas em sensibilidade,0.005404188245890566
+Quartos zero,56,fora somente de preço por quarto,0.012609772573744652
+Quartos positivos válidos,4385,elegível para preço por quarto,0.9873902274262554

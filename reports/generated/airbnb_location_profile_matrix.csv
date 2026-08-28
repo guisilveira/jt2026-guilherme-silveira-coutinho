@@ -1,0 +1,5 @@
+bairro_a,bairro_b,tipo_imovel,quartos,perfil,n_listings_a,n_listings_b,mediana_a,mediana_b,diferenca_a_menos_b_rs,diferenca_a_menos_b_pct_sobre_b,ic95_inferior_rs,ic95_superior_rs,evidencia_estatistica,par_bairros,n_perfis_equivalentes_no_par
+Centro,Meia Praia,apartamento,2,apartamento · 2 quartos,59,126,600.0,448.0,152.0,0.3392857142857143,-49.025,225.02499999999998,evidência inconclusiva,Centro × Meia Praia,2
+Centro,Morretes,apartamento,2,apartamento · 2 quartos,59,43,600.0,453.5,146.5,0.3230429988974642,-59.25625,207.0,evidência inconclusiva,Centro × Morretes,1
+Meia Praia,Morretes,apartamento,2,apartamento · 2 quartos,126,43,448.0,453.5,-5.5,-0.012127894156560088,-71.0,42.5,evidência inconclusiva,Meia Praia × Morretes,1
+Centro,Meia Praia,apartamento,3,apartamento · 3 quartos,38,284,664.0,650.0,14.0,0.021538461538461538,-143.0175,160.05312499999997,evidência inconclusiva,Centro × Meia Praia,2

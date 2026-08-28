@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="523" viewBox="0 0 1100 523">
+<rect width="100%" height="100%" fill="white"/>
+<text x="30" y="38" font-family="Arial" font-size="22" font-weight="bold">Centro · apartamento · 1 quarto: diferença versus comparadores</text>
+<line x1="748.3" y1="63" x2="748.3" y2="483" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="5,5"/>
+<text x="30" y="90" font-family="Arial" font-size="14">Meia Praia · apartamento · 1 quarto · Preço anunciado total</text>
+<line x1="669.8" y1="85" x2="844.0" y2="85" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="757.8" cy="85" r="6" fill="#006d77"/>
+<text x="767.8" y="90" font-family="Arial" font-size="13">R$ 10</text>
+<text x="30" y="132" font-family="Arial" font-size="14">Meia Praia · apartamento · 1 quarto · Preço anunciado por hóspede comportado</text>
+<line x1="643.2" y1="127" x2="790.0" y2="127" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="760.5" cy="127" r="6" fill="#006d77"/>
+<text x="770.5" y="132" font-family="Arial" font-size="13">R$ 13</text>
+<text x="30" y="174" font-family="Arial" font-size="14">Meia Praia · apartamento · 1 quarto · Preço anunciado por quarto</text>
+<line x1="669.8" y1="169" x2="844.0" y2="169" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="757.8" cy="169" r="6" fill="#006d77"/>
+<text x="767.8" y="174" font-family="Arial" font-size="13">R$ 10</text>
+<text x="30" y="216" font-family="Arial" font-size="14">Centro · apartamento · 2 quartos · Preço anunciado total</text>
+<line x1="556.8" y1="211" x2="817.0" y2="211" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="604.7" cy="211" r="6" fill="#006d77"/>
+<text x="614.7" y="216" font-family="Arial" font-size="13">R$ -150</text>
+<text x="30" y="258" font-family="Arial" font-size="14">Centro · apartamento · 2 quartos · Preço anunciado por hóspede comportado</text>
+<line x1="762.6" y1="253" x2="807.5" y2="253" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="782.4" cy="253" r="6" fill="#006d77"/>
+<text x="792.4" y="258" font-family="Arial" font-size="13">R$ 36</text>
+<text x="30" y="300" font-family="Arial" font-size="14">Centro · apartamento · 2 quartos · Preço anunciado por quarto</text>
+<line x1="856.6" y1="295" x2="1020.1" y2="295" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="891.9" cy="295" r="6" fill="#006d77"/>
+<text x="901.9" y="300" font-family="Arial" font-size="13">R$ 150</text>
+<text x="30" y="342" font-family="Arial" font-size="14">Centro · apartamento · 3 quartos · Preço anunciado total</text>
+<line x1="410.0" y1="337" x2="688.7" y2="337" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="543.4" cy="337" r="6" fill="#006d77"/>
+<text x="553.4" y="342" font-family="Arial" font-size="13">R$ -214</text>
+<text x="30" y="384" font-family="Arial" font-size="14">Centro · apartamento · 3 quartos · Preço anunciado por hóspede comportado</text>
+<line x1="756.2" y1="379" x2="804.3" y2="379" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="784.4" cy="379" r="6" fill="#006d77"/>
+<text x="794.4" y="384" font-family="Arial" font-size="13">R$ 38</text>
+<text x="30" y="426" font-family="Arial" font-size="14">Centro · apartamento · 3 quartos · Preço anunciado por quarto</text>
+<line x1="910.1" y1="421" x2="1030.0" y2="421" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="967.2" cy="421" r="6" fill="#006d77"/>
+<text x="977.2" y="426" font-family="Arial" font-size="13">R$ 229</text>
+<line x1="410" y1="483" x2="1030" y2="483" stroke="#333"/>
+<text x="410" y="508" font-family="Arial" font-size="12">R$ -353</text>
+<text x="970" y="508" font-family="Arial" font-size="12">R$ 294</text>
+</svg>

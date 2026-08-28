@@ -162,3 +162,96 @@ amostra coberta, com evidência mais forte para a liderança de Meia Praia/4
 quartos sobre o segundo colocado do que para ordenar os segmentos intermediários
 e inferiores. O ponto de parada foi respeitado; o próximo bloco depende de
 revisão humana deste resultado.
+
+## Ciclo 2 — perfil, localização e tese operacional
+
+### Pergunta e hipóteses pré-registradas
+
+**Pergunta:** quais perfis e localizações apresentam maior preço anunciado ao
+comparar imóveis semelhantes, e apartamentos de um quarto no Centro possuem
+vantagem operacional sustentada?
+
+- **Hipótese principal:** Centro · apartamento · 1 quarto tem vantagem de
+  localização sobre o mesmo perfil em outros bairros e vantagem de compacto
+  sobre apartamentos maiores do Centro nas métricas por capacidade.
+- **Hipóteses concorrentes:** outro bairro supera o Centro no mesmo perfil;
+  imóveis maiores igualam ou superam o compacto também por hóspede ou quarto;
+  ou as diferenças são inconclusivas após considerar anfitrião e sensibilidades.
+
+### Análise mínima
+
+1. auditar `number_of_guests` e quartos antes de cruzar capacidade com preço;
+2. calcular por listing preço anunciado total, por hóspede comportado e por
+   quarto, sem razão de medianas;
+3. comparar quartos dentro do mesmo bairro e tipologia;
+4. comparar bairros dentro do mesmo perfil exato;
+5. tratar como principais somente os contrastes pré-definidos da tese;
+6. reportar `n` de listings, `n` de hosts, mediana, p25/p75, diferença em reais
+   e percentual e intervalo agrupado por `owner_id`;
+7. testar mediana entre capturas, duas sensibilidades de preço suspeito,
+   calendário e concentração por anfitrião;
+8. preservar capacidades positivas suspeitas no headline e retirá-las somente
+   na sensibilidade pré-definida;
+9. impedir afirmação geral de bairro sem dois perfis equivalentes principais e
+   direção coerente;
+10. registrar a limitação de que `listing_type` é tipologia do imóvel, não tipo
+    de anúncio.
+
+### Critério de decisão
+
+- intervalo agrupado exclui zero: diferença estatisticamente sustentada;
+- intervalo agrupado inclui zero: evidência inconclusiva;
+- tamanho da diferença será mostrado em reais e percentual, sem classificação
+  de relevância econômica;
+- suporte principal exige 30 listings por lado; 10–29 é exploratório e abaixo
+  de 10 é insuficiente;
+- a tese será classificada conforme os dois componentes e as quatro categorias
+  pré-registradas em `docs/methodology.md`.
+
+### Escopo e ponto de parada
+
+Somente `Details`, `Mesh`, `Price_AV` e artefatos derivados do ciclo 1. Não usar
+VivaReal, não estimar ocupação, receita ou retorno, não construir dashboard e não
+emitir recomendação final de compra. Parar após o relatório do ciclo 2.
+
+### Resultado do ciclo e correção de calendário
+
+- os 20 checks de integridade foram aprovados e os 777 listings do headline
+  reconciliaram com o ciclo 1;
+- a correção passou a reutilizar a função de calendário do ciclo 1, filtrando
+  o universo residencial antes da mediana diária. As medianas ajustadas
+  reconciliaram nos 45 segmentos, com diferença máxima abaixo de `1e-10`;
+- todas as 4.441 capacidades são positivas, finitas e conversíveis; 24 foram
+  sinalizadas previamente como suspeitas por cerca externa ou incoerência com
+  quartos e permaneceram no resultado principal;
+- Meia Praia · apartamento · 4 quartos tem o maior preço total mediano entre os
+  segmentos principais (R$ 899). Contra o perfil controlado de 3 quartos no
+  mesmo bairro, a diferença é R$ 249 (38,3%) e o intervalo agrupado exclui zero;
+- Centro · apartamento · 1 quarto lidera preço por hóspede comportado
+  (R$ 136,50) e preço por quarto (R$ 450) entre os segmentos principais;
+- contra Centro/2 quartos, as diferenças do compacto são R$ 35,69 por hóspede
+  (35,4%) e R$ 150 por quarto (50,0%); contra Centro/3 quartos, R$ 37,73
+  (38,2%) e R$ 228,67 (103,3%). Os quatro intervalos agrupados excluem zero e o
+  sinal permanece nas sensibilidades;
+- o preço total do compacto é inferior: R$ 150 abaixo de Centro/2 quartos, com
+  evidência inconclusiva, e R$ 214 abaixo de Centro/3 quartos, com diferença
+  sustentada;
+- a comparação Centro/1 quarto versus Meia Praia/1 quarto é apenas
+  exploratória (`n=75` versus `n=16`), tem diferença total de R$ 10 (2,3%),
+  intervalo de R$ -82 a R$ 100 e inverte para R$ -11,93 (-2,6%) no ajuste de
+  calendário corrigido;
+- nenhum par de bairros apresentou dois perfis equivalentes principais com
+  diferenças sustentadas na mesma direção. A localização deve ser respondida
+  de forma condicionada ao perfil;
+- zero quarto permaneceu separado; o maior segmento teve apenas sete listings,
+  abaixo do suporte exploratório, e não foi chamado de studio;
+- a tese foi classificada como **parcialmente sustentada operacionalmente**:
+  componente de localização inconclusivo e componente compacto favorável
+  apenas em densidade de preço anunciado por capacidade declarada. Preço por
+  hóspede e por quarto não demonstra demanda, ocupação, receita, retorno ou
+  eficiência por área/capital; a razão por quarto pode favorecer mecanicamente
+  imóveis menores.
+
+**Ponto de parada:** ciclo operacional concluído. A classificação ainda deve
+ser confrontada com preço de aquisição e cenários econômicos; não constitui
+recomendação de compra.
