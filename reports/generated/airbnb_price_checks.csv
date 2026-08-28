@@ -1,0 +1,17 @@
+check,actual,expected,status,notes
+Details ID único,True,True,OK,
+Mesh ID único,True,True,OK,
+Join Details–Mesh sem multiplicação,4441,4441,OK,Join validado como 1:1.
+Grain Price listing–estadia–capture_day único,0,0,OK,O timestamp completo não é usado como snapshot independente.
+Reconciliação de linhas Price,118839,118839,OK,509 linhas órfãs preservadas no diagnóstico.
+Reconciliação de IDs Price,1005,1005,OK,Namespaces de IDs não foram convertidos.
+Uma linha por listing–método–tratamento,0,0,OK,Garante peso igual por listing na agregação posterior.
+Par listing–estadia único: snapshot_2025_01_20/original,0,0,OK,
+Par listing–estadia único: snapshot_2025_01_20/exclude_suspicious_prices,0,0,OK,
+Par listing–estadia único: snapshot_2025_01_20/exclude_affected_listings,0,0,OK,
+Par listing–estadia único: latest_available/original,0,0,OK,
+Par listing–estadia único: latest_available/exclude_suspicious_prices,0,0,OK,
+Par listing–estadia único: latest_available/exclude_affected_listings,0,0,OK,
+Par listing–estadia único: median_across_captures/original,0,0,OK,
+Par listing–estadia único: median_across_captures/exclude_suspicious_prices,0,0,OK,
+Par listing–estadia único: median_across_captures/exclude_affected_listings,0,0,OK,

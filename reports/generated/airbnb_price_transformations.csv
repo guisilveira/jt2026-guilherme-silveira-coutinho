@@ -1,0 +1,15 @@
+etapa,linhas_entrada,linhas_saida,registros_afetados,funcao,observacao
+Leitura de Details,4441,4441,0,read_inputs,Somente leitura; ID preservado como texto.
+Leitura de Mesh,4441,4441,0,read_inputs,Somente leitura; ID preservado como texto.
+Join Details–Mesh,4441,4441,0,build_listing_base,Join 1:1; nenhuma multiplicação de listings.
+Leitura de Price_AV,118839,118839,0,read_inputs,Preço raw preservado; datas e flag ≥ 10.000 derivadas.
+Separação de preços ligados a Details,118839,118330,509,main,"6 IDs e 509 linhas órfãs ficam fora da comparação, mas são reconciliadas."
+Agregação snapshot_2025_01_20/original,118330,41778,76552,filter_variant + build_pair_table + aggregate_listing,"41778 pares listing–estadia resultaram em 777 preços típicos por listing. A diferença inclui filtro temporal, sensibilidade e agregação; não é perda silenciosa."
+Agregação snapshot_2025_01_20/exclude_suspicious_prices,118330,41771,76559,filter_variant + build_pair_table + aggregate_listing,"41771 pares listing–estadia resultaram em 776 preços típicos por listing. A diferença inclui filtro temporal, sensibilidade e agregação; não é perda silenciosa."
+Agregação snapshot_2025_01_20/exclude_affected_listings,118330,41771,76559,filter_variant + build_pair_table + aggregate_listing,"41771 pares listing–estadia resultaram em 776 preços típicos por listing. A diferença inclui filtro temporal, sensibilidade e agregação; não é perda silenciosa."
+Agregação latest_available/original,118330,58600,59730,filter_variant + build_pair_table + aggregate_listing,"58600 pares listing–estadia resultaram em 999 preços típicos por listing. A diferença inclui filtro temporal, sensibilidade e agregação; não é perda silenciosa."
+Agregação latest_available/exclude_suspicious_prices,118330,58507,59823,filter_variant + build_pair_table + aggregate_listing,"58507 pares listing–estadia resultaram em 997 preços típicos por listing. A diferença inclui filtro temporal, sensibilidade e agregação; não é perda silenciosa."
+Agregação latest_available/exclude_affected_listings,118330,58493,59837,filter_variant + build_pair_table + aggregate_listing,"58493 pares listing–estadia resultaram em 996 preços típicos por listing. A diferença inclui filtro temporal, sensibilidade e agregação; não é perda silenciosa."
+Agregação median_across_captures/original,118330,58600,59730,filter_variant + build_pair_table + aggregate_listing,"58600 pares listing–estadia resultaram em 999 preços típicos por listing. A diferença inclui filtro temporal, sensibilidade e agregação; não é perda silenciosa."
+Agregação median_across_captures/exclude_suspicious_prices,118330,58507,59823,filter_variant + build_pair_table + aggregate_listing,"58507 pares listing–estadia resultaram em 997 preços típicos por listing. A diferença inclui filtro temporal, sensibilidade e agregação; não é perda silenciosa."
+Agregação median_across_captures/exclude_affected_listings,118330,58493,59837,filter_variant + build_pair_table + aggregate_listing,"58493 pares listing–estadia resultaram em 996 preços típicos por listing. A diferença inclui filtro temporal, sensibilidade e agregação; não é perda silenciosa."
