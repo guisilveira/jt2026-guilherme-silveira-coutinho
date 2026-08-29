@@ -255,3 +255,60 @@ emitir recomendação final de compra. Parar após o relatório do ciclo 2.
 **Ponto de parada:** ciclo operacional concluído. A classificação ainda deve
 ser confrontada com preço de aquisição e cenários econômicos; não constitui
 recomendação de compra.
+
+## Ciclo 3 — mercado de compra e estimativa simples de retorno
+
+### Pergunta e análise mínima
+
+**Pergunta:** quais segmentos principais preservam melhor relação entre preço
+Airbnb anunciado e preço VivaReal pedido quando o custo de aquisição entra na
+comparação?
+
+1. deduplicar o VivaReal por `listing_id`, interrompendo diante de divergência
+   material entre duplicações;
+2. preparar apenas apartamentos e casas, preservando campos originais e flags;
+3. resumir preço pedido, área, condomínio, IPTU e concentração por anunciante;
+4. ligar as bases somente por bairro normalizado + tipologia + quartos;
+5. classificar suporte principal, exploratório e insuficiente automaticamente;
+6. calcular nove testes de estresse de ocupação × sazonalidade;
+7. comparar headline e sensibilidades pré-definidas sem busca exploratória;
+8. testar diretamente Centro/1 quarto contra Meia Praia/1 quarto, Centro/2 e
+   Centro/3 quartos;
+9. recomendar um segmento apenas se a liderança persistir; caso contrário,
+   manter até três alternativas.
+
+### Critério de decisão
+
+- liderança principal: maior gross yield proxy em 45% × 80%, com amostras
+  principais e sem dependência de uma regra anômala;
+- robustez: preservação da liderança nas sensibilidades de preço Airbnb, preço
+  pedido e condomínio;
+- compactos: Centro/1 quarto deve superar Centro/2 e Centro/3 e preservar o
+  sinal; qualquer inversão torna o componente econômico inconclusivo;
+- os nove testes de ocupação e sazonalidade não distinguem o ranking antes do
+  condomínio, pois aplicam multiplicador comum.
+
+### Resultado e ponto de parada
+
+- 18 de 18 checks críticos foram aprovados;
+- 8.329 linhas do VivaReal produziram 8.293 IDs únicos; as 36 duplicações não
+  apresentaram divergência material após normalizar a ordem de `amenities`;
+- o universo derivado contém 8.044 anúncios residenciais, 34 segmentos
+  correspondentes, 11 exclusivos do Airbnb e 83 exclusivos do VivaReal;
+- sete segmentos alcançaram suporte principal em ambas as plataformas;
+- Morretes/apartamento/2 quartos lidera o cenário intermediário com 7,5% de
+  gross yield proxy, preço Airbnb de R$ 454 e preço pedido mediano de R$ 790
+  mil; a faixa dos nove testes é 3,8%–12,6%;
+- a liderança não é universal: com preço de compra no p25, Centro/apartamento/1
+  quarto passa à frente. A decisão provisória mantém Morretes/2 quartos,
+  Centro/2 quartos e Centro/1 quarto como alternativas, sem vencedor único;
+- Centro/1 quarto fica 0,21 p.p. abaixo de Centro/2 no headline e 2,49 p.p.
+  acima de Centro/3; a diferença contra Centro/2 muda de sinal nas
+  sensibilidades. O componente econômico dos compactos é **inconclusivo**;
+- Centro versus Meia Praia/1 quarto permanece exploratório pelo suporte Airbnb
+  de Meia Praia;
+- condomínio válido cobre de 40,5% a 61,8% dos segmentos principais e não foi
+  interpretado como custo completo. IPTU não foi descontado.
+
+**Ponto de parada:** recomendação econômica provisória concluída. Não houve
+matching individual, dashboard, Ciclo 4 ou recomendação final do hackathon.

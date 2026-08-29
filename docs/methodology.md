@@ -156,13 +156,13 @@ As flags abaixo serão calculadas em `Details`, antes do cruzamento com preços:
 ## Fórmulas provisórias
 
 ```text
-receita_bruta_cenario = ADR_proxy × 365 × ocupacao_cenario
+preco_anualizado_no_cenario = preco_anunciado_tipico × fator_sazonalidade × 365 × ocupacao_cenario
 
-gross_yield_proxy = receita_bruta_cenario / preco_aquisicao_coorte
+gross_yield_proxy = preco_anualizado_no_cenario / preco_pedido_mediano_segmento
 
 yield_apos_condominio =
-    (receita_bruta_cenario - 12 × condominio_mensal_valido)
-    / preco_aquisicao_coorte
+    (preco_anualizado_no_cenario - 12 × condominio_mensal_mediano_valido)
+    / preco_pedido_mediano_segmento
 ```
 
 O headline não usará soma de preços disponíveis como receita. Cenários de
@@ -216,3 +216,51 @@ realizado ou receita líquida.
 - Se a cobertura ou a composição das datas de estadia alterar materialmente os
   resultados, a conclusão será restringida à população coberta e acompanhada de
   uma leitura ajustada de calendário; não haverá imputação de preços ausentes.
+
+## Decisões implementadas no Ciclo 3 — compra e retorno
+
+As regras abaixo são **decisões metodológicas humanas**, não fatos fornecidos
+pelos dados:
+
+1. A ligação Airbnb–VivaReal é exclusivamente agregada por `bairro normalizado
+   + tipo residencial + quartos`. IDs, títulos e descrições não são usados para
+   correspondência individual.
+2. A normalização de bairro remove caixa, espaços repetidos e acentos. Ausências
+   permanecem `desconhecido`, não são ligadas entre plataformas e subdivisões
+   como `Meia Praia - Frente Mar` não são fundidas.
+3. O VivaReal é deduplicado por `listing_id` somente após comprovar que as 36
+   duplicações não divergem além da ordem de `amenities`. Não se tenta detectar
+   imóveis físicos repetidos sob IDs diferentes.
+4. O universo residencial principal contém apenas apartamentos e casas.
+   Terrenos, comerciais e `outros` são filtros de escopo, não erros.
+5. Preços pedidos inválidos são ausentes, não finitos ou não positivos. Valores
+   abaixo de R$ 100 mil ou fora da cerca externa `p25 ± 3 × IQR` do segmento
+   com pelo menos 20 anúncios recebem flag e permanecem no headline; somente a
+   sensibilidade os retira.
+6. Área ausente/não finita, não positiva ou acima de 1.000 m² não exclui o
+   anúncio da análise de preço. Ela fica fora apenas das métricas por m².
+7. Condomínio ausente ou zero significa desconhecido. O yield após condomínio
+   usa somente valores positivos, não suspeitos e apresenta suporte principal
+   apenas com pelo menos 20 observações válidas no segmento.
+8. IPTU é auditado, mas não descontado no Ciclo 3.
+9. O headline usa preço Airbnb da captura de 20/01 e preço pedido mediano. Os
+   nove pares de ocupação (30%, 45%, 60%) e sazonalidade (60%, 80%, 100%) são
+   testes de estresse; nenhum é o mais provável. O par 45% × 80% é apenas uma
+   leitura intermediária para comunicação.
+10. As sensibilidades são univariadas e pré-definidas: mediana Airbnb entre
+    capturas, ajuste de calendário, dois tratamentos dos preços Airbnb ≥ R$ 10
+    mil, p25/p75 do preço de compra, retirada dos preços de compra suspeitos e
+    condomínio observado. Não há escolha posterior da regra mais favorável.
+11. Suporte principal exige 30 anúncios Airbnb com preço em 20/01 e 20 anúncios
+    VivaReal deduplicados; exploratório exige ao menos 10 em cada base.
+12. O componente econômico dos compactos só é favorável se Centro/apartamento/1
+    quarto superar Centro/2 e Centro/3 no gross yield proxy e preservar o sinal
+    nas sensibilidades. Inversão produz classificação inconclusiva.
+
+### Interpretação econômica
+
+`preço anualizado no cenário` é um valor construído a partir de preço anunciado
+e premissas. `gross yield proxy` relaciona segmentos agregados de duas bases, não
+o fluxo de caixa de um imóvel. `yield após condomínio observado` desconta apenas
+um custo parcial e com cobertura seletiva. Nenhuma dessas métricas é receita
+realizada, retorno líquido, ADR realizado ou rentabilidade garantida.

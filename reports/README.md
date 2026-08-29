@@ -87,3 +87,34 @@ O relatório interpretativo é `airbnb_profile_location_analysis.md`.
 O check de calendário exige o mesmo universo residencial e as mesmas medianas
 ajustadas de `generated/airbnb_price_calendar.csv`; por isso o ciclo 1 deve ser
 executado antes do ciclo 2.
+
+## Ciclo 3 — mercado de compra e retorno em cenários
+
+Execute depois dos ciclos 1 e 2:
+
+```bash
+python scripts/analyze_investment_returns.py
+```
+
+O script deduplica o VivaReal em uma tabela derivada, mantém somente o escopo
+residencial para a análise principal e liga as plataformas apenas por segmento.
+Ele recria:
+
+- `../data/processed/vivareal_residential_listings.csv`: anúncios residenciais
+  deduplicados, valores originais e flags de qualidade;
+- `generated/vivareal_quality.csv`: contagens de deduplicação, escopo,
+  normalização e anomalias;
+- `generated/vivareal_segments.csv`: preço pedido, área, condomínio, IPTU e
+  concentração por anunciante em cada segmento;
+- `generated/airbnb_vivareal_segments.csv`: cobertura e suporte da ligação
+  agregada, incluindo segmentos exclusivos de cada plataforma;
+- `generated/investment_scenarios.csv`: nove testes de estresse por segmento;
+- `generated/investment_robustness.csv`: sensibilidades univariadas de preço
+  Airbnb, preço de compra e condomínio no cenário intermediário ilustrativo;
+- `generated/investment_checks.csv`: validações críticas da execução;
+- `generated/investment_summary.json`: resumo auditável da recomendação
+  provisória.
+
+O relatório interpretativo é `investment_return_analysis.md`. Os valores são
+`gross yield proxy` e `yield após condomínio observado`, não retorno líquido ou
+receita realizada.

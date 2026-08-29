@@ -1,0 +1,92 @@
+{
+  "scope": {
+    "individual_matching": false,
+    "join_grain": "bairro normalizado + tipo residencial + quartos",
+    "return_metric": "gross yield proxy",
+    "occupancy_observed": false,
+    "seasonality_observed_for_full_year": false
+  },
+  "assumptions": {
+    "occupancy": [
+      0.3,
+      0.45,
+      0.6
+    ],
+    "seasonality_factors": [
+      0.6,
+      0.8,
+      1.0
+    ],
+    "intermediate_illustrative": {
+      "occupancy": 0.45,
+      "seasonality": 0.8
+    }
+  },
+  "source_hashes": {
+    "Details_Itapema.csv": "3688ba1d8e576fb7e1091ff6242250bc3f845a3e10241fac378be8a168c83e84",
+    "Hosts_ids_Itapema.csv": "b043ffea58b6f9b572fa8fc2dfbe4c155b71a0e1636e6edc28d33c4ab7765eef",
+    "Mesh_Ids_Data_Itapema.csv": "f5064eec7fbfa7a962a0f67044baaeb0d7fcbfa9a730f80ce5a9dc8d58af694a",
+    "Price_AV_Itapema.csv": "c726481d3cb5b4b5e9a1eff9e27f2919a7deeeb66c1696f0d0f6d5527fd9b555",
+    "VivaReal_Itapema.csv": "ac6a4a8a3d2b43e0a7583ef7f4a86b849dedb79d56c2756eb2dce012de7ddd4f"
+  },
+  "counts": {
+    "vivareal_raw_rows": 8329,
+    "vivareal_unique_ids": 8293,
+    "vivareal_residential_rows": 8044,
+    "linked_segment_rows": 34,
+    "scenario_rows": 306,
+    "robustness_rows": 306
+  },
+  "results": {
+    "provisional_recommendation": [
+      "Morretes · apartamento · 2 quartos",
+      "Centro · apartamento · 2 quartos",
+      "Centro · apartamento · 1 quarto"
+    ],
+    "robust_single_leader": false,
+    "leader_segment": "morretes|apartamento|2 quartos",
+    "leader_intermediate_gross_yield_proxy": 0.07543025316455697,
+    "leader_sensitivity_wins": 8,
+    "sensitivity_count": 9,
+    "compact_economic_status": "inconclusivo",
+    "compact_comparisons": [
+      {
+        "comparator": "meia praia|apartamento|1 quarto",
+        "support": "exploratório",
+        "headline_delta": 0.0005510227600115242,
+        "min_delta": -0.002742662951375735,
+        "max_delta": 0.014245524529677048,
+        "direction_preserved": false,
+        "all_positive": false
+      },
+      {
+        "comparator": "centro|apartamento|2 quartos",
+        "support": "principal",
+        "headline_delta": -0.002118319491939427,
+        "min_delta": -0.0036425012212994573,
+        "max_delta": 0.009472218564845293,
+        "direction_preserved": false,
+        "all_positive": false
+      },
+      {
+        "comparator": "centro|apartamento|3 quartos",
+        "support": "principal",
+        "headline_delta": 0.02489077367576243,
+        "min_delta": 0.01733720706260032,
+        "max_delta": 0.04076377536945813,
+        "direction_preserved": true,
+        "all_positive": true
+      }
+    ],
+    "link_coverage": {
+      "exclusivo VivaReal": 83,
+      "segmento correspondente": 34,
+      "exclusivo Airbnb": 11
+    }
+  },
+  "checks": {
+    "passed": 18,
+    "total": 18,
+    "all_passed": true
+  }
+}
