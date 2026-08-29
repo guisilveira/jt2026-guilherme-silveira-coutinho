@@ -2,16 +2,26 @@
 
 ## Texto falado
 
-Se a Seazone fosse investir hoje em Itapema, eu priorizaria um apartamento de dois quartos em Morretes, sujeito à validação do imóvel específico, do condomínio e dos custos operacionais.
+Oi, pessoal! Eu sou o Guilherme e vou apresentar minha recomendação de investimento para a Seazone em Itapema.
 
-Eu defini “melhor” como a melhor relação entre preço anunciado e capital necessário para compra, e não simplesmente o maior preço no Airbnb. Morretes, com dois quartos, apresentou preço anunciado típico de 454 reais e preço pedido mediano de 790 mil reais. No cenário intermediário ilustrativo, com 45% de ocupação e fator sazonal de 80%, o gross yield proxy foi de 7,5%. Esse segmento liderou oito das nove sensibilidades e possui suporte de 43 anúncios no Airbnb e 1.037 no VivaReal.
+Eu defini “melhor” como a relação entre preço anunciado e capital de compra, considerando a estabilidade do resultado.
 
-Esses percentuais são testes de estresse, não previsões. A análise relaciona imóveis diferentes das duas plataformas apenas por bairro, tipo e quartos. Portanto, não representa retorno histórico ou garantido de um imóvel individual.
+Respondendo às quatro perguntas do desafio:
 
-Centro, com dois ou um quarto, continua como alternativa. Não existe vencedor totalmente robusto porque Centro com um quarto assume a liderança quando usamos o p25 dos preços pedidos.
+Primeiro: qual é o melhor perfil? Para investimento, é apartamento de dois quartos em Morretes. O maior preço anunciado pertence aos apartamentos de quatro quartos em Meia Praia, enquanto Centro com um quarto lidera por hóspede e por quarto. Os dados não distinguem imóvel inteiro, quarto privativo ou compartilhado, então essa parte ficou sem resposta confiável.
 
-Os dados também não sustentam os apartamentos compactos no Centro como principal tese de investimento. Eles mostraram maior densidade de preço anunciado por hóspede e por quarto, mas a vantagem de localização foi inconclusiva. No gross yield central, Centro com um quarto ficou abaixo de Centro com dois quartos, houve inversão nas sensibilidades e o resultado após condomínio usa somente dez valores válidos.
+Segundo: qual é a melhor localização? Como não existe receita observada, analisei preços anunciados. Não encontrei um bairro vencedor geral: Meia Praia concentra imóveis maiores e, entre imóveis semelhantes, as diferenças entre bairros foram inconclusivas. A localização depende do perfil.
 
-Eu trabalhei com a IA como parceira de análise, não como fonte de verdade. As decisões de negócio, critérios, cenários e limites de amostra foram escolhas humanas. A IA auditou os arquivos, validou relacionamentos, executou checks e sensibilidades e tornou o processo reproduzível. Durante as revisões, corrigimos o universo do ajuste de calendário, a leitura da concentração por anfitrião e rebaixamos conclusões que os dados não sustentavam, como a ideia de um bairro vencedor geral.
+Terceiro: quais características estão associadas aos maiores preços? Apareceram anfitrião profissional, número de banheiros, taxa de limpeza e nota. Anfitrião profissional esteve associado a preços 21% maiores e um banheiro adicional, a 13,3%. São associações, não causas.
 
-Com mais uma semana, eu buscaria dados de ocupação e preços realizados ao longo de um ano, custos operacionais completos e preços efetivamente negociados. Depois faria a due diligence de imóveis específicos da shortlist, verificando regras do condomínio, IPTU, manutenção, liquidez e padrão construtivo. Isso permitiria transformar esta recomendação por segmento em uma decisão real de aquisição.
+Por fim: o que eu compraria hoje? Eu priorizaria um apartamento de dois quartos em Morretes, após validar o imóvel, o condomínio e os custos. O preço anunciado típico foi de 454 reais; o preço pedido mediano, 790 mil; e o gross yield proxy, 7,5%. O segmento liderou oito de nove sensibilidades, com 43 anúncios no Airbnb e 1.037 no VivaReal.
+
+Esse cenário assume 45% de ocupação e sazonalidade de 80%; é um teste, não uma previsão. Centro com dois e com um quarto são alternativas. Centro com um quarto lidera quando usamos o p25 dos preços de compra.
+
+Sobre os compactos no Centro, os dados não sustentam essa como principal tese. Eles têm boa densidade de preço por capacidade, mas a localização foi inconclusiva e o resultado econômico mudou entre cenários.
+
+Usei a IA para auditar os dados, testar hipóteses, executar análises e encontrar inconsistências. Eu defini os critérios, questionei as conclusões e impedi que a análise afirmasse mais do que os dados permitiam.
+
+Com mais uma semana, buscaria ocupação e preços realizados ao longo de um ano, custos completos e preços negociados. Depois analisaria imóveis específicos, incluindo condomínio, IPTU, manutenção e regras para short-stay.
+
+Obrigado!
