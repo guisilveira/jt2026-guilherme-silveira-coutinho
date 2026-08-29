@@ -118,3 +118,30 @@ Ele recria:
 O relatório interpretativo é `investment_return_analysis.md`. Os valores são
 `gross yield proxy` e `yield após condomínio observado`, não retorno líquido ou
 receita realizada.
+
+## Ciclo 4 — características associadas ao preço
+
+Execute depois do Ciclo 2:
+
+```bash
+python scripts/analyze_price_characteristics.py
+```
+
+O script usa somente pandas e numpy, mantém uma linha por imóvel e recria:
+
+- `../data/processed/airbnb_listing_characteristics.csv`: características,
+  ligação temporal do host, flags de ausências e preços do headline;
+- `generated/airbnb_characteristics_quality.csv`: cobertura, regras literais
+  de amenities, ausências e disponibilidade por característica;
+- `generated/airbnb_characteristic_associations.csv`: coeficientes, efeitos,
+  IC95 agrupado, amostras e classificação;
+- `generated/airbnb_characteristic_sensitivities.csv`: seis leituras por
+  característica, incluindo peso igual por anfitrião;
+- `generated/airbnb_adjusted_comparisons.csv`: cinco contrastes antes e depois
+  do controle conjunto das características;
+- `generated/airbnb_characteristics_checks.csv`: checks de integridade,
+  bootstrap, fórmulas e preservação dos dados;
+- `generated/airbnb_characteristics_summary.json`: resumo auditável.
+
+O relatório interpretativo é `airbnb_characteristics_analysis.md`. Os modelos
+são associativos e não substituem as estimativas econômicas do Ciclo 3.

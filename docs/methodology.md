@@ -264,3 +264,42 @@ e premissas. `gross yield proxy` relaciona segmentos agregados de duas bases, n�
 o fluxo de caixa de um imóvel. `yield após condomínio observado` desconta apenas
 um custo parcial e com cobertura seletiva. Nenhuma dessas métricas é receita
 realizada, retorno líquido, ADR realizado ou rentabilidade garantida.
+
+## Decisões implementadas no Ciclo 4 — características
+
+As regras abaixo são decisões metodológicas, não relações causais demonstradas:
+
+1. A população principal contém uma linha para cada um dos 668 imóveis com
+   preço em 20/01 nos sete segmentos principais do Ciclo 2.
+2. `Details` liga-se a `Hosts` somente por `(owner_id, aquisition_date) =
+   (owner_id, host_snapshot_date)`. O relacionamento deve permanecer N:1 e com
+   100% de cobertura. Taxa e tempo de resposta, integralmente vazios, ficam
+   excluídos.
+3. Cada característica é estimada separadamente em uma regressão linear de
+   `log(preço anunciado)` com efeitos fixos do segmento `bairro + tipo +
+   quartos`. O coeficiente é convertido por `exp(beta) - 1`.
+4. A incerteza usa 500 reamostragens de `owner_id`, mantendo juntos todos os
+   imóveis do anfitrião. Uma associação só é sustentada quando o IC95 exclui
+   zero e o sinal permanece em 20/01, mediana entre capturas nos mesmos imóveis,
+   calendário, dois tratamentos dos preços ≥ R$ 10 mil e peso igual por host.
+5. Quantidades são expressas em unidades pré-definidas: um hóspede, banheiro,
+   cama ou ano; cinco comodidades; R$ 100 de taxa; dez fotos; dobro de
+   `reviews + 1`; e 0,1 ponto de nota.
+6. Nota zero sem reviews é ausência de avaliação para anúncio e anfitrião.
+   Booleanos ausentes permanecem desconhecidos e não são convertidos em falso.
+7. Taxa de limpeza zero e fotos zero permanecem na base com flag, mas não entram
+   nas regressões individuais de valor/quantidade devido à semântica ambígua.
+8. Comodidades específicas usam somente correspondência literal normalizada:
+   `ar-condicionado`, `estacionamento`, `piscina`, `elevador`, `churrasqueira`,
+   `acesso a praia` e `wi-fi`/`wifi`. Não há NLP ou seleção após os resultados.
+9. Wi-Fi não é estimável nos segmentos principais por falta de variação
+   residual suficiente; a ausência de coeficiente é preservada como limitação.
+10. O diagnóstico conjunto mantém a amostra por representações explícitas de
+    ausência e adiciona Meia Praia/1 quarto apenas para o contraste exploratório
+    obrigatório. A colinearidade entre os dois indicadores de desconhecido de
+    `can_instant_book` e `is_professional` é resolvida por um único indicador,
+    pois os padrões de ausência são idênticos.
+
+Reviews, notas, favorito, profissional e superhost podem refletir seleção,
+tempo de mercado e estratégia do operador. Nenhuma associação autoriza afirmar
+que alterar isoladamente a característica produziria o efeito estimado.

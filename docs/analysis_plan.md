@@ -312,3 +312,48 @@ comparação?
 
 **Ponto de parada:** recomendação econômica provisória concluída. Não houve
 matching individual, dashboard, Ciclo 4 ou recomendação final do hackathon.
+
+## Ciclo 4 — características e robustez das conclusões
+
+### Pergunta e análise mínima
+
+**Pergunta:** quais atributos do imóvel e do anfitrião estão associados ao
+preço anunciado dentro de segmentos comparáveis, e esses controles mudam as
+leituras operacionais ou a shortlist econômica?
+
+1. manter uma linha por imóvel nos sete segmentos principais do Ciclo 2;
+2. ligar Hosts pela chave temporal validada e excluir campos 100% vazios;
+3. construir as características e sete regras literais de comodidades antes do
+   contato com os resultados;
+4. estimar uma regressão por característica com controle de segmento;
+5. obter IC95 com 500 bootstraps agrupados por `owner_id`;
+6. exigir sinal estável nas seis sensibilidades pré-definidas;
+7. executar um modelo conjunto apenas como diagnóstico das cinco comparações;
+8. não substituir yields, aquisição ou cenários do Ciclo 3.
+
+### Resultado e decisão
+
+- 668 imóveis e 471 anfitriões compõem a análise principal; o join temporal é
+  N:1, sem multiplicação e com 100% de cobertura;
+- associações positivas sustentadas: anfitrião profissional (+21,0%), um
+  banheiro adicional (+13,3%), R$ 100 adicionais de taxa de limpeza positiva
+  (+5,9%) e 0,1 ponto adicional na nota avaliada (+2,3%);
+- associações negativas sustentadas: dobro de `reviews + 1` (-6,2%), favorito
+  dos hóspedes (-8,6%), superhost (-10,6%) e presença de reviews (-30,1%);
+- as 15 demais características são inconclusivas; Wi-Fi não é estimável por
+  falta de variação suficiente;
+- as associações negativas de reviews e status do anfitrião não são tratadas
+  como efeitos causais e são compatíveis com tempo de mercado, seleção e
+  estratégia de preço de anúncios novos;
+- todas as cinco comparações ajustadas têm IC95 incluindo zero. Centro/1 quarto
+  versus Meia Praia/1 quarto muda o sinal pontual de +2,3% para -17,5%, mas o
+  comparador tem somente 16 imóveis e o resultado continua exploratório e
+  inconclusivo;
+- Centro/1 quarto permanece abaixo de Centro/2 e Centro/3 no preço total
+  ajustado, sem mudança de direção e sem separação estatística;
+- Morretes/2, Centro/2 e Centro/1 continuam uma shortlist econômica defensável,
+  pois os controles não produzem evidência robusta que reverta os resultados do
+  Ciclo 3. Eles não transformam a shortlist em recomendação final.
+
+**Ponto de parada:** Ciclo 4 concluído com 28/28 checks. Não houve dashboard,
+Ciclo 5, commit ou recomendação final do hackathon.

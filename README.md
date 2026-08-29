@@ -34,18 +34,21 @@ python scripts/audit_data.py
 python scripts/analyze_airbnb_prices.py
 python scripts/analyze_airbnb_profiles.py
 python scripts/analyze_investment_returns.py
+python scripts/analyze_price_characteristics.py
 ```
 
 Os scripts leem os CSVs originais de `data/` e recriam somente artefatos
 derivados em `data/processed/` e `reports/generated/`. Os arquivos brutos não são
 alterados.
 
-Os resultados interpretativos dos três primeiros ciclos estão em
+Os resultados interpretativos dos quatro primeiros ciclos estão em
 `reports/airbnb_price_analysis.md` e
 `reports/airbnb_profile_location_analysis.md` e
-`reports/investment_return_analysis.md`. As tabelas reproduzíveis ficam em
+`reports/investment_return_analysis.md` e
+`reports/airbnb_characteristics_analysis.md`. As tabelas reproduzíveis ficam em
 `reports/generated/`. O Ciclo 3 deve ser executado após os Ciclos 1 e 2 porque
-reutiliza os respectivos artefatos aprovados.
+reutiliza os respectivos artefatos aprovados; o Ciclo 4 reutiliza a base por
+listing e os segmentos do Ciclo 2.
 
 ---
 

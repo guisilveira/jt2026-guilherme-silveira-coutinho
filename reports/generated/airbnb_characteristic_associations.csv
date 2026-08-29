@@ -1,0 +1,24 @@
+caracteristica,caracteristica_label,unidade_efeito,n_listings,n_hosts,coeficiente_log,efeito_percentual_aproximado,ic95_inferior_percentual,ic95_superior_percentual,direcao,intervalo_exclui_zero,direcao_preservada_sensibilidades,classificacao,bootstrap_repeticoes,bootstrap_validas,estimavel_com_controle_segmento
+piscina,Piscina,presente vs. ausente,668,471,0.2226780335222035,0.24941823818073694,-0.060478940550157394,0.48161264211075794,positiva,False,True,inconclusiva,500,500,True
+churrasqueira,Churrasqueira,presente vs. ausente,668,471,0.0827506132429347,0.08627087319543707,-0.014090265906282725,0.18073940521834517,positiva,False,True,inconclusiva,500,500,True
+elevador,Elevador,presente vs. ausente,668,471,0.05697203266382195,0.05862620302657546,-0.03547562060266432,0.13830293041298877,positiva,False,True,inconclusiva,500,500,True
+acesso_praia,Acesso à praia,presente vs. ausente,668,471,0.049756862861887685,0.05101552440104929,-0.013540359412772388,0.14929000463874637,positiva,False,True,inconclusiva,500,500,True
+capacidade_hospedes,Capacidade de hóspedes,+1 hóspede,668,471,0.023188316432592983,0.023459255596766725,-0.004607051795971921,0.04786714881867652,positiva,False,True,inconclusiva,500,500,True
+reserva_instantanea,Reserva instantânea,sim vs. não,663,470,0.01995883899831391,0.02015934838189383,-0.08263379514756894,0.10158610812642833,positiva,False,False,inconclusiva,500,500,True
+quantidade_fotos,Quantidade de fotos positiva,+10 fotos,560,455,0.010713146380315869,0.010770737610353982,-0.009885657988680978,0.039932788856489196,positiva,False,True,inconclusiva,500,500,True
+reviews_anfitriao,Quantidade de reviews do anfitrião,dobro de reviews+1,668,471,0.008209431048969852,0.008243220829710476,-0.018577500974425273,0.014804472973780078,positiva,False,False,inconclusiva,500,500,True
+tempo_anfitriao,Tempo como anfitrião,+1 ano,668,471,0.00396205505387226,0.003969914370250632,-0.014880437526643706,0.01937540674568602,positiva,False,False,inconclusiva,500,500,True
+quantidade_comodidades,Quantidade de comodidades,+5 comodidades,668,471,0.0032466516312185875,0.0032519277129471214,-0.01007966786922199,0.017381486446525325,positiva,False,True,inconclusiva,500,500,True
+nota_anfitriao,Nota do anfitrião avaliado,"+0,1 ponto",662,465,-0.003067967198735178,-0.003063265796513814,-0.034239613058106015,0.06034266501678758,negativa,False,False,inconclusiva,500,500,True
+camas,Camas,+1 cama,668,471,-0.0033338242050982014,-0.0033282731836062917,-0.02791488503477406,0.020575827378437262,negativa,False,True,inconclusiva,500,500,True
+estacionamento,Estacionamento,presente vs. ausente,668,471,-0.011357198996343604,-0.011292949473389487,-0.15002941302983325,0.07058287249783747,negativa,False,False,inconclusiva,500,500,True
+ar_condicionado,Ar-condicionado,presente vs. ausente,668,471,-0.692979439828149,-0.49991612259947027,-0.8430083807458008,0.10196196726448084,negativa,False,True,inconclusiva,500,500,True
+wifi,Wi-Fi,presente vs. ausente,668,471,,,,,não estimável,False,False,inconclusiva,500,0,False
+anfitriao_profissional,Anfitrião profissional,sim vs. não,663,470,0.19093976279384406,0.2103865395817858,0.0953200116628667,0.4142174289741912,positiva,True,True,sustentada,500,500,True
+banheiros,Banheiros,+1 banheiro,668,471,0.12504182615743817,0.13319584930361944,0.08262872241929682,0.20909475578764078,positiva,True,True,sustentada,500,500,True
+taxa_limpeza,Taxa de limpeza positiva,+R$ 100,652,459,0.057598080237856564,0.05928916089271855,0.005183277543599327,0.1176720267663903,positiva,True,True,sustentada,500,500,True
+nota_anuncio,Nota do anúncio avaliado,"+0,1 ponto",654,467,0.022359910110933304,0.02261176656057309,0.002348785121005635,0.0789688961227248,positiva,True,True,sustentada,500,500,True
+quantidade_reviews,Quantidade de reviews,dobro de reviews+1,668,471,-0.06418765480353501,-0.06217100509859875,-0.08691450717045948,-0.04166473005459261,negativa,True,True,sustentada,500,500,True
+favorito_hospedes,Favorito dos hóspedes,sim vs. não,668,471,-0.08941693257197389,-0.08553577583947708,-0.1439386875486558,-0.016609482635182197,negativa,True,True,sustentada,500,500,True
+superhost,Superhost,sim vs. não,668,471,-0.11162818082486742,-0.10562325789304133,-0.1736975434294972,-0.030578647568050742,negativa,True,True,sustentada,500,500,True
+presenca_reviews,Presença de reviews,sim vs. não,668,471,-0.35820607375668334,-0.30107097076570066,-0.5435398524167465,-0.2175973775788689,negativa,True,True,sustentada,500,500,True

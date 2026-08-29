@@ -1,0 +1,29 @@
+check,actual,expected,status,observacao
+Base contém 668 imóveis dos segmentos principais,668,668,OK,
+Uma linha por imóvel,0,0,OK,
+Sete segmentos principais,7,7,OK,
+Chave temporal de hosts única,0,0,OK,
+Join com hosts não multiplica imóveis,668,668,OK,
+Cobertura do join com hosts,1.0,1.0,OK,
+Taxa de resposta totalmente vazia e excluída,0,0,OK,
+Tempo de resposta totalmente vazio e excluído,0,0,OK,
+Amenities sem falha de parsing,0,0,OK,
+Nota zero sem reviews não tratada como avaliação,0,0,OK,
+Nota de host zero sem reviews não tratada como avaliação,0,0,OK,
+Booleano can_instant_book preserva desconhecidos,5,5,OK,Nenhum fillna(False) na característica individual.
+Booleano is_professional preserva desconhecidos,5,5,OK,Nenhum fillna(False) na característica individual.
+Booleano is_guest_favorite preserva desconhecidos,0,0,OK,Nenhum fillna(False) na característica individual.
+Booleano is_superhost preserva desconhecidos,0,0,OK,Nenhum fillna(False) na característica individual.
+Todas as características calculadas,23,23,OK,
+500 bootstraps por característica estimável,500,500,OK,
+Características não estimáveis explicitamente sinalizadas,1,1,OK,
+Seis sensibilidades por característica,6,6,OK,
+Fórmula de efeito percentual reconciliada,0.0,0.0,OK,
+Mediana entre capturas usa os mesmos imóveis,668,668,OK,
+Ajuste de calendário usa os mesmos imóveis,668,668,OK,
+Cinco comparações ajustadas,5,5,OK,
+500 bootstraps no modelo ajustado,500,500,OK,
+Modelo ajustado com rank completo,34,34,OK,
+Hashes dos CSVs originais preservados,True,True,OK,
+Ordenação determinística,True,True,OK,
+git diff --check aprovado,0,0,OK,
