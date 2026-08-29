@@ -145,3 +145,23 @@ O script usa somente pandas e numpy, mantém uma linha por imóvel e recria:
 
 O relatório interpretativo é `airbnb_characteristics_analysis.md`. Os modelos
 são associativos e não substituem as estimativas econômicas do Ciclo 3.
+
+## Síntese final e dashboard
+
+Execute depois dos quatro ciclos:
+
+```bash
+python scripts/build_dashboard.py
+```
+
+O script valida os números contra os artefatos aprovados e recria:
+
+- `../dashboard/index.html`: dashboard estático para apresentação;
+- `../dashboard/data/dashboard_data.json`: dados derivados e rastreáveis;
+- `final_recommendation.md`: decisão final e respostas às quatro perguntas;
+- `video_script.md`: roteiro falado de até três minutos, com recomendação,
+  colaboração com IA e próximos passos com mais uma semana;
+- `generated/final_summary.json`: resumo final e checks de reconciliação.
+
+Abra `../dashboard/index.html` diretamente no navegador. O dashboard não usa
+CDN, servidor ou conexão com a internet.

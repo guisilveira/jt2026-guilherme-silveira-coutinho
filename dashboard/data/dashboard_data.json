@@ -1,0 +1,439 @@
+{
+  "characteristics": {
+    "caveat": "Associações dentro de perfis comparáveis, não efeitos independentes ou causais.",
+    "method": "Regressões separadas de log(preço anunciado), controlando bairro, tipologia e quartos, sem controlar as demais características simultaneamente; bootstrap agrupado por anfitrião.",
+    "negative": [
+      {
+        "ciHigh": -0.04166473005459261,
+        "ciLow": -0.08691450717045948,
+        "direction": "negativa",
+        "effect": -0.06217100509859875,
+        "hosts": 471,
+        "key": "quantidade_reviews",
+        "label": "Quantidade de reviews",
+        "listings": 668,
+        "unit": "dobro de reviews+1"
+      },
+      {
+        "ciHigh": -0.016609482635182197,
+        "ciLow": -0.1439386875486558,
+        "direction": "negativa",
+        "effect": -0.08553577583947708,
+        "hosts": 471,
+        "key": "favorito_hospedes",
+        "label": "Favorito dos hóspedes",
+        "listings": 668,
+        "unit": "sim vs. não"
+      },
+      {
+        "ciHigh": -0.030578647568050742,
+        "ciLow": -0.1736975434294972,
+        "direction": "negativa",
+        "effect": -0.10562325789304133,
+        "hosts": 471,
+        "key": "superhost",
+        "label": "Superhost",
+        "listings": 668,
+        "unit": "sim vs. não"
+      },
+      {
+        "ciHigh": -0.2175973775788689,
+        "ciLow": -0.5435398524167465,
+        "direction": "negativa",
+        "effect": -0.30107097076570066,
+        "hosts": 471,
+        "key": "presenca_reviews",
+        "label": "Presença de reviews",
+        "listings": 668,
+        "unit": "sim vs. não"
+      }
+    ],
+    "positive": [
+      {
+        "ciHigh": 0.4142174289741912,
+        "ciLow": 0.0953200116628667,
+        "direction": "positiva",
+        "effect": 0.2103865395817858,
+        "hosts": 470,
+        "key": "anfitriao_profissional",
+        "label": "Anfitrião profissional",
+        "listings": 663,
+        "unit": "sim vs. não"
+      },
+      {
+        "ciHigh": 0.20909475578764078,
+        "ciLow": 0.08262872241929682,
+        "direction": "positiva",
+        "effect": 0.13319584930361944,
+        "hosts": 471,
+        "key": "banheiros",
+        "label": "Banheiros",
+        "listings": 668,
+        "unit": "+1 banheiro"
+      },
+      {
+        "ciHigh": 0.1176720267663903,
+        "ciLow": 0.005183277543599327,
+        "direction": "positiva",
+        "effect": 0.05928916089271855,
+        "hosts": 459,
+        "key": "taxa_limpeza",
+        "label": "Taxa de limpeza positiva",
+        "listings": 652,
+        "unit": "+R$ 100"
+      },
+      {
+        "ciHigh": 0.0789688961227248,
+        "ciLow": 0.002348785121005635,
+        "direction": "positiva",
+        "effect": 0.02261176656057309,
+        "hosts": 467,
+        "key": "nota_anuncio",
+        "label": "Nota do anúncio avaliado",
+        "listings": 654,
+        "unit": "+0,1 ponto"
+      }
+    ]
+  },
+  "compactThesis": {
+    "economicStatus": "inconclusivo",
+    "evidence": [
+      "Centro/1 quarto tem maior densidade de preço anunciado por hóspede comportado e por quarto.",
+      "A vantagem de localização de Centro/1 quarto foi inconclusiva.",
+      "No gross yield proxy central, Centro/1 quarto ficou abaixo de Centro/2 quartos.",
+      "A direção se inverte em sensibilidades; com o p25 de compra, Centro/1 lidera.",
+      "O yield após condomínio de Centro/1 usa apenas 10 valores válidos e é exploratório."
+    ],
+    "finalPosition": "Os dados não sustentam os apartamentos compactos no Centro como a principal tese de investimento.",
+    "operationalStatus": "parcialmente sustentada"
+  },
+  "definitions": {
+    "decision": "Escolha humana: priorizar a relação entre preço anunciado e capital de compra.",
+    "observed": "Medianas e amostras calculadas nos anúncios disponíveis.",
+    "price": "Preço anunciado não é diária recebida nem receita realizada.",
+    "scenario": "Ocupação e sazonalidade assumidas para teste de estresse; não são previsões.",
+    "yield": "Gross yield proxy = preço anunciado típico × sazonalidade × 365 × ocupação ÷ preço pedido mediano."
+  },
+  "location": {
+    "composition": "Meia Praia aparece nos maiores preços absolutos porque concentra imóveis maiores.",
+    "conclusion": "A localização depende do perfil do imóvel; os dados não sustentam uma vantagem geral de um bairro depois de controlar minimamente o perfil.",
+    "equivalentProfiles": "As comparações diretas entre bairros para perfis equivalentes foram inconclusivas."
+  },
+  "meta": {
+    "currencyAssumption": "R$; unidade e taxas não são definidas explicitamente na documentação dos dados",
+    "generatedFrom": [
+      "reports/generated/airbnb_profile_summary.json",
+      "reports/generated/airbnb_profile_segments.csv",
+      "reports/generated/investment_summary.json",
+      "reports/generated/airbnb_vivareal_segments.csv",
+      "reports/generated/investment_scenarios.csv",
+      "reports/generated/investment_robustness.csv",
+      "reports/generated/airbnb_characteristics_summary.json",
+      "reports/generated/airbnb_characteristic_associations.csv"
+    ],
+    "mainCapture": "20/01/2025",
+    "rawSourceHashes": {
+      "Details_Itapema.csv": "3688ba1d8e576fb7e1091ff6242250bc3f845a3e10241fac378be8a168c83e84",
+      "Hosts_ids_Itapema.csv": "b043ffea58b6f9b572fa8fc2dfbe4c155b71a0e1636e6edc28d33c4ab7765eef",
+      "Mesh_Ids_Data_Itapema.csv": "f5064eec7fbfa7a962a0f67044baaeb0d7fcbfa9a730f80ce5a9dc8d58af694a",
+      "Price_AV_Itapema.csv": "c726481d3cb5b4b5e9a1eff9e27f2919a7deeeb66c1696f0d0f6d5527fd9b555",
+      "VivaReal_Itapema.csv": "ac6a4a8a3d2b43e0a7583ef7f4a86b849dedb79d56c2756eb2dce012de7ddd4f"
+    },
+    "subtitle": "Preço anunciado, capital de compra e limites da evidência",
+    "title": "Onde investir em Itapema?"
+  },
+  "profile": {
+    "bestInvestment": "morretes|apartamento|2 quartos",
+    "highestAbsolute": {
+      "hosts": 38,
+      "key": "meia praia|apartamento|4 quartos",
+      "label": "Meia Praia · apartamento · 4 quartos",
+      "listings": 43,
+      "price": 899.0
+    },
+    "highestCapacityDensity": {
+      "hosts": 17,
+      "key": "centro|apartamento|1 quarto",
+      "label": "Centro · apartamento · 1 quarto",
+      "listings": 75,
+      "pricePerGuest": 136.5,
+      "pricePerRoom": 450.0
+    },
+    "listingTypeLimitation": "Não há campo confiável para distinguir imóvel inteiro, quarto privativo ou compartilhado; listing_type representa tipologia do imóvel."
+  },
+  "quality": {
+    "cycleChecks": {
+      "cycle2": 20,
+      "cycle3": 18,
+      "cycle4": 28
+    },
+    "limitations": [
+      "Só 22,5% dos anúncios do Airbnb têm preço, com cobertura desigual por bairro e perfil.",
+      "Os preços Airbnb cobrem 105 dias concentrados entre janeiro e abril; sazonalidade anual é assumida.",
+      "Airbnb e VivaReal são ligados por segmento, não por imóvel individual.",
+      "Preço pedido não é preço de transação; custos operacionais, IPTU, vacância e impostos não formam um retorno líquido.",
+      "Condomínio observado tem cobertura desigual; no Centro/1 quarto são apenas 10 valores válidos.",
+      "Os dados não identificam com segurança imóvel inteiro, quarto privativo ou compartilhado."
+    ]
+  },
+  "recommendation": {
+    "alternatives": [
+      "centro|apartamento|2 quartos",
+      "centro|apartamento|1 quarto"
+    ],
+    "reason": "Melhor relação observada entre preço anunciado e capital de compra no critério principal, com liderança em 8 de 9 sensibilidades.",
+    "robustSingleWinner": false,
+    "segmentKey": "morretes|apartamento|2 quartos",
+    "sensitivityTotal": 9,
+    "sensitivityWins": 8,
+    "statement": "Eu priorizaria um apartamento de dois quartos em Morretes, sujeito à validação do imóvel específico, do condomínio e dos custos operacionais.",
+    "stressRange": {
+      "max": 0.12571708860759492,
+      "min": 0.03771512658227847
+    }
+  },
+  "scenarioControls": {
+    "default": {
+      "occupancy": 0.45,
+      "purchaseBasis": "median",
+      "seasonality": 0.8
+    },
+    "note": "45% × 80% é apenas o cenário intermediário ilustrativo, nunca o mais provável.",
+    "occupancy": [
+      0.3,
+      0.45,
+      0.6
+    ],
+    "purchaseBases": [
+      {
+        "key": "p25",
+        "label": "p25"
+      },
+      {
+        "key": "median",
+        "label": "Mediana"
+      },
+      {
+        "key": "p75",
+        "label": "p75"
+      }
+    ],
+    "seasonality": [
+      0.6,
+      0.8,
+      1.0
+    ]
+  },
+  "segments": [
+    {
+      "airbnbHosts": 17,
+      "airbnbListings": 75,
+      "airbnbTypicalPrice": 450.0,
+      "areaMedianM2": 42.0,
+      "bairro": "Centro",
+      "condoCoverage": 0.45454545454545453,
+      "condoMonthlyMedian": 500.0,
+      "condoSupport": "exploratório",
+      "condoValid": 10,
+      "intermediate": {
+        "annualizedPrice": 59130.0,
+        "grossYield": 0.066438202247191,
+        "rank": 3,
+        "yieldAfterObservedCondo": 0.05969662921348315
+      },
+      "key": "centro|apartamento|1 quarto",
+      "label": "Centro · apartamento · 1 quarto",
+      "purchasePrice": {
+        "median": 890000.0,
+        "p25": 652500.0,
+        "p75": 980000.0
+      },
+      "purchasePriceMedianM2": 16250.0,
+      "purchasePriceWithoutSuspects": 890000.0,
+      "purchaseSuspects": 1,
+      "quartos": 1,
+      "tipo": "apartamento",
+      "vivarealListings": 22
+    },
+    {
+      "airbnbHosts": 37,
+      "airbnbListings": 59,
+      "airbnbTypicalPrice": 600.0,
+      "areaMedianM2": 86.0,
+      "bairro": "Centro",
+      "condoCoverage": 0.6179775280898876,
+      "condoMonthlyMedian": 500.0,
+      "condoSupport": "principal",
+      "condoValid": 55,
+      "intermediate": {
+        "annualizedPrice": 78840.0,
+        "grossYield": 0.06855652173913043,
+        "rank": 2,
+        "yieldAfterObservedCondo": 0.0633391304347826
+      },
+      "key": "centro|apartamento|2 quartos",
+      "label": "Centro · apartamento · 2 quartos",
+      "purchasePrice": {
+        "median": 1150000.0,
+        "p25": 889000.0,
+        "p75": 1550000.0
+      },
+      "purchasePriceMedianM2": 13088.778409090908,
+      "purchasePriceWithoutSuspects": 1150000.0,
+      "purchaseSuspects": 0,
+      "quartos": 2,
+      "tipo": "apartamento",
+      "vivarealListings": 89
+    },
+    {
+      "airbnbHosts": 34,
+      "airbnbListings": 38,
+      "airbnbTypicalPrice": 664.0,
+      "areaMedianM2": 131.0,
+      "bairro": "Centro",
+      "condoCoverage": 0.4096109839816934,
+      "condoMonthlyMedian": 617.0,
+      "condoSupport": "principal",
+      "condoValid": 179,
+      "intermediate": {
+        "annualizedPrice": 87249.60000000002,
+        "grossYield": 0.04154742857142858,
+        "rank": 6,
+        "yieldAfterObservedCondo": 0.0380217142857143
+      },
+      "key": "centro|apartamento|3 quartos",
+      "label": "Centro · apartamento · 3 quartos",
+      "purchasePrice": {
+        "median": 2100000.0,
+        "p25": 1750000.0,
+        "p75": 2790000.0
+      },
+      "purchasePriceMedianM2": 15789.473684210527,
+      "purchasePriceWithoutSuspects": 2100000.0,
+      "purchaseSuspects": 1,
+      "quartos": 3,
+      "tipo": "apartamento",
+      "vivarealListings": 437
+    },
+    {
+      "airbnbHosts": 112,
+      "airbnbListings": 126,
+      "airbnbTypicalPrice": 448.0,
+      "areaMedianM2": 85.0,
+      "bairro": "Meia Praia",
+      "condoCoverage": 0.5432098765432098,
+      "condoMonthlyMedian": 500.0,
+      "condoSupport": "principal",
+      "condoValid": 132,
+      "intermediate": {
+        "annualizedPrice": 58867.200000000004,
+        "grossYield": 0.05450666666666667,
+        "rank": 4,
+        "yieldAfterObservedCondo": 0.04895111111111111
+      },
+      "key": "meia praia|apartamento|2 quartos",
+      "label": "Meia Praia · apartamento · 2 quartos",
+      "purchasePrice": {
+        "median": 1080000.0,
+        "p25": 912850.0,
+        "p75": 1290000.0
+      },
+      "purchasePriceMedianM2": 13032.608695652174,
+      "purchasePriceWithoutSuspects": 1070000.0,
+      "purchaseSuspects": 2,
+      "quartos": 2,
+      "tipo": "apartamento",
+      "vivarealListings": 243
+    },
+    {
+      "airbnbHosts": 235,
+      "airbnbListings": 284,
+      "airbnbTypicalPrice": 650.0,
+      "areaMedianM2": 128.0,
+      "bairro": "Meia Praia",
+      "condoCoverage": 0.47083087802003537,
+      "condoMonthlyMedian": 600.0,
+      "condoSupport": "principal",
+      "condoValid": 799,
+      "intermediate": {
+        "annualizedPrice": 85410.0,
+        "grossYield": 0.04531034482758621,
+        "rank": 5,
+        "yieldAfterObservedCondo": 0.041490716180371354
+      },
+      "key": "meia praia|apartamento|3 quartos",
+      "label": "Meia Praia · apartamento · 3 quartos",
+      "purchasePrice": {
+        "median": 1885000.0,
+        "p25": 1579800.0,
+        "p75": 2399240.0
+      },
+      "purchasePriceMedianM2": 15000.0,
+      "purchasePriceWithoutSuspects": 1871827.5,
+      "purchaseSuspects": 33,
+      "quartos": 3,
+      "tipo": "apartamento",
+      "vivarealListings": 1697
+    },
+    {
+      "airbnbHosts": 38,
+      "airbnbListings": 43,
+      "airbnbTypicalPrice": 899.0,
+      "areaMedianM2": 188.0,
+      "bairro": "Meia Praia",
+      "condoCoverage": 0.405446293494705,
+      "condoMonthlyMedian": 923.0,
+      "condoSupport": "principal",
+      "condoValid": 536,
+      "intermediate": {
+        "annualizedPrice": 118128.6,
+        "grossYield": 0.0328135,
+        "rank": 7,
+        "yieldAfterObservedCondo": 0.029736833333333334
+      },
+      "key": "meia praia|apartamento|4 quartos",
+      "label": "Meia Praia · apartamento · 4 quartos",
+      "purchasePrice": {
+        "median": 3600000.0,
+        "p25": 2754250.0,
+        "p75": 4987500.0
+      },
+      "purchasePriceMedianM2": 18604.490537795362,
+      "purchasePriceWithoutSuspects": 3560000.0,
+      "purchaseSuspects": 21,
+      "quartos": 4,
+      "tipo": "apartamento",
+      "vivarealListings": 1322
+    },
+    {
+      "airbnbHosts": 34,
+      "airbnbListings": 43,
+      "airbnbTypicalPrice": 453.5,
+      "areaMedianM2": 69.0,
+      "bairro": "Morretes",
+      "condoCoverage": 0.46962391513982643,
+      "condoMonthlyMedian": 350.0,
+      "condoSupport": "principal",
+      "condoValid": 487,
+      "intermediate": {
+        "annualizedPrice": 59589.9,
+        "grossYield": 0.07543025316455697,
+        "rank": 1,
+        "yieldAfterObservedCondo": 0.07011379746835443
+      },
+      "key": "morretes|apartamento|2 quartos",
+      "label": "Morretes · apartamento · 2 quartos",
+      "purchasePrice": {
+        "median": 790000.0,
+        "p25": 680000.0,
+        "p75": 879740.0
+      },
+      "purchasePriceMedianM2": 11550.942028985508,
+      "purchasePriceWithoutSuspects": 790000.0,
+      "purchaseSuspects": 1,
+      "quartos": 2,
+      "tipo": "apartamento",
+      "vivarealListings": 1037
+    }
+  ]
+}
