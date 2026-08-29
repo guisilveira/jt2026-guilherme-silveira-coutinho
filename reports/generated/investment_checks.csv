@@ -1,0 +1,19 @@
+check,actual,expected,status,observacao
+8.293 IDs únicos após deduplicação,8293,8293,OK,
+Uma linha por listing_id na base residencial processada,0,0,OK,
+Nenhuma divergência material escondida nas duplicações,0,0,OK,
+Somente apartamentos e casas no universo principal,"['apartamento', 'casa']","['apartamento', 'casa']",OK,
+Nenhuma ligação individual Airbnb–VivaReal,False,False,OK,Única chave: bairro normalizado + tipo residencial + quartos.
+Uma linha por segmento e cenário econômico,0,0,OK,
+Exatamente nove combinações de ocupação e sazonalidade,9,9,OK,
+Fórmula do preço anualizado reconciliada,0.0,0.0,OK,
+Fórmula do gross yield proxy reconciliada,0.0,0.0,OK,
+Fórmula do yield após condomínio reconciliada,0.0,0.0,OK,
+Suporte principal e exploratório classificado automaticamente,0,0,OK,
+Bairro original e normalizado preservados,True,True,OK,
+Preços suspeitos preservados no principal,133,133,OK,
+Preços suspeitos retirados somente na sensibilidade,34,34,OK,
+Condomínio desconhecido não tratado como zero,0,0,OK,
+Hashes dos CSVs originais preservados,True,True,OK,
+Ordenação determinística dos artefatos econômicos,True,True,OK,A repetição integral também é verificada após a execução.
+git diff --check aprovado,0,0,OK,

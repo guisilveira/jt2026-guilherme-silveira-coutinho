@@ -1,0 +1,6 @@
+etapa,linhas_entrada,linhas_saida,registros_afetados,funcao,observacao
+Auditoria prévia de capacidade,4441,4441,24,audit_capacity,Flags calculadas antes do cruzamento com preços; suspeitos positivos preservados.
+Métricas por listing,8313,9083,9083,build_listing_metrics,"Uma linha por listing, método e tratamento; calendário ajustado reutiliza exatamente a lógica residencial do ciclo 1."
+Reconciliação do calendário com ciclo 1,45,45,45,build_checks,Compara universo e mediana ajustada de cada segmento com reports/generated/airbnb_price_calendar.csv.
+Resumo por segmento,36220,2246,36220,build_segment_summary,Mediana e p25/p75 calculados somente depois das métricas por listing.
+Contrastes controlados,17,51,51,build_main_contrasts,Bootstrap agrupado por owner_id; tese pré-definida separada das comparações exploratórias.

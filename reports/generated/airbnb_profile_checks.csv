@@ -1,0 +1,21 @@
+check,actual,expected,difference,status,critical,notes
+IDs únicos em Details,4441,4441,0.0,OK,True,Chave da base principal.
+Grain listing–método–tratamento,0,0,0.0,OK,True,Nenhum listing recebe peso extra por duplicação.
+Diagnóstico de capacidade completo,4441,4441,0.0,OK,True,Uma linha de capacidade por listing.
+Métricas por hóspede finitas,0,0,0.0,OK,True,Ausentes e divisores inválidos não entram na razão.
+Métricas positivas,0,0,0.0,OK,True,Preços e divisores precisam ser positivos.
+Reconcilia listings do headline com ciclo 1,777,777,0.0,OK,True,Nenhum listing foi perdido na preparação do ciclo 2.
+Resumo tem uma linha por segmento e cenário,0,0,0.0,OK,True,Evita agregação duplicada.
+Contrastes do headline sem duplicação,0,0,0.0,OK,True,Uma estimativa por par e métrica.
+Percentuais reconciliam com diferença em R$,0.0,0.0,0.0,OK,True,Percentual usa o segmento B como referência.
+Zero quarto fora da razão por quarto,0,0,0.0,OK,True,Zero quarto permanece nas demais leituras.
+Nenhum contraste bruto de bairro,0,0,0.0,OK,True,Localização é comparada dentro do perfil.
+Owner presente no headline residencial,0,0,0.0,OK,True,Necessário para bootstrap agrupado.
+Flag de capacidade suspeita reconcilia,0,0,0.0,OK,True,União exata das três regras pré-definidas.
+Sensibilidade remove flags de capacidade,0,0,0.0,OK,True,Nenhuma flag positiva permanece na sensibilidade.
+Intervalos agrupados ordenados,0,0,0.0,OK,True,Limite inferior não pode superar o superior.
+Universo do calendário reconcilia com ciclo 1,0,0,0.0,OK,True,Mesmos segmentos residenciais no artefato dos dois ciclos.
+Medianas ajustadas reconciliam com ciclo 1,4.547473508864641e-13,0.0,4.547473508864641e-13,OK,True,Tolerância numérica absoluta de 1e-10 por segmento.
+Pares pré-definidos da tese presentes,3,3,0.0,OK,True,Um contraste de localização e dois de compacto com suporte mínimo.
+VivaReal ausente do ciclo 2,False,False,0.0,OK,True,Escopo operacional do Airbnb.
+Hashes dos CSVs brutos preservados,True,True,0.0,OK,True,Nenhum CSV original foi alterado.

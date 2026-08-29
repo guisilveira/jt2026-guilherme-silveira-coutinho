@@ -1,0 +1,139 @@
+caracteristica,caracteristica_label,unidade_efeito,sensibilidade,sensibilidade_label,n_listings,n_hosts,coeficiente_log,efeito_percentual_aproximado,rank_modelo,colunas_modelo
+acesso_praia,Acesso à praia,presente vs. ausente,ajuste_calendario,Ajuste de calendário aprovado,668,471,0.0544403498400306,0.0559494869792607,8,8
+acesso_praia,Acesso à praia,presente vs. ausente,headline_20_01,Captura de 20/01,668,471,0.049756862861887685,0.05101552440104929,8,8
+acesso_praia,Acesso à praia,presente vs. ausente,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,0.04797622457388495,0.04914571114160324,8,8
+acesso_praia,Acesso à praia,presente vs. ausente,peso_igual_anfitriao,Peso igual por anfitrião,668,471,0.08624105681130495,0.09006906520955778,8,8
+acesso_praia,Acesso à praia,presente vs. ausente,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,0.04161466320790741,0.04249269055468924,8,8
+acesso_praia,Acesso à praia,presente vs. ausente,sem_tres_imoveis,Sem os três imóveis afetados,667,470,0.04161466320790741,0.04249269055468924,8,8
+anfitriao_profissional,Anfitrião profissional,sim vs. não,ajuste_calendario,Ajuste de calendário aprovado,663,470,0.1802209720798854,0.19748194396402702,8,8
+anfitriao_profissional,Anfitrião profissional,sim vs. não,headline_20_01,Captura de 20/01,663,470,0.19093976279384406,0.2103865395817858,8,8
+anfitriao_profissional,Anfitrião profissional,sim vs. não,mediana_capturas,Mediana entre capturas nos mesmos imóveis,663,470,0.20885562175800876,0.2322670731326033,8,8
+anfitriao_profissional,Anfitrião profissional,sim vs. não,peso_igual_anfitriao,Peso igual por anfitrião,663,470,0.2369834740273219,0.26742017225107323,8,8
+anfitriao_profissional,Anfitrião profissional,sim vs. não,sem_precos_10k,Sem preços ≥ R$ 10 mil,662,469,0.19917703153563993,0.22039799570853608,8,8
+anfitriao_profissional,Anfitrião profissional,sim vs. não,sem_tres_imoveis,Sem os três imóveis afetados,662,469,0.19917703153563993,0.22039799570853608,8,8
+ar_condicionado,Ar-condicionado,presente vs. ausente,ajuste_calendario,Ajuste de calendário aprovado,668,471,-0.6504976578753057,-0.47821395879597584,8,8
+ar_condicionado,Ar-condicionado,presente vs. ausente,headline_20_01,Captura de 20/01,668,471,-0.692979439828149,-0.49991612259947027,8,8
+ar_condicionado,Ar-condicionado,presente vs. ausente,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,-0.6117830688454197,-0.4576170996983395,8,8
+ar_condicionado,Ar-condicionado,presente vs. ausente,peso_igual_anfitriao,Peso igual por anfitrião,668,471,-1.091017195308093,-0.6641253302528313,8,8
+ar_condicionado,Ar-condicionado,presente vs. ausente,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,-0.21216008552962662,-0.19116479561029087,8,8
+ar_condicionado,Ar-condicionado,presente vs. ausente,sem_tres_imoveis,Sem os três imóveis afetados,667,470,-0.21216008552962662,-0.19116479561029087,8,8
+banheiros,Banheiros,+1 banheiro,ajuste_calendario,Ajuste de calendário aprovado,668,471,0.10347414147987588,0.10901711545288731,8,8
+banheiros,Banheiros,+1 banheiro,headline_20_01,Captura de 20/01,668,471,0.12504182615743817,0.13319584930361944,8,8
+banheiros,Banheiros,+1 banheiro,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,0.1328399670036064,0.14206721526708155,8,8
+banheiros,Banheiros,+1 banheiro,peso_igual_anfitriao,Peso igual por anfitrião,668,471,0.14907635375216757,0.16076161433023844,8,8
+banheiros,Banheiros,+1 banheiro,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,0.12441273051708113,0.13248318492568217,8,8
+banheiros,Banheiros,+1 banheiro,sem_tres_imoveis,Sem os três imóveis afetados,667,470,0.12441273051708113,0.13248318492568217,8,8
+camas,Camas,+1 cama,ajuste_calendario,Ajuste de calendário aprovado,668,471,-0.0016584938721149745,-0.0016571193311473212,8,8
+camas,Camas,+1 cama,headline_20_01,Captura de 20/01,668,471,-0.0033338242050982014,-0.0033282731836062917,8,8
+camas,Camas,+1 cama,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,-0.004338235869042618,-0.004328839316879072,8,8
+camas,Camas,+1 cama,peso_igual_anfitriao,Peso igual por anfitrião,668,471,-0.001308195942641241,-0.0013073406273430602,8,8
+camas,Camas,+1 cama,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,-0.0012097413085940534,-0.0012090098665588078,8,8
+camas,Camas,+1 cama,sem_tres_imoveis,Sem os três imóveis afetados,667,470,-0.0012097413085940534,-0.0012090098665588078,8,8
+capacidade_hospedes,Capacidade de hóspedes,+1 hóspede,ajuste_calendario,Ajuste de calendário aprovado,668,471,0.02037205357639211,0.020580980202816138,8,8
+capacidade_hospedes,Capacidade de hóspedes,+1 hóspede,headline_20_01,Captura de 20/01,668,471,0.023188316432592983,0.023459255596766725,8,8
+capacidade_hospedes,Capacidade de hóspedes,+1 hóspede,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,0.030914070295084292,0.03139687244964006,8,8
+capacidade_hospedes,Capacidade de hóspedes,+1 hóspede,peso_igual_anfitriao,Peso igual por anfitrião,668,471,0.02177002579033073,0.022008721794227918,8,8
+capacidade_hospedes,Capacidade de hóspedes,+1 hóspede,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,0.026508659790433133,0.02686313964277185,8,8
+capacidade_hospedes,Capacidade de hóspedes,+1 hóspede,sem_tres_imoveis,Sem os três imóveis afetados,667,470,0.026508659790433133,0.02686313964277185,8,8
+churrasqueira,Churrasqueira,presente vs. ausente,ajuste_calendario,Ajuste de calendário aprovado,668,471,0.08120272923916944,0.08459075253846274,8,8
+churrasqueira,Churrasqueira,presente vs. ausente,headline_20_01,Captura de 20/01,668,471,0.0827506132429347,0.08627087319543707,8,8
+churrasqueira,Churrasqueira,presente vs. ausente,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,0.08574926692620266,0.08953311206819373,8,8
+churrasqueira,Churrasqueira,presente vs. ausente,peso_igual_anfitriao,Peso igual por anfitrião,668,471,0.06768842169637224,0.07003185782238912,8,8
+churrasqueira,Churrasqueira,presente vs. ausente,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,0.10741347415804081,0.11339451918037383,8,8
+churrasqueira,Churrasqueira,presente vs. ausente,sem_tres_imoveis,Sem os três imóveis afetados,667,470,0.10741347415804081,0.11339451918037383,8,8
+elevador,Elevador,presente vs. ausente,ajuste_calendario,Ajuste de calendário aprovado,668,471,0.06506384935888038,0.06722716397903454,8,8
+elevador,Elevador,presente vs. ausente,headline_20_01,Captura de 20/01,668,471,0.05697203266382195,0.05862620302657546,8,8
+elevador,Elevador,presente vs. ausente,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,0.06805008773750482,0.07041892199805845,8,8
+elevador,Elevador,presente vs. ausente,peso_igual_anfitriao,Peso igual por anfitrião,668,471,0.06013020430936927,0.06197481124069986,8,8
+elevador,Elevador,presente vs. ausente,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,0.04847116425235071,0.04966510350588151,8,8
+elevador,Elevador,presente vs. ausente,sem_tres_imoveis,Sem os três imóveis afetados,667,470,0.04847116425235071,0.04966510350588151,8,8
+estacionamento,Estacionamento,presente vs. ausente,ajuste_calendario,Ajuste de calendário aprovado,668,471,-0.0062471635108629076,-0.006227690556242567,8,8
+estacionamento,Estacionamento,presente vs. ausente,headline_20_01,Captura de 20/01,668,471,-0.011357198996343604,-0.011292949473389487,8,8
+estacionamento,Estacionamento,presente vs. ausente,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,0.0016371952992677297,0.0016385362351831762,8,8
+estacionamento,Estacionamento,presente vs. ausente,peso_igual_anfitriao,Peso igual por anfitrião,668,471,-0.07124524579648009,-0.06876651697670241,8,8
+estacionamento,Estacionamento,presente vs. ausente,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,-0.013203361258253749,-0.01311657924196827,8,8
+estacionamento,Estacionamento,presente vs. ausente,sem_tres_imoveis,Sem os três imóveis afetados,667,470,-0.013203361258253749,-0.01311657924196827,8,8
+favorito_hospedes,Favorito dos hóspedes,sim vs. não,ajuste_calendario,Ajuste de calendário aprovado,668,471,-0.08626349695811186,-0.08264752021677366,8,8
+favorito_hospedes,Favorito dos hóspedes,sim vs. não,headline_20_01,Captura de 20/01,668,471,-0.08941693257197389,-0.08553577583947708,8,8
+favorito_hospedes,Favorito dos hóspedes,sim vs. não,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,-0.08838436360302526,-0.08459104079028701,8,8
+favorito_hospedes,Favorito dos hóspedes,sim vs. não,peso_igual_anfitriao,Peso igual por anfitrião,668,471,-0.08220885322055477,-0.07892043182784225,8,8
+favorito_hospedes,Favorito dos hóspedes,sim vs. não,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,-0.07721300644189158,-0.07430734589367731,8,8
+favorito_hospedes,Favorito dos hóspedes,sim vs. não,sem_tres_imoveis,Sem os três imóveis afetados,667,470,-0.07721300644189158,-0.07430734589367731,8,8
+nota_anfitriao,Nota do anfitrião avaliado,"+0,1 ponto",ajuste_calendario,Ajuste de calendário aprovado,662,465,-0.012995082159896783,-0.012911010645831555,8,8
+nota_anfitriao,Nota do anfitrião avaliado,"+0,1 ponto",headline_20_01,Captura de 20/01,662,465,-0.003067967198735178,-0.003063265796513814,8,8
+nota_anfitriao,Nota do anfitrião avaliado,"+0,1 ponto",mediana_capturas,Mediana entre capturas nos mesmos imóveis,662,465,-0.004163325519954772,-0.004154670895101595,8,8
+nota_anfitriao,Nota do anfitrião avaliado,"+0,1 ponto",peso_igual_anfitriao,Peso igual por anfitrião,662,465,0.03053567074024778,0.03100666616384378,8,8
+nota_anfitriao,Nota do anfitrião avaliado,"+0,1 ponto",sem_precos_10k,Sem preços ≥ R$ 10 mil,661,464,-0.00037483033145690927,-0.0003747600913445349,8,8
+nota_anfitriao,Nota do anfitrião avaliado,"+0,1 ponto",sem_tres_imoveis,Sem os três imóveis afetados,661,464,-0.00037483033145690927,-0.0003747600913445349,8,8
+nota_anuncio,Nota do anúncio avaliado,"+0,1 ponto",ajuste_calendario,Ajuste de calendário aprovado,654,467,0.01622288839480584,0.01635519393982517,8,8
+nota_anuncio,Nota do anúncio avaliado,"+0,1 ponto",headline_20_01,Captura de 20/01,654,467,0.022359910110933304,0.02261176656057309,8,8
+nota_anuncio,Nota do anúncio avaliado,"+0,1 ponto",mediana_capturas,Mediana entre capturas nos mesmos imóveis,654,467,0.0218943506162239,0.022135790749375477,8,8
+nota_anuncio,Nota do anúncio avaliado,"+0,1 ponto",peso_igual_anfitriao,Peso igual por anfitrião,654,467,0.04087216742032242,0.0417189314153628,8,8
+nota_anuncio,Nota do anúncio avaliado,"+0,1 ponto",sem_precos_10k,Sem preços ≥ R$ 10 mil,653,466,0.026913535745510753,0.027278976012561927,8,8
+nota_anuncio,Nota do anúncio avaliado,"+0,1 ponto",sem_tres_imoveis,Sem os três imóveis afetados,653,466,0.026913535745510753,0.027278976012561927,8,8
+piscina,Piscina,presente vs. ausente,ajuste_calendario,Ajuste de calendário aprovado,668,471,0.23487965239688702,0.2647565491542326,8,8
+piscina,Piscina,presente vs. ausente,headline_20_01,Captura de 20/01,668,471,0.2226780335222035,0.24941823818073694,8,8
+piscina,Piscina,presente vs. ausente,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,0.25952817207789036,0.29631830317747454,8,8
+piscina,Piscina,presente vs. ausente,peso_igual_anfitriao,Peso igual por anfitrião,668,471,0.17658400622722226,0.19313465329050347,8,8
+piscina,Piscina,presente vs. ausente,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,0.2278718817687969,0.25592440831063823,8,8
+piscina,Piscina,presente vs. ausente,sem_tres_imoveis,Sem os três imóveis afetados,667,470,0.2278718817687969,0.25592440831063823,8,8
+presenca_reviews,Presença de reviews,sim vs. não,ajuste_calendario,Ajuste de calendário aprovado,668,471,-0.32232485126131943,-0.2755371905573427,8,8
+presenca_reviews,Presença de reviews,sim vs. não,headline_20_01,Captura de 20/01,668,471,-0.35820607375668334,-0.30107097076570066,8,8
+presenca_reviews,Presença de reviews,sim vs. não,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,-0.28318064523111286,-0.24661631960255667,8,8
+presenca_reviews,Presença de reviews,sim vs. não,peso_igual_anfitriao,Peso igual por anfitrião,668,471,-0.5251726073877756,-0.40854673364766364,8,8
+presenca_reviews,Presença de reviews,sim vs. não,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,-0.3582060737566847,-0.30107097076570155,8,8
+presenca_reviews,Presença de reviews,sim vs. não,sem_tres_imoveis,Sem os três imóveis afetados,667,470,-0.3582060737566847,-0.30107097076570155,8,8
+quantidade_comodidades,Quantidade de comodidades,+5 comodidades,ajuste_calendario,Ajuste de calendário aprovado,668,471,0.004024256384783029,0.004032364577341695,8,8
+quantidade_comodidades,Quantidade de comodidades,+5 comodidades,headline_20_01,Captura de 20/01,668,471,0.0032466516312185875,0.0032519277129471214,8,8
+quantidade_comodidades,Quantidade de comodidades,+5 comodidades,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,0.005308835384116327,0.005322952220949394,8,8
+quantidade_comodidades,Quantidade de comodidades,+5 comodidades,peso_igual_anfitriao,Peso igual por anfitrião,668,471,0.00573269835215668,0.005749161712145769,8,8
+quantidade_comodidades,Quantidade de comodidades,+5 comodidades,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,0.005415120481203392,0.0054298087470575854,8,8
+quantidade_comodidades,Quantidade de comodidades,+5 comodidades,sem_tres_imoveis,Sem os três imóveis afetados,667,470,0.005415120481203392,0.0054298087470575854,8,8
+quantidade_fotos,Quantidade de fotos positiva,+10 fotos,ajuste_calendario,Ajuste de calendário aprovado,560,455,0.013411502961136745,0.013501840569581812,8,8
+quantidade_fotos,Quantidade de fotos positiva,+10 fotos,headline_20_01,Captura de 20/01,560,455,0.010713146380315869,0.010770737610353982,8,8
+quantidade_fotos,Quantidade de fotos positiva,+10 fotos,mediana_capturas,Mediana entre capturas nos mesmos imóveis,560,455,0.008273499460331887,0.008307819440478663,8,8
+quantidade_fotos,Quantidade de fotos positiva,+10 fotos,peso_igual_anfitriao,Peso igual por anfitrião,560,455,0.018250799628163172,0.018418363309815458,8,8
+quantidade_fotos,Quantidade de fotos positiva,+10 fotos,sem_precos_10k,Sem preços ≥ R$ 10 mil,559,454,0.013570187994103977,0.013662680903704299,8,8
+quantidade_fotos,Quantidade de fotos positiva,+10 fotos,sem_tres_imoveis,Sem os três imóveis afetados,559,454,0.013570187994103977,0.013662680903704299,8,8
+quantidade_reviews,Quantidade de reviews,dobro de reviews+1,ajuste_calendario,Ajuste de calendário aprovado,668,471,-0.060595088877547394,-0.058795733294128016,8,8
+quantidade_reviews,Quantidade de reviews,dobro de reviews+1,headline_20_01,Captura de 20/01,668,471,-0.06418765480353501,-0.06217100509859875,8,8
+quantidade_reviews,Quantidade de reviews,dobro de reviews+1,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,-0.06391596670631394,-0.06191617350766774,8,8
+quantidade_reviews,Quantidade de reviews,dobro de reviews+1,peso_igual_anfitriao,Peso igual por anfitrião,668,471,-0.07366678815019596,-0.07101881018474793,8,8
+quantidade_reviews,Quantidade de reviews,dobro de reviews+1,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,-0.06885332398012889,-0.06653641323890644,8,8
+quantidade_reviews,Quantidade de reviews,dobro de reviews+1,sem_tres_imoveis,Sem os três imóveis afetados,667,470,-0.06885332398012889,-0.06653641323890644,8,8
+reserva_instantanea,Reserva instantânea,sim vs. não,ajuste_calendario,Ajuste de calendário aprovado,663,470,0.0199877857351482,0.020188879093487287,8,8
+reserva_instantanea,Reserva instantânea,sim vs. não,headline_20_01,Captura de 20/01,663,470,0.01995883899831391,0.02015934838189383,8,8
+reserva_instantanea,Reserva instantânea,sim vs. não,mediana_capturas,Mediana entre capturas nos mesmos imóveis,663,470,0.02060299859300152,0.02081670551298545,8,8
+reserva_instantanea,Reserva instantânea,sim vs. não,peso_igual_anfitriao,Peso igual por anfitrião,663,470,-0.012911737634916709,-0.012828738754492544,8,8
+reserva_instantanea,Reserva instantânea,sim vs. não,sem_precos_10k,Sem preços ≥ R$ 10 mil,662,469,0.004256741483186388,0.004265814276157234,8,8
+reserva_instantanea,Reserva instantânea,sim vs. não,sem_tres_imoveis,Sem os três imóveis afetados,662,469,0.004256741483186388,0.004265814276157234,8,8
+reviews_anfitriao,Quantidade de reviews do anfitrião,dobro de reviews+1,ajuste_calendario,Ajuste de calendário aprovado,668,471,0.01041317345459842,0.010467579226890318,8,8
+reviews_anfitriao,Quantidade de reviews do anfitrião,dobro de reviews+1,headline_20_01,Captura de 20/01,668,471,0.008209431048969852,0.008243220829710476,8,8
+reviews_anfitriao,Quantidade de reviews do anfitrião,dobro de reviews+1,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,0.01082838959110443,0.010887228787807053,8,8
+reviews_anfitriao,Quantidade de reviews do anfitrião,dobro de reviews+1,peso_igual_anfitriao,Peso igual por anfitrião,668,471,-0.015455303900349132,-0.015336483613152865,8,8
+reviews_anfitriao,Quantidade de reviews do anfitrião,dobro de reviews+1,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,0.00828447733136034,0.008318888574435114,8,8
+reviews_anfitriao,Quantidade de reviews do anfitrião,dobro de reviews+1,sem_tres_imoveis,Sem os três imóveis afetados,667,470,0.00828447733136034,0.008318888574435114,8,8
+superhost,Superhost,sim vs. não,ajuste_calendario,Ajuste de calendário aprovado,668,471,-0.11612010034423506,-0.10963171666148673,8,8
+superhost,Superhost,sim vs. não,headline_20_01,Captura de 20/01,668,471,-0.11162818082486742,-0.10562325789304133,8,8
+superhost,Superhost,sim vs. não,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,-0.12012252821398203,-0.11318822940242887,8,8
+superhost,Superhost,sim vs. não,peso_igual_anfitriao,Peso igual por anfitrião,668,471,-0.1164725551568993,-0.109945475951759,8,8
+superhost,Superhost,sim vs. não,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,-0.10094729310411099,-0.0960193223542883,8,8
+superhost,Superhost,sim vs. não,sem_tres_imoveis,Sem os três imóveis afetados,667,470,-0.10094729310411099,-0.0960193223542883,8,8
+taxa_limpeza,Taxa de limpeza positiva,+R$ 100,ajuste_calendario,Ajuste de calendário aprovado,652,459,0.06220527609581812,0.0641807731825601,8,8
+taxa_limpeza,Taxa de limpeza positiva,+R$ 100,headline_20_01,Captura de 20/01,652,459,0.057598080237856564,0.05928916089271855,8,8
+taxa_limpeza,Taxa de limpeza positiva,+R$ 100,mediana_capturas,Mediana entre capturas nos mesmos imóveis,652,459,0.06180048386087782,0.06375008824384336,8,8
+taxa_limpeza,Taxa de limpeza positiva,+R$ 100,peso_igual_anfitriao,Peso igual por anfitrião,652,459,0.08611824983149605,0.08993520533950769,8,8
+taxa_limpeza,Taxa de limpeza positiva,+R$ 100,sem_precos_10k,Sem preços ≥ R$ 10 mil,651,458,0.06120217512224335,0.06311382762944708,8,8
+taxa_limpeza,Taxa de limpeza positiva,+R$ 100,sem_tres_imoveis,Sem os três imóveis afetados,651,458,0.06120217512224335,0.06311382762944708,8,8
+tempo_anfitriao,Tempo como anfitrião,+1 ano,ajuste_calendario,Ajuste de calendário aprovado,668,471,0.0043170340078480945,0.004326365822915858,8,8
+tempo_anfitriao,Tempo como anfitrião,+1 ano,headline_20_01,Captura de 20/01,668,471,0.00396205505387226,0.003969914370250632,8,8
+tempo_anfitriao,Tempo como anfitrião,+1 ano,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,0.004088036683756922,0.004096404103942271,8,8
+tempo_anfitriao,Tempo como anfitrião,+1 ano,peso_igual_anfitriao,Peso igual por anfitrião,668,471,-0.001972494008081846,-0.001970549920219854,8,8
+tempo_anfitriao,Tempo como anfitrião,+1 ano,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,0.0025614038716886833,0.0025646870691854486,8,8
+tempo_anfitriao,Tempo como anfitrião,+1 ano,sem_tres_imoveis,Sem os três imóveis afetados,667,470,0.0025614038716886833,0.0025646870691854486,8,8
+wifi,Wi-Fi,presente vs. ausente,ajuste_calendario,Ajuste de calendário aprovado,668,471,,,7,8
+wifi,Wi-Fi,presente vs. ausente,headline_20_01,Captura de 20/01,668,471,,,7,8
+wifi,Wi-Fi,presente vs. ausente,mediana_capturas,Mediana entre capturas nos mesmos imóveis,668,471,,,7,8
+wifi,Wi-Fi,presente vs. ausente,peso_igual_anfitriao,Peso igual por anfitrião,668,471,,,7,8
+wifi,Wi-Fi,presente vs. ausente,sem_precos_10k,Sem preços ≥ R$ 10 mil,667,470,,,7,8
+wifi,Wi-Fi,presente vs. ausente,sem_tres_imoveis,Sem os três imóveis afetados,667,470,,,7,8

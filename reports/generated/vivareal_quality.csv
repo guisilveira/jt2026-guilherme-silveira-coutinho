@@ -1,0 +1,49 @@
+categoria,item,registros,tratamento,observacao
+deduplicação,Linhas brutas,8329,preservadas no CSV original,
+deduplicação,IDs duplicados,36,DEDUPLICAÇÃO,
+deduplicação,Linhas removidas da tabela derivada,36,DEDUPLICAÇÃO,
+deduplicação,IDs com diferença apenas na ordem de amenities,1,DEDUPLICAÇÃO,
+deduplicação,IDs com divergência material,0,bloqueio se > 0,
+escopo,Tipo: apartamento,7497,universo residencial principal,
+escopo,Tipo: casa,547,universo residencial principal,
+escopo,Tipo: terreno,160,FILTRO DE ESCOPO,
+escopo,Tipo: comercial,79,FILTRO DE ESCOPO,
+escopo,Tipo: outros,10,FILTRO DE ESCOPO,
+normalização de bairro,Alto São Bento → alto sao bento,66,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Andorinha → andorinha,779,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,CENTRO → centro,1,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Canto da Praia → canto da praia,131,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Casa Branca → casa branca,95,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Castelo Branco → castelo branco,506,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Centro → centro,1006,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Estreito → estreito,5,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Ilhota → ilhota,55,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Itapema → itapema,2,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Jardim Praia Mar → jardim praia mar,104,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,MEIA PRAIA → meia praia,1,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Meia Praia → meia praia,3439,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Meia Praia - Frente Mar → meia praia - frente mar,1,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Meia praia → meia praia,8,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Morretes → morretes,1768,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Ocean Tower → ocean tower,1,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Sertão Do Trombudo → sertao do trombudo,2,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Sertão do Trombudo → sertao do trombudo,39,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Sertãozinho → sertaozinho,1,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Taboleiro → taboleiro,1,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Tabuleiro → tabuleiro,6,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Tabuleiro dos Oliveiras → tabuleiro dos oliveiras,127,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,Varzea → varzea,45,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,meia praia → meia praia,6,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+normalização de bairro,<ausente> → desconhecido,98,NORMALIZAÇÃO,"Somente caixa, espaços e acentos; subdivisões não são fundidas."
+preço de compra,Preço inválido,0,excluído das métricas de preço,
+preço de compra,Preço abaixo de R$ 100 mil,1,FLAG DE QUALIDADE; preservado no principal,
+preço de compra,Preço fora da cerca externa do segmento,132,FLAG DE QUALIDADE; preservado no principal,
+área,Área ausente/não finita,0,fora apenas das métricas por m²,
+área,Área ≤ 0 ou > 1.000 m²,35,FLAG DE QUALIDADE; fora apenas das métricas por m²,
+condomínio,Ausente ou zero,4620,desconhecido; nunca convertido em gratuito,
+condomínio,Não finito ou negativo,0,inválido,
+condomínio,Custo anual ≥ preço pedido,8,FLAG DE QUALIDADE,
+condomínio,Acima da cerca externa do segmento,47,FLAG DE QUALIDADE,
+IPTU,Ausente ou zero,4775,cobertura desconhecida; não descontado,
+IPTU,Não finito ou negativo,0,inválido; não descontado,
+IPTU,Valor anual ≥ preço pedido,3,FLAG DE QUALIDADE; não descontado,

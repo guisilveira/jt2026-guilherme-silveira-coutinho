@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="439" viewBox="0 0 1100 439">
+<rect width="100%" height="100%" fill="white"/>
+<text x="30" y="38" font-family="Arial" font-size="22" font-weight="bold">Preço anunciado por hóspede comportado</text>
+<line x1="410.0" y1="63" x2="410.0" y2="399" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="5,5"/>
+<text x="30" y="90" font-family="Arial" font-size="14">Centro · apartamento · 1 quarto</text>
+<line x1="798.0" y1="85" x2="1030.0" y2="85" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="857.5" cy="85" r="6" fill="#006d77"/>
+<text x="867.5" y="90" font-family="Arial" font-size="13">R$ 136</text>
+<text x="30" y="132" font-family="Arial" font-size="14">Centro · apartamento · 2 quartos</text>
+<line x1="644.7" y1="127" x2="859.4" y2="127" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="740.5" cy="127" r="6" fill="#006d77"/>
+<text x="750.5" y="132" font-family="Arial" font-size="13">R$ 101</text>
+<text x="30" y="174" font-family="Arial" font-size="14">Meia Praia · apartamento · 4 quartos</text>
+<line x1="656.5" y1="169" x2="901.3" y2="169" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="737.8" cy="169" r="6" fill="#006d77"/>
+<text x="747.8" y="174" font-family="Arial" font-size="13">R$ 100</text>
+<text x="30" y="216" font-family="Arial" font-size="14">Centro · apartamento · 3 quartos</text>
+<line x1="616.7" y1="211" x2="788.6" y2="211" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="733.8" cy="211" r="6" fill="#006d77"/>
+<text x="743.8" y="216" font-family="Arial" font-size="13">R$ 99</text>
+<text x="30" y="258" font-family="Arial" font-size="14">Morretes · apartamento · 2 quartos</text>
+<line x1="612.2" y1="253" x2="796.0" y2="253" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="705.0" cy="253" r="6" fill="#006d77"/>
+<text x="715.0" y="258" font-family="Arial" font-size="13">R$ 90</text>
+<text x="30" y="300" font-family="Arial" font-size="14">Meia Praia · apartamento · 3 quartos</text>
+<line x1="623.1" y1="295" x2="783.3" y2="295" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="697.3" cy="295" r="6" fill="#006d77"/>
+<text x="707.3" y="300" font-family="Arial" font-size="13">R$ 88</text>
+<text x="30" y="342" font-family="Arial" font-size="14">Meia Praia · apartamento · 2 quartos</text>
+<line x1="605.2" y1="337" x2="736.3" y2="337" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="655.9" cy="337" r="6" fill="#006d77"/>
+<text x="665.9" y="342" font-family="Arial" font-size="13">R$ 75</text>
+<line x1="410" y1="399" x2="1030" y2="399" stroke="#333"/>
+<text x="410" y="424" font-family="Arial" font-size="12">R$ 0</text>
+<text x="970" y="424" font-family="Arial" font-size="12">R$ 189</text>
+</svg>

@@ -1,0 +1,4 @@
+relation,left_key,right_key,cardinality,left_distinct,right_distinct,matched_distinct,left_orphan_distinct,right_orphan_distinct,left_coverage,right_coverage
+details_to_hosts,Details.owner_id,Hosts.owner_id,N:N,3057,3057,3057,0,0,1.0,1.0
+details_to_mesh,Details.airbnb_listing_id,Mesh.airbnb_listing_id,1:1,4441,4441,4441,0,0,1.0,1.0
+details_to_price,Details.airbnb_listing_id,Price.airbnb_listing_id,1:N,4441,1005,999,3442,6,0.22494933573519477,0.9940298507462687

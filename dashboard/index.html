@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Síntese final da análise de investimento short-stay em Itapema.">
+  <title>Onde investir em Itapema? — Seazone</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="hero" id="topo">
+    <nav class="nav shell" aria-label="Navegação principal">
+      <a class="brand" href="#topo" aria-label="Voltar ao início"><span class="brand-mark">S</span><span>Investimento em Itapema</span></a>
+      <div class="nav-links"><a href="#ranking">Ranking</a><a href="#perguntas">Respostas</a><a href="#limites">Limites</a></div>
+    </nav>
+    <div class="hero-grid shell">
+      <div class="hero-copy">
+        <p class="eyebrow decision-tag">Decisão recomendada</p>
+        <h1>Priorizar um apartamento de <em>2 quartos em Morretes</em>.</h1>
+        <p class="hero-lead">Melhor relação entre preço anunciado e capital de compra no critério principal — sujeita à validação do imóvel, condomínio e custos operacionais.</p>
+        <div class="hero-actions"><a class="button primary" href="#ranking">Testar cenários</a><a class="button ghost" href="#tese">Ver tese dos compactos</a></div>
+      </div>
+      <aside class="decision-panel" aria-label="Resumo da decisão">
+        <div class="decision-number"><span>7,5%</span><small>gross yield proxy</small></div>
+        <dl>
+          <div><dt>Preço anunciado típico</dt><dd>R$ 454</dd></div>
+          <div><dt>Preço pedido mediano</dt><dd>R$ 790 mil</dd></div>
+          <div><dt>Amostra</dt><dd>43 Airbnb · 1.037 VivaReal</dd></div>
+          <div><dt>Robustez</dt><dd>liderou 8 de 9 sensibilidades</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="legend-strip" aria-label="Como ler o dashboard">
+      <div class="shell legend-grid">
+        <div><span class="legend-dot observed"></span><strong>Fato observado</strong><small>medianas e amostras nos anúncios</small></div>
+        <div><span class="legend-dot scenario"></span><strong>Cenário</strong><small>ocupação e sazonalidade assumidas</small></div>
+        <div><span class="legend-dot decision"></span><strong>Decisão humana</strong><small>critério: preço anunciado ÷ capital</small></div>
+        <div><span class="legend-dot alert"></span><strong>Limitação</strong><small>incerteza capaz de mudar a decisão</small></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="ranking">
+      <div class="section-heading">
+        <div><p class="eyebrow">Laboratório de cenários</p><h2>O ranking econômico responde às premissas</h2></div>
+        <p>Todos os controles são testes de estresse. Nenhuma combinação é apresentada como mais provável.</p>
+      </div>
+      <div class="scenario-layout">
+        <aside class="controls-card">
+          <fieldset><legend>Ocupação assumida</legend><div class="segmented" id="occupancy-controls"></div></fieldset>
+          <fieldset><legend>Preço fora do verão</legend><div class="segmented" id="seasonality-controls"></div></fieldset>
+          <fieldset><legend>Preço pedido de compra</legend><div class="segmented" id="purchase-controls"></div></fieldset>
+          <div class="scenario-result"><span>Líder neste cenário</span><strong id="scenario-leader">—</strong><b id="scenario-yield">—</b></div>
+          <p class="microcopy" id="scenario-note"></p>
+        </aside>
+        <div class="chart-card">
+          <div class="chart-title"><div><h3>Ranking dos segmentos principais</h3><p>Gross yield proxy · uma observação por anúncio</p></div><span class="source-pill">n Airbnb + n VivaReal</span></div>
+          <div id="ranking-chart" class="ranking-chart" role="img" aria-label="Ranking de gross yield proxy por segmento"></div>
+          <p class="chart-source">Fonte: Ciclo 3 · captura Airbnb de 20/01 + VivaReal deduplicado · ligação agregada por bairro, tipo e quartos.</p>
+        </div>
+      </div>
+      <div class="stress-card">
+        <div class="chart-title"><div><h3>Nove testes de estresse para Morretes/2 quartos</h3><p>Gross yield proxy · n=43 Airbnb + 1.037 VivaReal · compra conforme controle selecionado</p></div><span class="scenario-pill">cenários, não previsão</span></div>
+        <div class="stress-grid" id="stress-grid"></div>
+        <p class="chart-source">Fonte: Ciclo 3 · preço Airbnb de 20/01 e preços pedidos do VivaReal no segmento.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="perguntas">
+      <div class="shell">
+        <div class="section-heading"><div><p class="eyebrow">Respostas do desafio</p><h2>Quatro perguntas, quatro respostas diretas</h2></div></div>
+
+        <article class="answer-block" id="perfil">
+          <div class="question-number">01</div>
+          <div class="answer-content"><p class="eyebrow">Qual é o melhor perfil?</p><h3>Depende da definição de “melhor”. Para investimento, Morretes/2 quartos.</h3>
+            <div class="metric-triptych">
+              <div class="metric-card observed-card"><span>Maior preço absoluto</span><strong>R$ 899</strong><p>Meia Praia · apartamento · 4 quartos</p><small>n=43 anúncios · 38 anfitriões</small></div>
+              <div class="metric-card observed-card"><span>Maior densidade por capacidade</span><strong>R$ 137</strong><p>Centro · apartamento · 1 quarto, por hóspede comportado</p><small>R$ 450 por quarto · n=75 · 17 anfitriões</small></div>
+              <div class="metric-card decision-card"><span>Melhor investimento</span><strong>7,5%</strong><p>Morretes · apartamento · 2 quartos</p><small>gross yield proxy · cenário intermediário ilustrativo</small></div>
+            </div>
+            <div class="callout alert-callout"><strong>Tipo de anúncio sem resposta segura.</strong> Não existe campo confiável para distinguir imóvel inteiro, quarto privativo ou compartilhado. <code>listing_type</code> representa a tipologia do imóvel.</div>
+          </div>
+        </article>
+
+        <article class="answer-block" id="localizacao">
+          <div class="question-number">02</div>
+          <div class="answer-content"><p class="eyebrow">Qual é a melhor localização em preço?</p><h3>A localização depende do perfil; não há um bairro vencedor geral.</h3>
+            <div class="location-flow">
+              <div><span class="step">Composição</span><strong>Meia Praia</strong><p>Concentra imóveis maiores e aparece nos maiores preços absolutos.</p></div>
+              <div class="flow-arrow" aria-hidden="true">→</div>
+              <div><span class="step">Controle mínimo</span><strong>Mesmo tipo + quartos</strong><p>Comparamos bairros apenas dentro de perfis equivalentes.</p></div>
+              <div class="flow-arrow" aria-hidden="true">→</div>
+              <div><span class="step">Conclusão</span><strong>Inconclusiva</strong><p>Os intervalos agrupados não sustentam vantagem geral de localização.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="answer-block" id="caracteristicas">
+          <div class="question-number">03</div>
+          <div class="answer-content"><p class="eyebrow">O que está associado a preços maiores?</p><h3>Quatro associações positivas sustentadas dentro de perfis comparáveis.</h3>
+            <div id="positive-associations" class="association-grid"></div>
+            <div class="negative-panel"><div><span class="alert-kicker">Resultados contraintuitivos</span><h4>Reviews, superhost e favorito aparecem com sinal negativo</h4><p>Podem refletir idade do anúncio, seleção, padrão do imóvel ou estratégia de preço — não uma penalidade causada por esses atributos.</p></div><div id="negative-associations" class="negative-list"></div></div>
+            <p class="method-note">Regressões separadas de log(preço anunciado), controlando bairro, tipologia e quartos, mas não as demais características simultaneamente. São associações, não efeitos causais nem instruções para modificar um imóvel. IC95 por bootstrap agrupado por anfitrião.</p>
+          </div>
+        </article>
+
+        <article class="answer-block" id="decisao">
+          <div class="question-number">04</div>
+          <div class="answer-content"><p class="eyebrow">O que comprar hoje?</p><h3>Um apartamento de dois quartos em Morretes, após validar o ativo específico.</h3>
+            <div class="recommendation-grid">
+              <div class="recommendation-kpi"><span>Preço anunciado típico</span><strong>R$ 454</strong><small>dado observado · n=43 Airbnb</small></div>
+              <div class="recommendation-kpi"><span>Preço pedido mediano</span><strong>R$ 790 mil</strong><small>dado observado · n=1.037 VivaReal</small></div>
+              <div class="recommendation-kpi"><span>Gross yield proxy</span><strong>7,5%</strong><small>45% ocupação × 80% sazonalidade</small></div>
+              <div class="recommendation-kpi"><span>Após condomínio observado</span><strong>7,0%</strong><small>487 valores válidos de condomínio</small></div>
+              <div class="recommendation-kpi"><span>Faixa de estresse</span><strong>3,8%–12,6%</strong><small>nove combinações · compra mediana</small></div>
+            </div>
+            <div class="callout uncertainty-callout"><strong>Sem vencedor único totalmente robusto.</strong> Centro/2 e Centro/1 são alternativas; Centro/1 assume a liderança quando cada segmento usa o p25 do preço pedido.</div>
+            <p class="method-note">A estimativa combina imóveis diferentes do Airbnb e do VivaReal dentro do mesmo segmento. Não é retorno histórico, líquido, garantido nem avaliação de um imóvel individual.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section compact-section" id="tese">
+      <div class="shell compact-grid">
+        <div><p class="eyebrow">Tese dos compactos no Centro</p><h2>Um sinal operacional interessante, mas evidência econômica insuficiente.</h2><p class="compact-verdict">Os dados <strong>não sustentam</strong> os apartamentos compactos no Centro como a principal tese de investimento.</p></div>
+        <div class="evidence-stack">
+          <div class="evidence-item positive-evidence"><span>01</span><p>Centro/1 quarto tem boa densidade de preço anunciado por hóspede e por quarto.</p></div>
+          <div class="evidence-item"><span>02</span><p>A vantagem de localização foi inconclusiva.</p></div>
+          <div class="evidence-item"><span>03</span><p>No gross yield central, Centro/1 ficou abaixo de Centro/2.</p></div>
+          <div class="evidence-item"><span>04</span><p>A direção muda nas sensibilidades; p25 de compra favorece Centro/1.</p></div>
+          <div class="evidence-item warning-evidence"><span>05</span><p>Yield após condomínio de Centro/1 usa só 10 valores válidos.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="limites">
+      <div class="section-heading"><div><p class="eyebrow">Qualidade e limites</p><h2>O que ainda pode mudar a decisão</h2></div><p>Limitações não são rodapé: definem o nível de confiança da recomendação.</p></div>
+      <div id="limitations-grid" class="limitations-grid"></div>
+      <div class="audit-footer"><strong>Rastreabilidade</strong><span>20/20 checks do Ciclo 2</span><span>18/18 checks do Ciclo 3</span><span>28/28 checks do Ciclo 4</span><span>5/5 hashes brutos preservados</span></div>
+    </section>
+  </main>
+
+  <footer><div class="shell footer-grid"><p><strong>Seazone · Jovens Talentos 2026</strong><br>Síntese baseada somente nos cinco CSVs do desafio e nos artefatos aprovados.</p><a href="#topo">Voltar ao topo ↑</a></div></footer>
+
+  <script id="dashboard-data" type="application/json">{"characteristics": {"caveat": "Associações dentro de perfis comparáveis, não efeitos independentes ou causais.", "method": "Regressões separadas de log(preço anunciado), controlando bairro, tipologia e quartos, sem controlar as demais características simultaneamente; bootstrap agrupado por anfitrião.", "negative": [{"ciHigh": -0.04166473005459261, "ciLow": -0.08691450717045948, "direction": "negativa", "effect": -0.06217100509859875, "hosts": 471, "key": "quantidade_reviews", "label": "Quantidade de reviews", "listings": 668, "unit": "dobro de reviews+1"}, {"ciHigh": -0.016609482635182197, "ciLow": -0.1439386875486558, "direction": "negativa", "effect": -0.08553577583947708, "hosts": 471, "key": "favorito_hospedes", "label": "Favorito dos hóspedes", "listings": 668, "unit": "sim vs. não"}, {"ciHigh": -0.030578647568050742, "ciLow": -0.1736975434294972, "direction": "negativa", "effect": -0.10562325789304133, "hosts": 471, "key": "superhost", "label": "Superhost", "listings": 668, "unit": "sim vs. não"}, {"ciHigh": -0.2175973775788689, "ciLow": -0.5435398524167465, "direction": "negativa", "effect": -0.30107097076570066, "hosts": 471, "key": "presenca_reviews", "label": "Presença de reviews", "listings": 668, "unit": "sim vs. não"}], "positive": [{"ciHigh": 0.4142174289741912, "ciLow": 0.0953200116628667, "direction": "positiva", "effect": 0.2103865395817858, "hosts": 470, "key": "anfitriao_profissional", "label": "Anfitrião profissional", "listings": 663, "unit": "sim vs. não"}, {"ciHigh": 0.20909475578764078, "ciLow": 0.08262872241929682, "direction": "positiva", "effect": 0.13319584930361944, "hosts": 471, "key": "banheiros", "label": "Banheiros", "listings": 668, "unit": "+1 banheiro"}, {"ciHigh": 0.1176720267663903, "ciLow": 0.005183277543599327, "direction": "positiva", "effect": 0.05928916089271855, "hosts": 459, "key": "taxa_limpeza", "label": "Taxa de limpeza positiva", "listings": 652, "unit": "+R$ 100"}, {"ciHigh": 0.0789688961227248, "ciLow": 0.002348785121005635, "direction": "positiva", "effect": 0.02261176656057309, "hosts": 467, "key": "nota_anuncio", "label": "Nota do anúncio avaliado", "listings": 654, "unit": "+0,1 ponto"}]}, "compactThesis": {"economicStatus": "inconclusivo", "evidence": ["Centro/1 quarto tem maior densidade de preço anunciado por hóspede comportado e por quarto.", "A vantagem de localização de Centro/1 quarto foi inconclusiva.", "No gross yield proxy central, Centro/1 quarto ficou abaixo de Centro/2 quartos.", "A direção se inverte em sensibilidades; com o p25 de compra, Centro/1 lidera.", "O yield após condomínio de Centro/1 usa apenas 10 valores válidos e é exploratório."], "finalPosition": "Os dados não sustentam os apartamentos compactos no Centro como a principal tese de investimento.", "operationalStatus": "parcialmente sustentada"}, "definitions": {"decision": "Escolha humana: priorizar a relação entre preço anunciado e capital de compra.", "observed": "Medianas e amostras calculadas nos anúncios disponíveis.", "price": "Preço anunciado não é diária recebida nem receita realizada.", "scenario": "Ocupação e sazonalidade assumidas para teste de estresse; não são previsões.", "yield": "Gross yield proxy = preço anunciado típico × sazonalidade × 365 × ocupação ÷ preço pedido mediano."}, "location": {"composition": "Meia Praia aparece nos maiores preços absolutos porque concentra imóveis maiores.", "conclusion": "A localização depende do perfil do imóvel; os dados não sustentam uma vantagem geral de um bairro depois de controlar minimamente o perfil.", "equivalentProfiles": "As comparações diretas entre bairros para perfis equivalentes foram inconclusivas."}, "meta": {"currencyAssumption": "R$; unidade e taxas não são definidas explicitamente na documentação dos dados", "generatedFrom": ["reports/generated/airbnb_profile_summary.json", "reports/generated/airbnb_profile_segments.csv", "reports/generated/investment_summary.json", "reports/generated/airbnb_vivareal_segments.csv", "reports/generated/investment_scenarios.csv", "reports/generated/investment_robustness.csv", "reports/generated/airbnb_characteristics_summary.json", "reports/generated/airbnb_characteristic_associations.csv"], "mainCapture": "20/01/2025", "rawSourceHashes": {"Details_Itapema.csv": "3688ba1d8e576fb7e1091ff6242250bc3f845a3e10241fac378be8a168c83e84", "Hosts_ids_Itapema.csv": "b043ffea58b6f9b572fa8fc2dfbe4c155b71a0e1636e6edc28d33c4ab7765eef", "Mesh_Ids_Data_Itapema.csv": "f5064eec7fbfa7a962a0f67044baaeb0d7fcbfa9a730f80ce5a9dc8d58af694a", "Price_AV_Itapema.csv": "c726481d3cb5b4b5e9a1eff9e27f2919a7deeeb66c1696f0d0f6d5527fd9b555", "VivaReal_Itapema.csv": "ac6a4a8a3d2b43e0a7583ef7f4a86b849dedb79d56c2756eb2dce012de7ddd4f"}, "subtitle": "Preço anunciado, capital de compra e limites da evidência", "title": "Onde investir em Itapema?"}, "profile": {"bestInvestment": "morretes|apartamento|2 quartos", "highestAbsolute": {"hosts": 38, "key": "meia praia|apartamento|4 quartos", "label": "Meia Praia · apartamento · 4 quartos", "listings": 43, "price": 899.0}, "highestCapacityDensity": {"hosts": 17, "key": "centro|apartamento|1 quarto", "label": "Centro · apartamento · 1 quarto", "listings": 75, "pricePerGuest": 136.5, "pricePerRoom": 450.0}, "listingTypeLimitation": "Não há campo confiável para distinguir imóvel inteiro, quarto privativo ou compartilhado; listing_type representa tipologia do imóvel."}, "quality": {"cycleChecks": {"cycle2": 20, "cycle3": 18, "cycle4": 28}, "limitations": ["Só 22,5% dos anúncios do Airbnb têm preço, com cobertura desigual por bairro e perfil.", "Os preços Airbnb cobrem 105 dias concentrados entre janeiro e abril; sazonalidade anual é assumida.", "Airbnb e VivaReal são ligados por segmento, não por imóvel individual.", "Preço pedido não é preço de transação; custos operacionais, IPTU, vacância e impostos não formam um retorno líquido.", "Condomínio observado tem cobertura desigual; no Centro/1 quarto são apenas 10 valores válidos.", "Os dados não identificam com segurança imóvel inteiro, quarto privativo ou compartilhado."]}, "recommendation": {"alternatives": ["centro|apartamento|2 quartos", "centro|apartamento|1 quarto"], "reason": "Melhor relação observada entre preço anunciado e capital de compra no critério principal, com liderança em 8 de 9 sensibilidades.", "robustSingleWinner": false, "segmentKey": "morretes|apartamento|2 quartos", "sensitivityTotal": 9, "sensitivityWins": 8, "statement": "Eu priorizaria um apartamento de dois quartos em Morretes, sujeito à validação do imóvel específico, do condomínio e dos custos operacionais.", "stressRange": {"max": 0.12571708860759492, "min": 0.03771512658227847}}, "scenarioControls": {"default": {"occupancy": 0.45, "purchaseBasis": "median", "seasonality": 0.8}, "note": "45% × 80% é apenas o cenário intermediário ilustrativo, nunca o mais provável.", "occupancy": [0.3, 0.45, 0.6], "purchaseBases": [{"key": "p25", "label": "p25"}, {"key": "median", "label": "Mediana"}, {"key": "p75", "label": "p75"}], "seasonality": [0.6, 0.8, 1.0]}, "segments": [{"airbnbHosts": 17, "airbnbListings": 75, "airbnbTypicalPrice": 450.0, "areaMedianM2": 42.0, "bairro": "Centro", "condoCoverage": 0.45454545454545453, "condoMonthlyMedian": 500.0, "condoSupport": "exploratório", "condoValid": 10, "intermediate": {"annualizedPrice": 59130.0, "grossYield": 0.066438202247191, "rank": 3, "yieldAfterObservedCondo": 0.05969662921348315}, "key": "centro|apartamento|1 quarto", "label": "Centro · apartamento · 1 quarto", "purchasePrice": {"median": 890000.0, "p25": 652500.0, "p75": 980000.0}, "purchasePriceMedianM2": 16250.0, "purchasePriceWithoutSuspects": 890000.0, "purchaseSuspects": 1, "quartos": 1, "tipo": "apartamento", "vivarealListings": 22}, {"airbnbHosts": 37, "airbnbListings": 59, "airbnbTypicalPrice": 600.0, "areaMedianM2": 86.0, "bairro": "Centro", "condoCoverage": 0.6179775280898876, "condoMonthlyMedian": 500.0, "condoSupport": "principal", "condoValid": 55, "intermediate": {"annualizedPrice": 78840.0, "grossYield": 0.06855652173913043, "rank": 2, "yieldAfterObservedCondo": 0.0633391304347826}, "key": "centro|apartamento|2 quartos", "label": "Centro · apartamento · 2 quartos", "purchasePrice": {"median": 1150000.0, "p25": 889000.0, "p75": 1550000.0}, "purchasePriceMedianM2": 13088.778409090908, "purchasePriceWithoutSuspects": 1150000.0, "purchaseSuspects": 0, "quartos": 2, "tipo": "apartamento", "vivarealListings": 89}, {"airbnbHosts": 34, "airbnbListings": 38, "airbnbTypicalPrice": 664.0, "areaMedianM2": 131.0, "bairro": "Centro", "condoCoverage": 0.4096109839816934, "condoMonthlyMedian": 617.0, "condoSupport": "principal", "condoValid": 179, "intermediate": {"annualizedPrice": 87249.60000000002, "grossYield": 0.04154742857142858, "rank": 6, "yieldAfterObservedCondo": 0.0380217142857143}, "key": "centro|apartamento|3 quartos", "label": "Centro · apartamento · 3 quartos", "purchasePrice": {"median": 2100000.0, "p25": 1750000.0, "p75": 2790000.0}, "purchasePriceMedianM2": 15789.473684210527, "purchasePriceWithoutSuspects": 2100000.0, "purchaseSuspects": 1, "quartos": 3, "tipo": "apartamento", "vivarealListings": 437}, {"airbnbHosts": 112, "airbnbListings": 126, "airbnbTypicalPrice": 448.0, "areaMedianM2": 85.0, "bairro": "Meia Praia", "condoCoverage": 0.5432098765432098, "condoMonthlyMedian": 500.0, "condoSupport": "principal", "condoValid": 132, "intermediate": {"annualizedPrice": 58867.200000000004, "grossYield": 0.05450666666666667, "rank": 4, "yieldAfterObservedCondo": 0.04895111111111111}, "key": "meia praia|apartamento|2 quartos", "label": "Meia Praia · apartamento · 2 quartos", "purchasePrice": {"median": 1080000.0, "p25": 912850.0, "p75": 1290000.0}, "purchasePriceMedianM2": 13032.608695652174, "purchasePriceWithoutSuspects": 1070000.0, "purchaseSuspects": 2, "quartos": 2, "tipo": "apartamento", "vivarealListings": 243}, {"airbnbHosts": 235, "airbnbListings": 284, "airbnbTypicalPrice": 650.0, "areaMedianM2": 128.0, "bairro": "Meia Praia", "condoCoverage": 0.47083087802003537, "condoMonthlyMedian": 600.0, "condoSupport": "principal", "condoValid": 799, "intermediate": {"annualizedPrice": 85410.0, "grossYield": 0.04531034482758621, "rank": 5, "yieldAfterObservedCondo": 0.041490716180371354}, "key": "meia praia|apartamento|3 quartos", "label": "Meia Praia · apartamento · 3 quartos", "purchasePrice": {"median": 1885000.0, "p25": 1579800.0, "p75": 2399240.0}, "purchasePriceMedianM2": 15000.0, "purchasePriceWithoutSuspects": 1871827.5, "purchaseSuspects": 33, "quartos": 3, "tipo": "apartamento", "vivarealListings": 1697}, {"airbnbHosts": 38, "airbnbListings": 43, "airbnbTypicalPrice": 899.0, "areaMedianM2": 188.0, "bairro": "Meia Praia", "condoCoverage": 0.405446293494705, "condoMonthlyMedian": 923.0, "condoSupport": "principal", "condoValid": 536, "intermediate": {"annualizedPrice": 118128.6, "grossYield": 0.0328135, "rank": 7, "yieldAfterObservedCondo": 0.029736833333333334}, "key": "meia praia|apartamento|4 quartos", "label": "Meia Praia · apartamento · 4 quartos", "purchasePrice": {"median": 3600000.0, "p25": 2754250.0, "p75": 4987500.0}, "purchasePriceMedianM2": 18604.490537795362, "purchasePriceWithoutSuspects": 3560000.0, "purchaseSuspects": 21, "quartos": 4, "tipo": "apartamento", "vivarealListings": 1322}, {"airbnbHosts": 34, "airbnbListings": 43, "airbnbTypicalPrice": 453.5, "areaMedianM2": 69.0, "bairro": "Morretes", "condoCoverage": 0.46962391513982643, "condoMonthlyMedian": 350.0, "condoSupport": "principal", "condoValid": 487, "intermediate": {"annualizedPrice": 59589.9, "grossYield": 0.07543025316455697, "rank": 1, "yieldAfterObservedCondo": 0.07011379746835443}, "key": "morretes|apartamento|2 quartos", "label": "Morretes · apartamento · 2 quartos", "purchasePrice": {"median": 790000.0, "p25": 680000.0, "p75": 879740.0}, "purchasePriceMedianM2": 11550.942028985508, "purchasePriceWithoutSuspects": 790000.0, "purchaseSuspects": 1, "quartos": 2, "tipo": "apartamento", "vivarealListings": 1037}]}</script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

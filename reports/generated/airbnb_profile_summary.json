@@ -1,0 +1,53 @@
+{
+  "scope": {
+    "uses_vivareal": false,
+    "estimates_occupancy": false,
+    "estimates_revenue": false,
+    "estimates_return": false,
+    "main_capture": "2025-01-20"
+  },
+  "source_hashes": {
+    "Details_Itapema.csv": "3688ba1d8e576fb7e1091ff6242250bc3f845a3e10241fac378be8a168c83e84",
+    "Mesh_Ids_Data_Itapema.csv": "f5064eec7fbfa7a962a0f67044baaeb0d7fcbfa9a730f80ce5a9dc8d58af694a",
+    "Price_AV_Itapema.csv": "c726481d3cb5b4b5e9a1eff9e27f2919a7deeeb66c1696f0d0f6d5527fd9b555"
+  },
+  "capacity_thresholds": {
+    "capacidade_p25_global": 5.0,
+    "capacidade_p75_global": 8.0,
+    "cerca_externa_global": 17.0
+  },
+  "calendar_reference_price": 546.1438722395396,
+  "calendar_reconciliation": {
+    "segments": 45,
+    "max_absolute_difference": 4.547473508864641e-13,
+    "tolerance": 1e-10
+  },
+  "counts": {
+    "listing_metric_rows": 9083,
+    "segment_rows": 2246,
+    "contrast_definitions": 17,
+    "contrast_rows": 51,
+    "robustness_rows": 75
+  },
+  "results": {
+    "thesis_operational_classification": "parcialmente sustentada",
+    "location_component": "inconclusiva",
+    "compact_component": "favorável apenas em densidade de preço anunciado por capacidade declarada",
+    "compact_component_evidence_status": "favorável",
+    "compact_comparator_status": {
+      "centro|apartamento|2 quartos": "favorável",
+      "centro|apartamento|3 quartos": "favorável"
+    },
+    "top_total_price_segment": "Meia Praia · apartamento · 4 quartos",
+    "top_total_price_median": 899.0,
+    "top_controlled_comparator": "Meia Praia · apartamento · 3 quartos",
+    "top_vs_controlled_comparator_difference": 249.0,
+    "top_vs_controlled_comparator_difference_pct": 0.3830769230769231,
+    "general_location_claims": []
+  },
+  "checks": {
+    "all_passed": true,
+    "passed": 20,
+    "total": 20
+  }
+}

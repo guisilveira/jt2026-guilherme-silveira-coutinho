@@ -1,0 +1,1584 @@
+{
+  "source_files": {
+    "details": "data/Details_Itapema.csv",
+    "hosts": "data/Hosts_ids_Itapema.csv",
+    "mesh": "data/Mesh_Ids_Data_Itapema.csv",
+    "price": "data/Price_AV_Itapema.csv",
+    "vivareal": "data/VivaReal_Itapema.csv"
+  },
+  "audits": {
+    "details": {
+      "file": "Details_Itapema.csv",
+      "rows": 4441,
+      "columns": 35,
+      "column_names": [
+        "airbnb_listing_id",
+        "url",
+        "ad_name",
+        "ad_description",
+        "space",
+        "house_rules",
+        "amenities",
+        "safety_features",
+        "number_of_bathrooms",
+        "number_of_bedrooms",
+        "number_of_beds",
+        "latitude",
+        "longitude",
+        "check_in",
+        "check_out",
+        "number_of_guests",
+        "number_of_reviews",
+        "cleaning_fee",
+        "owner_id",
+        "aquisition_date",
+        "star_rating",
+        "picture_count",
+        "min_nights",
+        "guest_satisfaction_overall",
+        "listing_type",
+        "can_instant_book",
+        "is_professional",
+        "accuracy_rating",
+        "checkin_rating",
+        "cleanliness_rating",
+        "communication_rating",
+        "location_rating",
+        "value_rating",
+        "is_new_listing",
+        "is_guest_favorite"
+      ],
+      "memory_mb": 13.864055633544922,
+      "exact_duplicates": {
+        "duplicate_rows_all_columns": 0,
+        "duplicate_groups_all_columns": 0
+      },
+      "identifiers": {
+        "airbnb_listing_id": {
+          "missing_count": 0,
+          "distinct_non_null": 4441,
+          "is_unique_non_null": true,
+          "ids_with_multiple_rows": 0,
+          "rows_on_duplicated_ids": 0,
+          "max_rows_per_id": 1
+        },
+        "owner_id": {
+          "missing_count": 0,
+          "distinct_non_null": 3057,
+          "is_unique_non_null": false,
+          "ids_with_multiple_rows": 509,
+          "rows_on_duplicated_ids": 1893,
+          "max_rows_per_id": 112
+        }
+      },
+      "dates": {
+        "aquisition_date": {
+          "min": "2025-01-13T01:54:03",
+          "max": "2025-01-13T03:01:31",
+          "invalid_or_missing_count": 0,
+          "distinct_timestamps": 2624,
+          "distinct_dates": 1
+        }
+      },
+      "categories": {
+        "listing_type": [
+          {
+            "value": "apartamento",
+            "count": 3710,
+            "share": 0.8353974330105832
+          },
+          {
+            "value": "casa",
+            "count": 443,
+            "share": 0.09975230803873002
+          },
+          {
+            "value": "outros",
+            "count": 245,
+            "share": 0.05516775501013285
+          },
+          {
+            "value": "hotel",
+            "count": 43,
+            "share": 0.009682503940553928
+          }
+        ],
+        "number_of_bedrooms": [
+          {
+            "value": 3,
+            "count": 1922,
+            "share": 0.4327854086917361
+          },
+          {
+            "value": 2,
+            "count": 1482,
+            "share": 0.3337086241837424
+          },
+          {
+            "value": 1,
+            "count": 549,
+            "share": 0.12362080612474668
+          },
+          {
+            "value": 4,
+            "count": 371,
+            "share": 0.08353974330105832
+          },
+          {
+            "value": 0,
+            "count": 56,
+            "share": 0.012609772573744652
+          },
+          {
+            "value": 5,
+            "count": 41,
+            "share": 0.00923215492006305
+          },
+          {
+            "value": 6,
+            "count": 6,
+            "share": 0.0013510470614726414
+          },
+          {
+            "value": 7,
+            "count": 5,
+            "share": 0.001125872551227201
+          },
+          {
+            "value": 12,
+            "count": 4,
+            "share": 0.0009006980409817609
+          },
+          {
+            "value": 10,
+            "count": 2,
+            "share": 0.00045034902049088043
+          },
+          {
+            "value": 16,
+            "count": 1,
+            "share": 0.00022517451024544022
+          },
+          {
+            "value": 8,
+            "count": 1,
+            "share": 0.00022517451024544022
+          },
+          {
+            "value": 11,
+            "count": 1,
+            "share": 0.00022517451024544022
+          }
+        ],
+        "number_of_guests": [
+          {
+            "value": 6,
+            "count": 1224,
+            "share": 0.27561360054041883
+          },
+          {
+            "value": 8,
+            "count": 997,
+            "share": 0.2244989867147039
+          },
+          {
+            "value": 4,
+            "count": 493,
+            "share": 0.11101103355100203
+          },
+          {
+            "value": 5,
+            "count": 371,
+            "share": 0.08353974330105832
+          },
+          {
+            "value": 10,
+            "count": 327,
+            "share": 0.07363206485025896
+          },
+          {
+            "value": 7,
+            "count": 317,
+            "share": 0.07138031974780455
+          },
+          {
+            "value": 2,
+            "count": 251,
+            "share": 0.05651880207160549
+          },
+          {
+            "value": 9,
+            "count": 152,
+            "share": 0.03422652555730691
+          },
+          {
+            "value": 12,
+            "count": 98,
+            "share": 0.02206710200405314
+          },
+          {
+            "value": 3,
+            "count": 88,
+            "share": 0.01981535690159874
+          },
+          {
+            "value": 16,
+            "count": 37,
+            "share": 0.008331456879081288
+          },
+          {
+            "value": 11,
+            "count": 33,
+            "share": 0.007430758838099527
+          },
+          {
+            "value": 15,
+            "count": 18,
+            "share": 0.004053141184417924
+          },
+          {
+            "value": 1,
+            "count": 14,
+            "share": 0.003152443143436163
+          },
+          {
+            "value": 14,
+            "count": 13,
+            "share": 0.0029272686331907227
+          }
+        ],
+        "can_instant_book": [
+          {
+            "value": false,
+            "count": 3127,
+            "share": 0.7041206935374915
+          },
+          {
+            "value": true,
+            "count": 959,
+            "share": 0.21594235532537717
+          },
+          {
+            "value": null,
+            "count": 355,
+            "share": 0.07993695113713127
+          }
+        ],
+        "is_professional": [
+          {
+            "value": false,
+            "count": 3697,
+            "share": 0.8324701643773925
+          },
+          {
+            "value": true,
+            "count": 389,
+            "share": 0.08759288448547624
+          },
+          {
+            "value": null,
+            "count": 355,
+            "share": 0.07993695113713127
+          }
+        ],
+        "is_new_listing": [
+          {
+            "value": false,
+            "count": 2836,
+            "share": 0.6385949110560685
+          },
+          {
+            "value": null,
+            "count": 874,
+            "share": 0.19680252195451475
+          },
+          {
+            "value": true,
+            "count": 731,
+            "share": 0.1646025669894168
+          }
+        ],
+        "is_guest_favorite": [
+          {
+            "value": false,
+            "count": 3567,
+            "share": 0.8031974780454852
+          },
+          {
+            "value": true,
+            "count": 874,
+            "share": 0.19680252195451475
+          }
+        ]
+      },
+      "suspicious_values": {
+        "bedrooms_negative": 0,
+        "bedrooms_zero": 56,
+        "bedrooms_above_10": 6,
+        "guests_nonpositive": 0,
+        "guests_above_30": 0,
+        "bathrooms_negative": 0,
+        "star_rating_outside_0_5": 0,
+        "zero_star_with_reviews": 0,
+        "cleaning_fee_negative": 0,
+        "min_nights_negative": 0
+      },
+      "coordinate_quality": {
+        "latitude": {
+          "min": 0.0,
+          "p01": 0.0,
+          "p05": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "max": 0.0,
+          "negative_count": 0,
+          "zero_count": 4441
+        },
+        "longitude": {
+          "min": 0.0,
+          "p01": 0.0,
+          "p05": 0.0,
+          "median": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "max": 0.0,
+          "negative_count": 0,
+          "zero_count": 4441
+        },
+        "missing_coordinate_pairs": 0,
+        "outside_world_bounds": 0,
+        "outside_broad_itapema_box": 4441,
+        "distinct_coordinate_pairs": 1
+      }
+    },
+    "hosts": {
+      "file": "Hosts_ids_Itapema.csv",
+      "rows": 4440,
+      "columns": 11,
+      "column_names": [
+        "owner_id",
+        "owner",
+        "is_superhost",
+        "number_of_reviews_host",
+        "is_verified",
+        "star_rating_host",
+        "years_host",
+        "months_host",
+        "response_rate_shown",
+        "response_time_shown",
+        "host_snapshot_date"
+      ],
+      "memory_mb": 1.0134859085083008,
+      "exact_duplicates": {
+        "duplicate_rows_all_columns": 0,
+        "duplicate_groups_all_columns": 0
+      },
+      "identifiers": {
+        "owner_id": {
+          "missing_count": 0,
+          "distinct_non_null": 3057,
+          "is_unique_non_null": false,
+          "ids_with_multiple_rows": 509,
+          "rows_on_duplicated_ids": 1892,
+          "max_rows_per_id": 112
+        }
+      },
+      "dates": {
+        "host_snapshot_date": {
+          "min": "2025-01-13T01:54:03",
+          "max": "2025-01-13T03:01:31",
+          "invalid_or_missing_count": 0,
+          "distinct_timestamps": 2624,
+          "distinct_dates": 1
+        }
+      },
+      "categories": {
+        "is_superhost": [
+          {
+            "value": false,
+            "count": 3549,
+            "share": 0.7993243243243243
+          },
+          {
+            "value": true,
+            "count": 891,
+            "share": 0.20067567567567568
+          }
+        ],
+        "is_verified": [
+          {
+            "value": true,
+            "count": 4411,
+            "share": 0.9934684684684685
+          },
+          {
+            "value": false,
+            "count": 29,
+            "share": 0.006531531531531532
+          }
+        ],
+        "years_host": [
+          {
+            "value": 0,
+            "count": 921,
+            "share": 0.20743243243243242
+          },
+          {
+            "value": 1,
+            "count": 709,
+            "share": 0.1596846846846847
+          },
+          {
+            "value": 5,
+            "count": 523,
+            "share": 0.1177927927927928
+          },
+          {
+            "value": 6,
+            "count": 511,
+            "share": 0.1150900900900901
+          },
+          {
+            "value": 2,
+            "count": 486,
+            "share": 0.10945945945945947
+          },
+          {
+            "value": 3,
+            "count": 355,
+            "share": 0.07995495495495496
+          },
+          {
+            "value": 7,
+            "count": 289,
+            "share": 0.06509009009009009
+          },
+          {
+            "value": 4,
+            "count": 281,
+            "share": 0.0632882882882883
+          },
+          {
+            "value": 8,
+            "count": 229,
+            "share": 0.05157657657657658
+          },
+          {
+            "value": 9,
+            "count": 93,
+            "share": 0.020945945945945947
+          },
+          {
+            "value": 10,
+            "count": 32,
+            "share": 0.007207207207207207
+          },
+          {
+            "value": 11,
+            "count": 5,
+            "share": 0.0011261261261261261
+          },
+          {
+            "value": 12,
+            "count": 4,
+            "share": 0.0009009009009009009
+          },
+          {
+            "value": 13,
+            "count": 2,
+            "share": 0.00045045045045045046
+          }
+        ],
+        "response_rate_shown": [
+          {
+            "value": null,
+            "count": 4440,
+            "share": 1.0
+          }
+        ],
+        "response_time_shown": [
+          {
+            "value": null,
+            "count": 4440,
+            "share": 1.0
+          }
+        ]
+      },
+      "suspicious_values": {
+        "host_star_outside_0_5": 0,
+        "years_host_negative": 0,
+        "months_host_outside_0_11": 0
+      },
+      "coordinate_quality": null
+    },
+    "mesh": {
+      "file": "Mesh_Ids_Data_Itapema.csv",
+      "rows": 4441,
+      "columns": 8,
+      "column_names": [
+        "airbnb_listing_id",
+        "latitude",
+        "longitude",
+        "suburb",
+        "country",
+        "state",
+        "city",
+        "aquisition_date"
+      ],
+      "memory_mb": 1.6309289932250977,
+      "exact_duplicates": {
+        "duplicate_rows_all_columns": 0,
+        "duplicate_groups_all_columns": 0
+      },
+      "identifiers": {
+        "airbnb_listing_id": {
+          "missing_count": 0,
+          "distinct_non_null": 4441,
+          "is_unique_non_null": true,
+          "ids_with_multiple_rows": 0,
+          "rows_on_duplicated_ids": 0,
+          "max_rows_per_id": 1
+        }
+      },
+      "dates": {
+        "aquisition_date": {
+          "min": "2021-10-25T14:40:16.352000",
+          "max": "2026-05-04T19:18:49.603000",
+          "invalid_or_missing_count": 0,
+          "distinct_timestamps": 2362,
+          "distinct_dates": 99
+        }
+      },
+      "categories": {
+        "suburb": [
+          {
+            "value": "Meia Praia",
+            "count": 2860,
+            "share": 0.643999099301959
+          },
+          {
+            "value": "Centro",
+            "count": 657,
+            "share": 0.14793965323125421
+          },
+          {
+            "value": "Morretes",
+            "count": 441,
+            "share": 0.09930195901823914
+          },
+          {
+            "value": "Tabuleiro dos Oliveiras",
+            "count": 129,
+            "share": 0.02904751182166179
+          },
+          {
+            "value": "Casa Branca",
+            "count": 88,
+            "share": 0.01981535690159874
+          },
+          {
+            "value": "Alto Sao Bento",
+            "count": 62,
+            "share": 0.013960819635217293
+          },
+          {
+            "value": "Ilhota",
+            "count": 56,
+            "share": 0.012609772573744652
+          },
+          {
+            "value": "Varzea",
+            "count": 43,
+            "share": 0.009682503940553928
+          },
+          {
+            "value": "Canto da Praia",
+            "count": 28,
+            "share": 0.006304886286872326
+          },
+          {
+            "value": "Sertao do Trombudo",
+            "count": 22,
+            "share": 0.004953839225399685
+          },
+          {
+            "value": "Sertaozinho",
+            "count": 21,
+            "share": 0.0047286647151542445
+          },
+          {
+            "value": "Leopoldo Zarling",
+            "count": 18,
+            "share": 0.004053141184417924
+          },
+          {
+            "value": "Areal",
+            "count": 5,
+            "share": 0.001125872551227201
+          },
+          {
+            "value": "Jardim Praiamar",
+            "count": 5,
+            "share": 0.001125872551227201
+          },
+          {
+            "value": "none",
+            "count": 5,
+            "share": 0.001125872551227201
+          }
+        ],
+        "country": [
+          {
+            "value": "Brasil",
+            "count": 4441,
+            "share": 1.0
+          }
+        ],
+        "state": [
+          {
+            "value": "Santa Catarina",
+            "count": 4441,
+            "share": 1.0
+          }
+        ],
+        "city": [
+          {
+            "value": "Itapema",
+            "count": 4441,
+            "share": 1.0
+          }
+        ]
+      },
+      "suspicious_values": {},
+      "coordinate_quality": {
+        "latitude": {
+          "min": -27.1490001678,
+          "p01": -27.144297466576685,
+          "p05": -27.14163912147,
+          "median": -27.12794359520252,
+          "p95": -27.08966,
+          "p99": -27.066507666839296,
+          "max": -27.05589395136928,
+          "negative_count": 4441,
+          "zero_count": 0
+        },
+        "longitude": {
+          "min": -48.66191482543945,
+          "p01": -48.63067242724,
+          "p05": -48.617825704346814,
+          "median": -48.60499954223633,
+          "p95": -48.59157388270077,
+          "p99": -48.587958,
+          "max": -48.58594772482967,
+          "negative_count": 4441,
+          "zero_count": 0
+        },
+        "missing_coordinate_pairs": 0,
+        "outside_world_bounds": 0,
+        "outside_broad_itapema_box": 0,
+        "distinct_coordinate_pairs": 3988
+      }
+    },
+    "price": {
+      "file": "Price_AV_Itapema.csv",
+      "rows": 118839,
+      "columns": 4,
+      "column_names": [
+        "airbnb_listing_id",
+        "date",
+        "price",
+        "aquisition_date"
+      ],
+      "memory_mb": 22.81848430633545,
+      "exact_duplicates": {
+        "duplicate_rows_all_columns": 0,
+        "duplicate_groups_all_columns": 0
+      },
+      "identifiers": {
+        "airbnb_listing_id": {
+          "missing_count": 0,
+          "distinct_non_null": 1005,
+          "is_unique_non_null": false,
+          "ids_with_multiple_rows": 1005,
+          "rows_on_duplicated_ids": 118839,
+          "max_rows_per_id": 270
+        }
+      },
+      "dates": {
+        "date": {
+          "min": "2025-01-06T00:00:00",
+          "max": "2025-04-20T00:00:00",
+          "invalid_or_missing_count": 0,
+          "distinct_timestamps": 105,
+          "distinct_dates": 105
+        },
+        "aquisition_date": {
+          "min": "2025-01-06T13:22:07",
+          "max": "2025-01-20T15:07:47",
+          "invalid_or_missing_count": 0,
+          "distinct_timestamps": 4172,
+          "distinct_dates": 3
+        }
+      },
+      "categories": {},
+      "suspicious_values": {
+        "price_nonpositive": 0,
+        "price_above_10000": 1,
+        "price_above_100000": 0
+      },
+      "coordinate_quality": null
+    },
+    "vivareal": {
+      "file": "VivaReal_Itapema.csv",
+      "rows": 8329,
+      "columns": 22,
+      "column_names": [
+        "listing_id",
+        "link_url",
+        "listing_title",
+        "business_types",
+        "listing_type",
+        "property_type",
+        "sale_price",
+        "rental_price",
+        "rental_period",
+        "yearly_iptu",
+        "monthly_condo_fee",
+        "amenities",
+        "usable_area",
+        "bathrooms",
+        "bedrooms",
+        "parking_spaces",
+        "state",
+        "city",
+        "suburb",
+        "advertiser_name",
+        "portal",
+        "aquisition_date"
+      ],
+      "memory_mb": 9.780491828918457,
+      "exact_duplicates": {
+        "duplicate_rows_all_columns": 70,
+        "duplicate_groups_all_columns": 35
+      },
+      "identifiers": {
+        "listing_id": {
+          "missing_count": 0,
+          "distinct_non_null": 8293,
+          "is_unique_non_null": false,
+          "ids_with_multiple_rows": 36,
+          "rows_on_duplicated_ids": 72,
+          "max_rows_per_id": 2
+        }
+      },
+      "dates": {
+        "aquisition_date": {
+          "min": "2025-01-11T00:00:00",
+          "max": "2025-01-11T00:00:00",
+          "invalid_or_missing_count": 0,
+          "distinct_timestamps": 1,
+          "distinct_dates": 1
+        }
+      },
+      "categories": {
+        "business_types": [
+          {
+            "value": "Venda",
+            "count": 8327,
+            "share": 0.9997598751350703
+          },
+          {
+            "value": "Ambos",
+            "count": 2,
+            "share": 0.00024012486492976348
+          }
+        ],
+        "listing_type": [
+          {
+            "value": "apartamento",
+            "count": 7529,
+            "share": 0.9039500540280946
+          },
+          {
+            "value": "casa",
+            "count": 547,
+            "share": 0.06567415055829032
+          },
+          {
+            "value": "terreno",
+            "count": 164,
+            "share": 0.019690238924240606
+          },
+          {
+            "value": "comercial",
+            "count": 79,
+            "share": 0.009484932164725658
+          },
+          {
+            "value": "outros",
+            "count": 10,
+            "share": 0.0012006243246488173
+          }
+        ],
+        "property_type": [
+          {
+            "value": "UNIT",
+            "count": 8329,
+            "share": 1.0
+          }
+        ],
+        "bedrooms": [
+          {
+            "value": 3,
+            "count": 3435,
+            "share": 0.4124144555168688
+          },
+          {
+            "value": 4,
+            "count": 2240,
+            "share": 0.2689398487213351
+          },
+          {
+            "value": 2,
+            "count": 2076,
+            "share": 0.24924960979709448
+          },
+          {
+            "value": 0,
+            "count": 230,
+            "share": 0.0276143594669228
+          },
+          {
+            "value": 1,
+            "count": 179,
+            "share": 0.02149117541121383
+          },
+          {
+            "value": 5,
+            "count": 136,
+            "share": 0.016328490815223917
+          },
+          {
+            "value": 6,
+            "count": 24,
+            "share": 0.0028814983791571615
+          },
+          {
+            "value": 7,
+            "count": 7,
+            "share": 0.0008404370272541722
+          },
+          {
+            "value": 11,
+            "count": 1,
+            "share": 0.00012006243246488174
+          },
+          {
+            "value": 8,
+            "count": 1,
+            "share": 0.00012006243246488174
+          }
+        ],
+        "suburb": [
+          {
+            "value": "Meia Praia",
+            "count": 3452,
+            "share": 0.41445551686877175
+          },
+          {
+            "value": "Morretes",
+            "count": 1777,
+            "share": 0.21335094249009484
+          },
+          {
+            "value": "Centro",
+            "count": 1009,
+            "share": 0.12114299435706567
+          },
+          {
+            "value": "Andorinha",
+            "count": 782,
+            "share": 0.09388882218753752
+          },
+          {
+            "value": "Castelo Branco",
+            "count": 510,
+            "share": 0.06123184055708969
+          },
+          {
+            "value": "Canto da Praia",
+            "count": 131,
+            "share": 0.015728178652899508
+          },
+          {
+            "value": "Tabuleiro dos Oliveiras",
+            "count": 128,
+            "share": 0.015367991355504863
+          },
+          {
+            "value": "Jardim Praia Mar",
+            "count": 104,
+            "share": 0.0124864929763477
+          },
+          {
+            "value": null,
+            "count": 98,
+            "share": 0.01176611838155841
+          },
+          {
+            "value": "Casa Branca",
+            "count": 95,
+            "share": 0.011405931084163766
+          },
+          {
+            "value": "Alto São Bento",
+            "count": 66,
+            "share": 0.007924120542682194
+          },
+          {
+            "value": "Ilhota",
+            "count": 55,
+            "share": 0.006603433785568495
+          },
+          {
+            "value": "Varzea",
+            "count": 47,
+            "share": 0.005642934325849442
+          },
+          {
+            "value": "Sertão do Trombudo",
+            "count": 40,
+            "share": 0.004802497298595269
+          },
+          {
+            "value": "Meia praia",
+            "count": 8,
+            "share": 0.0009604994597190539
+          }
+        ],
+        "city": [
+          {
+            "value": "Itapema",
+            "count": 8329,
+            "share": 1.0
+          }
+        ],
+        "state": [
+          {
+            "value": "SC",
+            "count": 8327,
+            "share": 0.9997598751350703
+          },
+          {
+            "value": null,
+            "count": 2,
+            "share": 0.00024012486492976348
+          }
+        ],
+        "portal": [
+          {
+            "value": "GRUPOZAP",
+            "count": 8329,
+            "share": 1.0
+          }
+        ],
+        "rental_period": [
+          {
+            "value": null,
+            "count": 8327,
+            "share": 0.9997598751350703
+          },
+          {
+            "value": "MONTHLY",
+            "count": 2,
+            "share": 0.00024012486492976348
+          }
+        ]
+      },
+      "suspicious_values": {
+        "sale_price_nonpositive": 0,
+        "sale_price_below_100000": 2,
+        "sale_price_above_50000000": 0,
+        "usable_area_nonpositive": 11,
+        "usable_area_above_2000": 26,
+        "bedrooms_negative": 0,
+        "bedrooms_above_20": 0,
+        "condo_fee_negative": 0,
+        "condo_fee_above_10000": 12
+      },
+      "coordinate_quality": null
+    }
+  },
+  "relationships": {
+    "details_to_hosts": {
+      "left_distinct": 3057,
+      "right_distinct": 3057,
+      "matched_distinct": 3057,
+      "left_orphan_distinct": 0,
+      "right_orphan_distinct": 0,
+      "left_coverage": 1.0,
+      "right_coverage": 1.0,
+      "left_key": "Details.owner_id",
+      "right_key": "Hosts.owner_id",
+      "cardinality": "N:N",
+      "detail_rows_with_missing_key": 0,
+      "host_rows_with_missing_key": 0,
+      "detail_rows_without_match": 0,
+      "host_rows_without_detail": 0,
+      "owners_with_repeated_rows": 509,
+      "max_rows_per_owner_in_hosts": 112,
+      "max_listings_per_host": 112,
+      "raw_owner_id_join_rows": 30822,
+      "raw_owner_id_join_multiplier": 6.940328754784958,
+      "composite_key": "Details.(owner_id,aquisition_date) -> Hosts.(owner_id,host_snapshot_date)",
+      "composite_cardinality": "N:1",
+      "composite_matched_detail_rows": 4441,
+      "composite_orphan_detail_rows": 0,
+      "owners_with_attribute_variation": {
+        "owner": 0,
+        "is_superhost": 0,
+        "number_of_reviews_host": 1,
+        "is_verified": 0,
+        "star_rating_host": 0,
+        "years_host": 0,
+        "months_host": 0,
+        "response_rate_shown": 0,
+        "response_time_shown": 0
+      }
+    },
+    "details_to_mesh": {
+      "left_distinct": 4441,
+      "right_distinct": 4441,
+      "matched_distinct": 4441,
+      "left_orphan_distinct": 0,
+      "right_orphan_distinct": 0,
+      "left_coverage": 1.0,
+      "right_coverage": 1.0,
+      "left_key": "Details.airbnb_listing_id",
+      "right_key": "Mesh.airbnb_listing_id",
+      "cardinality": "1:1",
+      "detail_rows_without_match": 0,
+      "mesh_rows_without_detail": 0,
+      "listings_with_multiple_mesh_rows": 0,
+      "max_mesh_rows_per_listing": 1,
+      "listings_with_multiple_coordinates": 0,
+      "listings_with_multiple_suburbs": 0,
+      "missing_suburb_rows": 0,
+      "coordinate_quality": {
+        "latitude": {
+          "min": -27.1490001678,
+          "p01": -27.144297466576685,
+          "p05": -27.14163912147,
+          "median": -27.12794359520252,
+          "p95": -27.08966,
+          "p99": -27.066507666839296,
+          "max": -27.05589395136928,
+          "negative_count": 4441,
+          "zero_count": 0
+        },
+        "longitude": {
+          "min": -48.66191482543945,
+          "p01": -48.63067242724,
+          "p05": -48.617825704346814,
+          "median": -48.60499954223633,
+          "p95": -48.59157388270077,
+          "p99": -48.587958,
+          "max": -48.58594772482967,
+          "negative_count": 4441,
+          "zero_count": 0
+        },
+        "missing_coordinate_pairs": 0,
+        "outside_world_bounds": 0,
+        "outside_broad_itapema_box": 0,
+        "distinct_coordinate_pairs": 3988
+      }
+    },
+    "details_to_price": {
+      "left_distinct": 4441,
+      "right_distinct": 1005,
+      "matched_distinct": 999,
+      "left_orphan_distinct": 3442,
+      "right_orphan_distinct": 6,
+      "left_coverage": 0.22494933573519477,
+      "right_coverage": 0.9940298507462687,
+      "left_key": "Details.airbnb_listing_id",
+      "right_key": "Price.airbnb_listing_id",
+      "cardinality": "1:N",
+      "detail_rows_without_match": 3442,
+      "price_rows_without_detail": 509,
+      "listings_with_price_history": 1005,
+      "min_rows_per_listing": 2,
+      "median_rows_per_listing": 106.0,
+      "max_rows_per_listing": 270,
+      "listing_stay_date_pairs_with_multiple_rows": 33588,
+      "max_rows_per_listing_stay_date": 3,
+      "listing_stay_capture_keys_with_duplicates": 0,
+      "listing_stay_pairs_with_multiple_captures": 33588,
+      "max_captures_per_listing_stay_pair": 3,
+      "rows_captured_after_stay_date": 0,
+      "price_numeric": {
+        "min": 63.0,
+        "p01": 192.3800000000001,
+        "p05": 299.0,
+        "median": 607.0,
+        "p95": 1500.0,
+        "p99": 2250.0,
+        "max": 29000.0,
+        "negative_count": 0,
+        "zero_count": 0
+      }
+    }
+  },
+  "cross_file_columns": [
+    {
+      "column": "airbnb_listing_id",
+      "files": [
+        "details",
+        "mesh",
+        "price"
+      ]
+    },
+    {
+      "column": "amenities",
+      "files": [
+        "details",
+        "vivareal"
+      ]
+    },
+    {
+      "column": "aquisition_date",
+      "files": [
+        "details",
+        "mesh",
+        "price",
+        "vivareal"
+      ]
+    },
+    {
+      "column": "city",
+      "files": [
+        "mesh",
+        "vivareal"
+      ]
+    },
+    {
+      "column": "latitude",
+      "files": [
+        "details",
+        "mesh"
+      ]
+    },
+    {
+      "column": "listing_type",
+      "files": [
+        "details",
+        "vivareal"
+      ]
+    },
+    {
+      "column": "longitude",
+      "files": [
+        "details",
+        "mesh"
+      ]
+    },
+    {
+      "column": "owner_id",
+      "files": [
+        "details",
+        "hosts"
+      ]
+    },
+    {
+      "column": "state",
+      "files": [
+        "mesh",
+        "vivareal"
+      ]
+    },
+    {
+      "column": "suburb",
+      "files": [
+        "mesh",
+        "vivareal"
+      ]
+    }
+  ],
+  "additional_relationship_diagnostics": {
+    "details_mesh_coordinates": {
+      "joined_rows": 4441,
+      "exact_coordinate_matches": 0,
+      "within_1e_5_degrees": 0,
+      "rows_with_any_coordinate_difference": 4441,
+      "max_absolute_latitude_difference": 27.1490001678,
+      "max_absolute_longitude_difference": 48.66191482543945
+    },
+    "airbnb_vivareal_aggregate_dimensions": {
+      "literal_listing_id_overlap": 0,
+      "shared_normalized_suburbs": [
+        "canto da praia",
+        "casa branca",
+        "centro",
+        "ilhota",
+        "meia praia",
+        "morretes",
+        "tabuleiro dos oliveiras",
+        "varzea"
+      ],
+      "airbnb_only_normalized_suburbs": [
+        "alto sao bento",
+        "areal",
+        "jardim praiamar",
+        "lameiro",
+        "leopoldo zarling",
+        "none",
+        "sertao do trombudo",
+        "sertaozinho"
+      ],
+      "vivareal_only_normalized_suburbs": [
+        "alto são bento",
+        "andorinha",
+        "castelo branco",
+        "estreito",
+        "itapema",
+        "jardim praia mar",
+        "meia praia - frente mar",
+        "ocean tower",
+        "sertão do trombudo",
+        "sertãozinho",
+        "taboleiro",
+        "tabuleiro"
+      ],
+      "shared_normalized_listing_types": [
+        "apartamento",
+        "casa",
+        "outros"
+      ],
+      "airbnb_only_normalized_listing_types": [
+        "hotel"
+      ],
+      "vivareal_only_normalized_listing_types": [
+        "comercial",
+        "terreno"
+      ],
+      "shared_bedroom_counts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11
+      ]
+    }
+  },
+  "price_semantics": {
+    "columns_present": [
+      "airbnb_listing_id",
+      "date",
+      "price",
+      "aquisition_date"
+    ],
+    "availability_column_present": false,
+    "fee_columns_present": [],
+    "currency_column_present": false,
+    "stay_date": {
+      "min": "2025-01-06T00:00:00",
+      "max": "2025-04-20T00:00:00",
+      "distinct_dates": 105
+    },
+    "capture_timestamp": {
+      "min": "2025-01-06T13:22:07",
+      "max": "2025-01-20T15:07:47",
+      "distinct_timestamps": 4172,
+      "distinct_dates": 3,
+      "rows_by_capture_date": {
+        "2025-01-06": 37825,
+        "2025-01-07": 38991,
+        "2025-01-20": 42023
+      },
+      "largest_timestamp_groups": {
+        "2025-01-20 15:05:10.000": 4,
+        "2025-01-20 15:05:18.000": 82,
+        "2025-01-20 15:05:29.000": 1,
+        "2025-01-20 15:05:38.000": 5,
+        "2025-01-20 15:06:43.000": 1,
+        "2025-01-20 15:06:45.000": 16,
+        "2025-01-20 15:07:14.000": 18,
+        "2025-01-20 15:07:24.000": 2,
+        "2025-01-20 15:07:25.000": 45,
+        "2025-01-20 15:07:47.000": 59
+      }
+    },
+    "capture_structure": {
+      "listings_per_capture_day": {
+        "2025-01-06": 753,
+        "2025-01-07": 773,
+        "2025-01-20": 780
+      },
+      "capture_days_per_listing": {
+        "1": 332,
+        "2": 45,
+        "3": 628
+      },
+      "capture_timestamps_per_listing": {
+        "min": 1.0,
+        "p01": 1.0,
+        "p05": 1.0,
+        "median": 5.0,
+        "p95": 10.799999999999955,
+        "p99": 13.0,
+        "max": 19.0,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      "rows_per_listing_capture_day": {
+        "min": 2.0,
+        "p01": 5.050000000000001,
+        "p05": 14.0,
+        "median": 54.0,
+        "p95": 83.0,
+        "p99": 90.0,
+        "max": 91.0,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      "duplicate_listing_stay_capture_day_keys": 0,
+      "interpretation": "O dia da captura funciona como snapshot; timestamps diferentes no mesmo dia particionam datas de estadia, sem duplicar listing+estadia+dia."
+    },
+    "lead_days": {
+      "min": 0.0,
+      "p01": 6.0,
+      "p05": 15.0,
+      "median": 58.0,
+      "p95": 87.0,
+      "p99": 90.0,
+      "max": 90.0,
+      "negative_count": 0,
+      "zero_count": 69
+    },
+    "listing_stay_pairs": 59040,
+    "pairs_with_multiple_rows": 33588,
+    "pairs_with_price_change": 15617,
+    "max_price_change_for_pair": 1300.0
+  },
+  "price_coverage_by_cohort": {
+    "listing_type": [
+      {
+        "listing_type": "apartamento",
+        "price_listings": 911,
+        "total_listings": 3710,
+        "coverage": 0.24555256064690026
+      },
+      {
+        "listing_type": "casa",
+        "price_listings": 70,
+        "total_listings": 443,
+        "coverage": 0.1580135440180587
+      },
+      {
+        "listing_type": "hotel",
+        "price_listings": 1,
+        "total_listings": 43,
+        "coverage": 0.023255813953488372
+      },
+      {
+        "listing_type": "outros",
+        "price_listings": 17,
+        "total_listings": 245,
+        "coverage": 0.06938775510204082
+      }
+    ],
+    "number_of_bedrooms": [
+      {
+        "number_of_bedrooms": 0,
+        "price_listings": 8,
+        "total_listings": 56,
+        "coverage": 0.14285714285714285
+      },
+      {
+        "number_of_bedrooms": 1,
+        "price_listings": 144,
+        "total_listings": 549,
+        "coverage": 0.26229508196721313
+      },
+      {
+        "number_of_bedrooms": 2,
+        "price_listings": 351,
+        "total_listings": 1482,
+        "coverage": 0.23684210526315788
+      },
+      {
+        "number_of_bedrooms": 3,
+        "price_listings": 404,
+        "total_listings": 1922,
+        "coverage": 0.21019771071800208
+      },
+      {
+        "number_of_bedrooms": 4,
+        "price_listings": 80,
+        "total_listings": 371,
+        "coverage": 0.215633423180593
+      },
+      {
+        "number_of_bedrooms": 5,
+        "price_listings": 7,
+        "total_listings": 41,
+        "coverage": 0.17073170731707318
+      },
+      {
+        "number_of_bedrooms": 6,
+        "price_listings": 2,
+        "total_listings": 6,
+        "coverage": 0.3333333333333333
+      },
+      {
+        "number_of_bedrooms": 7,
+        "price_listings": 2,
+        "total_listings": 5,
+        "coverage": 0.4
+      },
+      {
+        "number_of_bedrooms": 8,
+        "price_listings": 0,
+        "total_listings": 1,
+        "coverage": 0.0
+      },
+      {
+        "number_of_bedrooms": 10,
+        "price_listings": 0,
+        "total_listings": 2,
+        "coverage": 0.0
+      },
+      {
+        "number_of_bedrooms": 11,
+        "price_listings": 0,
+        "total_listings": 1,
+        "coverage": 0.0
+      },
+      {
+        "number_of_bedrooms": 12,
+        "price_listings": 1,
+        "total_listings": 4,
+        "coverage": 0.25
+      },
+      {
+        "number_of_bedrooms": 16,
+        "price_listings": 0,
+        "total_listings": 1,
+        "coverage": 0.0
+      }
+    ],
+    "suburb": [
+      {
+        "suburb": "Alto Sao Bento",
+        "price_listings": 5,
+        "total_listings": 62,
+        "coverage": 0.08064516129032258
+      },
+      {
+        "suburb": "Areal",
+        "price_listings": 1,
+        "total_listings": 5,
+        "coverage": 0.2
+      },
+      {
+        "suburb": "Canto da Praia",
+        "price_listings": 9,
+        "total_listings": 28,
+        "coverage": 0.32142857142857145
+      },
+      {
+        "suburb": "Casa Branca",
+        "price_listings": 15,
+        "total_listings": 88,
+        "coverage": 0.17045454545454544
+      },
+      {
+        "suburb": "Centro",
+        "price_listings": 205,
+        "total_listings": 657,
+        "coverage": 0.3120243531202435
+      },
+      {
+        "suburb": "Ilhota",
+        "price_listings": 10,
+        "total_listings": 56,
+        "coverage": 0.17857142857142858
+      },
+      {
+        "suburb": "Jardim Praiamar",
+        "price_listings": 1,
+        "total_listings": 5,
+        "coverage": 0.2
+      },
+      {
+        "suburb": "Lameiro",
+        "price_listings": 0,
+        "total_listings": 1,
+        "coverage": 0.0
+      },
+      {
+        "suburb": "Leopoldo Zarling",
+        "price_listings": 1,
+        "total_listings": 18,
+        "coverage": 0.05555555555555555
+      },
+      {
+        "suburb": "Meia Praia",
+        "price_listings": 632,
+        "total_listings": 2860,
+        "coverage": 0.22097902097902097
+      },
+      {
+        "suburb": "Morretes",
+        "price_listings": 83,
+        "total_listings": 441,
+        "coverage": 0.18820861678004536
+      },
+      {
+        "suburb": "Sertao do Trombudo",
+        "price_listings": 3,
+        "total_listings": 22,
+        "coverage": 0.13636363636363635
+      },
+      {
+        "suburb": "Sertaozinho",
+        "price_listings": 6,
+        "total_listings": 21,
+        "coverage": 0.2857142857142857
+      },
+      {
+        "suburb": "Tabuleiro dos Oliveiras",
+        "price_listings": 20,
+        "total_listings": 129,
+        "coverage": 0.15503875968992248
+      },
+      {
+        "suburb": "Varzea",
+        "price_listings": 5,
+        "total_listings": 43,
+        "coverage": 0.11627906976744186
+      },
+      {
+        "suburb": "none",
+        "price_listings": 3,
+        "total_listings": 5,
+        "coverage": 0.6
+      }
+    ]
+  },
+  "vivareal_quality": {
+    "duplicate_listing_ids": 36,
+    "exact_duplicate_pairs": 35,
+    "duplicate_ids_with_different_rows": 1,
+    "condo_fee_equals_sale_price": 5,
+    "iptu_equals_sale_price": 1,
+    "apartment_area_above_1000": 33,
+    "sale_price_below_100000": 2
+  }
+}

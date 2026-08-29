@@ -1,0 +1,215 @@
+{
+  "checks": {
+    "allPassed": true,
+    "items": [
+      {
+        "check": "Checks aprovados no Ciclo 2",
+        "evidence": "20/20",
+        "status": "OK"
+      },
+      {
+        "check": "Checks aprovados no Ciclo 3",
+        "evidence": "18/18",
+        "status": "OK"
+      },
+      {
+        "check": "Checks aprovados no Ciclo 4",
+        "evidence": "28/28",
+        "status": "OK"
+      },
+      {
+        "check": "Hashes dos CSVs originais preservados",
+        "evidence": "5 de 5 hashes reconciliados",
+        "status": "OK"
+      },
+      {
+        "check": "Hashes comuns entre ciclos reconciliados",
+        "evidence": "Details, Mesh e Price_AV coincidem",
+        "status": "OK"
+      },
+      {
+        "check": "Sete segmentos principais",
+        "evidence": "7 segmentos",
+        "status": "OK"
+      },
+      {
+        "check": "Ligação somente agregada",
+        "evidence": "bairro + tipo residencial + quartos",
+        "status": "OK"
+      },
+      {
+        "check": "Nove combinações de cenário",
+        "evidence": "9 combinações",
+        "status": "OK"
+      },
+      {
+        "check": "Fórmulas dos cenários reconciliadas",
+        "evidence": "306 linhas",
+        "status": "OK"
+      },
+      {
+        "check": "Amostras da recomendação reconciliadas",
+        "evidence": "43 Airbnb e 1.037 VivaReal",
+        "status": "OK"
+      },
+      {
+        "check": "Liderança em sensibilidades",
+        "evidence": "8/9",
+        "status": "OK"
+      },
+      {
+        "check": "Inversão no p25",
+        "evidence": "Centro · apartamento · 1 quarto",
+        "status": "OK"
+      },
+      {
+        "check": "Conclusão operacional reconciliada",
+        "evidence": "localização inconclusiva; densidade por capacidade favorável",
+        "status": "OK"
+      },
+      {
+        "check": "Associações sustentadas reconciliadas",
+        "evidence": "4 positivas e 4 negativas",
+        "status": "OK"
+      },
+      {
+        "check": "Líder no cenário intermediário",
+        "evidence": "Morretes · apartamento · 2 quartos",
+        "status": "OK"
+      },
+      {
+        "check": "Assets locais presentes",
+        "evidence": "CSS e JavaScript locais",
+        "status": "OK"
+      },
+      {
+        "check": "Quatro respostas no HTML",
+        "evidence": "4 blocos",
+        "status": "OK"
+      },
+      {
+        "check": "Três grupos de controles",
+        "evidence": "ocupação, sazonalidade e preço de compra",
+        "status": "OK"
+      },
+      {
+        "check": "JSON incorporado reconciliado",
+        "evidence": "igual a dashboard_data.json",
+        "status": "OK"
+      },
+      {
+        "check": "Funcionamento sem internet",
+        "evidence": "sem URL externa, CDN ou requisição de rede",
+        "status": "OK"
+      },
+      {
+        "check": "Breakpoints responsivos presentes",
+        "evidence": "desktop, tablet e celular",
+        "status": "OK"
+      },
+      {
+        "check": "Yields dinâmicos finitos — p25",
+        "evidence": "7 segmentos",
+        "status": "OK"
+      },
+      {
+        "check": "Yields dinâmicos finitos — median",
+        "evidence": "7 segmentos",
+        "status": "OK"
+      },
+      {
+        "check": "Yields dinâmicos finitos — p75",
+        "evidence": "7 segmentos",
+        "status": "OK"
+      },
+      {
+        "check": "Controles reproduzem mudança de liderança",
+        "evidence": "{\"median\": \"morretes|apartamento|2 quartos\", \"p25\": \"centro|apartamento|1 quarto\", \"p75\": \"morretes|apartamento|2 quartos\"}",
+        "status": "OK"
+      },
+      {
+        "check": "Hashes brutos preservados após o build",
+        "evidence": "5 de 5 hashes",
+        "status": "OK"
+      }
+    ],
+    "passed": 26,
+    "total": 26
+  },
+  "compactThesis": {
+    "economicStatus": "inconclusivo",
+    "evidence": [
+      "Centro/1 quarto tem maior densidade de preço anunciado por hóspede comportado e por quarto.",
+      "A vantagem de localização de Centro/1 quarto foi inconclusiva.",
+      "No gross yield proxy central, Centro/1 quarto ficou abaixo de Centro/2 quartos.",
+      "A direção se inverte em sensibilidades; com o p25 de compra, Centro/1 lidera.",
+      "O yield após condomínio de Centro/1 usa apenas 10 valores válidos e é exploratório."
+    ],
+    "finalPosition": "Os dados não sustentam os apartamentos compactos no Centro como a principal tese de investimento.",
+    "operationalStatus": "parcialmente sustentada"
+  },
+  "headlineSegment": {
+    "airbnbHosts": 34,
+    "airbnbListings": 43,
+    "airbnbTypicalPrice": 453.5,
+    "areaMedianM2": 69.0,
+    "bairro": "Morretes",
+    "condoCoverage": 0.46962391513982643,
+    "condoMonthlyMedian": 350.0,
+    "condoSupport": "principal",
+    "condoValid": 487,
+    "intermediate": {
+      "annualizedPrice": 59589.9,
+      "grossYield": 0.07543025316455697,
+      "rank": 1,
+      "yieldAfterObservedCondo": 0.07011379746835443
+    },
+    "key": "morretes|apartamento|2 quartos",
+    "label": "Morretes · apartamento · 2 quartos",
+    "purchasePrice": {
+      "median": 790000.0,
+      "p25": 680000.0,
+      "p75": 879740.0
+    },
+    "purchasePriceMedianM2": 11550.942028985508,
+    "purchasePriceWithoutSuspects": 790000.0,
+    "purchaseSuspects": 1,
+    "quartos": 2,
+    "tipo": "apartamento",
+    "vivarealListings": 1037
+  },
+  "locationConclusion": "A localização depende do perfil do imóvel; os dados não sustentam uma vantagem geral de um bairro depois de controlar minimamente o perfil.",
+  "rawSourceHashes": {
+    "Details_Itapema.csv": "3688ba1d8e576fb7e1091ff6242250bc3f845a3e10241fac378be8a168c83e84",
+    "Hosts_ids_Itapema.csv": "b043ffea58b6f9b572fa8fc2dfbe4c155b71a0e1636e6edc28d33c4ab7765eef",
+    "Mesh_Ids_Data_Itapema.csv": "f5064eec7fbfa7a962a0f67044baaeb0d7fcbfa9a730f80ce5a9dc8d58af694a",
+    "Price_AV_Itapema.csv": "c726481d3cb5b4b5e9a1eff9e27f2919a7deeeb66c1696f0d0f6d5527fd9b555",
+    "VivaReal_Itapema.csv": "ac6a4a8a3d2b43e0a7583ef7f4a86b849dedb79d56c2756eb2dce012de7ddd4f"
+  },
+  "recommendation": {
+    "alternatives": [
+      "centro|apartamento|2 quartos",
+      "centro|apartamento|1 quarto"
+    ],
+    "reason": "Melhor relação observada entre preço anunciado e capital de compra no critério principal, com liderança em 8 de 9 sensibilidades.",
+    "robustSingleWinner": false,
+    "segmentKey": "morretes|apartamento|2 quartos",
+    "sensitivityTotal": 9,
+    "sensitivityWins": 8,
+    "statement": "Eu priorizaria um apartamento de dois quartos em Morretes, sujeito à validação do imóvel específico, do condomínio e dos custos operacionais.",
+    "stressRange": {
+      "max": 0.12571708860759492,
+      "min": 0.03771512658227847
+    }
+  },
+  "sources": [
+    "reports/generated/airbnb_profile_summary.json",
+    "reports/generated/airbnb_profile_segments.csv",
+    "reports/generated/investment_summary.json",
+    "reports/generated/airbnb_vivareal_segments.csv",
+    "reports/generated/investment_scenarios.csv",
+    "reports/generated/investment_robustness.csv",
+    "reports/generated/airbnb_characteristics_summary.json",
+    "reports/generated/airbnb_characteristic_associations.csv"
+  ]
+}

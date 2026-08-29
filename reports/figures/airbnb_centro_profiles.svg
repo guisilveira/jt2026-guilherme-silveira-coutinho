@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="271" viewBox="0 0 1100 271">
+<rect width="100%" height="100%" fill="white"/>
+<text x="30" y="38" font-family="Arial" font-size="22" font-weight="bold">Apartamentos no Centro: preço anunciado total por quartos</text>
+<line x1="410.0" y1="63" x2="410.0" y2="231" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="5,5"/>
+<text x="30" y="90" font-family="Arial" font-size="14">Centro · apartamento · 1 quarto</text>
+<line x1="691.6" y1="85" x2="780.0" y2="85" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="745.0" cy="85" r="6" fill="#006d77"/>
+<text x="755.0" y="90" font-family="Arial" font-size="13">R$ 450</text>
+<text x="30" y="132" font-family="Arial" font-size="14">Centro · apartamento · 2 quartos</text>
+<line x1="707.1" y1="127" x2="917.8" y2="127" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="856.7" cy="127" r="6" fill="#006d77"/>
+<text x="866.7" y="132" font-family="Arial" font-size="13">R$ 600</text>
+<text x="30" y="174" font-family="Arial" font-size="14">Centro · apartamento · 3 quartos</text>
+<line x1="782.3" y1="169" x2="1030.0" y2="169" stroke="#7a8a99" stroke-width="5"/>
+<circle cx="904.4" cy="169" r="6" fill="#006d77"/>
+<text x="914.4" y="174" font-family="Arial" font-size="13">R$ 664</text>
+<line x1="410" y1="231" x2="1030" y2="231" stroke="#333"/>
+<text x="410" y="256" font-family="Arial" font-size="12">R$ 0</text>
+<text x="970" y="256" font-family="Arial" font-size="12">R$ 833</text>
+</svg>

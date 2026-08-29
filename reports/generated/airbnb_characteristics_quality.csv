@@ -1,0 +1,48 @@
+categoria,item,registros,tratamento,observacao
+universo,Imóveis nos sete segmentos principais,668.0,resultado principal,
+join hosts,Cobertura da chave owner_id + timestamp,1.0,exigida em 100%,
+join hosts,Duplicações da chave temporal,0.0,bloqueio se > 0,
+join hosts,Imóveis após o join,668.0,uma linha por imóvel,
+campos excluídos,response_rate_shown preenchido,0.0,não entra na análise,
+campos excluídos,response_time_shown preenchido,0.0,não entra na análise,
+comodidades,Falhas de parsing,0.0,excluídas somente das características de amenities,
+regra de comodidade,tem_ar_condicionado: `\bar-condicionado\b`,662.0,correspondência literal após casefold e remoção de acentos,
+regra de comodidade,tem_estacionamento: `\bestacionamento\b`,621.0,correspondência literal após casefold e remoção de acentos,
+regra de comodidade,tem_piscina: `\bpiscina\b`,102.0,correspondência literal após casefold e remoção de acentos,
+regra de comodidade,tem_elevador: `\belevador\b`,481.0,correspondência literal após casefold e remoção de acentos,
+regra de comodidade,tem_churrasqueira: `\bchurrasqueira\b`,529.0,correspondência literal após casefold e remoção de acentos,
+regra de comodidade,tem_acesso_praia: `\bacesso a praia\b`,425.0,correspondência literal após casefold e remoção de acentos,
+regra de comodidade,tem_wifi: `\bwi-?fi\b|\bwifi\b`,668.0,correspondência literal após casefold e remoção de acentos,
+notas,Anúncios sem reviews tratados como não avaliados,14.0,nota convertida para ausente,
+notas,Notas do anúncio disponíveis,654.0,somente anúncios com reviews e nota > 0,
+notas,Anfitriões sem reviews tratados como não avaliados,6.0,nota convertida para ausente,
+notas,Notas do anfitrião disponíveis,662.0,somente anfitriões com reviews e nota > 0,
+zeros ambíguos,Taxa de limpeza igual a zero,16.0,preservada; excluída da regressão individual de valor,
+zeros suspeitos,Quantidade de fotos igual a zero,108.0,preservada; excluída da regressão individual de quantidade,
+booleanos,can_instant_book desconhecido,5.0,permanece desconhecido; não convertido em false,
+booleanos,is_professional desconhecido,5.0,permanece desconhecido; não convertido em false,
+booleanos,is_guest_favorite desconhecido,0.0,permanece desconhecido; não convertido em false,
+booleanos,is_superhost desconhecido,0.0,permanece desconhecido; não convertido em false,
+disponibilidade por característica,Capacidade de hóspedes,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Banheiros,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Camas,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Quantidade de comodidades,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Taxa de limpeza positiva,652.0,amostra da regressão individual,459 anfitriões
+disponibilidade por característica,Quantidade de fotos positiva,560.0,amostra da regressão individual,455 anfitriões
+disponibilidade por característica,Presença de reviews,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Quantidade de reviews,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Nota do anúncio avaliado,654.0,amostra da regressão individual,467 anfitriões
+disponibilidade por característica,Favorito dos hóspedes,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Reserva instantânea,663.0,amostra da regressão individual,470 anfitriões
+disponibilidade por característica,Anfitrião profissional,663.0,amostra da regressão individual,470 anfitriões
+disponibilidade por característica,Superhost,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Quantidade de reviews do anfitrião,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Tempo como anfitrião,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Nota do anfitrião avaliado,662.0,amostra da regressão individual,465 anfitriões
+disponibilidade por característica,Ar-condicionado,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Estacionamento,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Piscina,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Elevador,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Churrasqueira,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Acesso à praia,668.0,amostra da regressão individual,471 anfitriões
+disponibilidade por característica,Wi-Fi,668.0,amostra da regressão individual,471 anfitriões
