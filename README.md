@@ -1,4 +1,4 @@
-Vídeo de apresentação: LINK_GOOGLE_DRIVE_PENDENTE
+Vídeo de apresentação: [assistir no Google Drive](https://drive.google.com/file/d/1hPxtkWTUpqcqC02TsWw8NScaQWox5D9S/view?usp=sharing)
 
 # Onde investir em short-stay em Itapema?
 
